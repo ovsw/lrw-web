@@ -296,23 +296,8 @@ module.exports = {
             title: 'column 1',
             children: [
               {
-                title: 'Welcome',
-                slug: '/staff/welcome/',
-                children: []
-              },
-              {
-                title: 'Employment',
-                slug: '/staff/employment/',
-                children: []
-              },
-              {
                 title: 'Current Openings',
                 slug: '/staff/current-openings/',
-                children: []
-              },
-              {
-                title: 'Summer Dates',
-                slug: '/staff/summer-dates/',
                 children: []
               },
               {
