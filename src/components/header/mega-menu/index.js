@@ -67,37 +67,41 @@ class Megamenu extends React.Component {
         >
           <Flex className='MenuColumnsContainer' menuTitle={menuTitle}>
             {menuColumns.map(column => (
-              <ul key={column.title} sx={{
-                variant: 'lists.reset',
-                p: 4,
-                pt: 3,
-                '&:nth-of-type(2)': {
-                  borderWidth: 0,
-                  borderLeftWidth: '1px',
-                  borderStyle: 'dashed',
-                  borderLeftColor: 'gray.5',
-                  pl: 4
+              <>
+                {column.children.length !== 0 &&
+                <ul key={column.title} sx={{
+                  variant: 'lists.reset',
+                  py: 3,
+                  px: '1.5rem',
+                  '&:nth-of-type(2)': {
+                    borderWidth: 0,
+                    borderLeftWidth: '1px',
+                    borderStyle: 'dashed',
+                    borderLeftColor: 'gray.5',
+                    pl: 4
+                  }
+                }}>
+                  {column.children.map(item => (
+                    <li key={item.slug} sx={{py: 1}}>
+                      <NavLink to={item.slug} onClick={this.onNavClick} sx={{variant: 'links.navSub'}}>
+                        {item.title}
+                      </NavLink>
+                      {item.children !== undefined && item.children.length > 0 && (
+                        <ul sx={{color: 'brown'}}>
+                          {item.children.map(child => (
+                            <li key={child.slug}>
+                              <NavLink to={child.slug} onClick={this.onNavClick} sx={{variant: 'links.navSub2'}}>
+                                {child.title}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
                 }
-              }}>
-                {column.children.map(item => (
-                  <li key={item.slug} sx={{py: 1}}>
-                    <NavLink to={item.slug} onClick={this.onNavClick} sx={{variant: 'links.navSub'}}>
-                      {item.title}
-                    </NavLink>
-                    {item.children !== undefined && item.children.length > 0 && (
-                      <ul sx={{color: 'brown'}}>
-                        {item.children.map(child => (
-                          <li key={child.slug}>
-                            <NavLink to={child.slug} onClick={this.onNavClick} sx={{variant: 'links.navSub2'}}>
-                              {child.title}
-                            </NavLink>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              </>
             ))}
           </Flex>
         </div>

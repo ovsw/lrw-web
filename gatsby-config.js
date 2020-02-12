@@ -221,13 +221,7 @@ module.exports = {
                 title: 'Refer a Friend',
                 slug: '/refer-a-friend/',
                 children: []
-              }
-
-            ]
-          },
-          {
-            title: 'column 2',
-            children: [
+              },
               {
                 title: 'What\'s New',
                 slug: '/whats-new-on-campus/',
@@ -244,13 +238,48 @@ module.exports = {
                 children: []
               }
             ]
+          },
+          {
+            title: 'column 2',
+            children: []
           }
         ]
       },
       {
         title: 'Retreats & Events',
         slug: '/private-events-and-retreats/',
-        children: []
+        children: [
+          {
+            title: 'column 1',
+            children: [
+              {
+                title: 'Facilities',
+                slug: '/private-events-and-retreats/facilities/',
+                children: []
+              },
+              {
+                title: 'Photos',
+                slug: '/private-events-and-retreats/photos/',
+                children: []
+              },
+
+              {
+                title: 'Recommended Vendors',
+                slug: '/private-events-and-retreats/recommended-vendors/',
+                children: []
+              },
+              {
+                title: 'Contact us',
+                slug: '/private-events-and-retreats/contact-us/',
+                children: []
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: []
+          }
+        ]
       },
       {
         title: 'Donate',
