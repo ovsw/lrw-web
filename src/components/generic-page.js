@@ -16,7 +16,7 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
       <PageHeaderImage headerImage={headerImage} />
 
       <section sx={{variant: 'sections.hpSectionLight'}}>
-        <Container sx={{maxWidth: '6xl', p: 2, py: [4, 5]}} s>
+        <Container sx={{maxWidth: '6xl', p: 2, pb: [2, 3]}} s>
           <Flex sx={{flexWrap: 'wrap', flexDirection: 'row-reverse'}}>
             <Box sx={{width: ['full', 'full', '3/4'], pl: [0, 0, 4]}}>
               <div sx={{display: ['block', 'block', 'none'], mb: 4}}>
