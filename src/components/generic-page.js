@@ -31,7 +31,8 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
             </Box>
             <Box sx={{width: ['full', 'full', '1/4']}}>
               <aside sx={{
-                pr: [0, 0, 4],
+                pl: [0, 0, 3, 0],
+                pr: [0, 0, 0, 3],
                 pb: 4
               }}>
                 <PageSideNav section={section} />
