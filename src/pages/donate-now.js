@@ -54,12 +54,12 @@ const programs = [
     description: 'Sponsor a child by paying their camp fees.',
     link: '/send-a-kid-to-laurelwood/'
   },
-  {
-    name: 'Amazon Wishlist',
-    icon: 'gift-list',
-    description: 'Get something off the list as a donation. We\'ll put it to good use!',
-    link: '/amazon-wishlist/'
-  },
+  // {
+  //   name: 'Amazon Wishlist',
+  //   icon: 'gift-list',
+  //   description: 'Get something off the list as a donation. We\'ll put it to good use!',
+  //   link: '/amazon-wishlist/'
+  // },
   {
     name: 'More ways to Support',
     icon: 'leader',
