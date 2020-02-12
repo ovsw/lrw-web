@@ -57,7 +57,7 @@ const programs = [
     age: '2nd-9th graders',
     icon: 'moon',
     description: 'We need a description here for the Overnight Camp for 2nd to 9th graders, couldn\'t find anything on the old website',
-    link: '/programs/pine-cone-camp/'
+    link: '/programs/overnight-camp/'
   },
   {
     name: 'Day Camp',
@@ -71,14 +71,14 @@ const programs = [
     age: '10th graders',
     icon: 'teenagers',
     description: 'A recreational, educational and cultural experience for 10th graders, building character and social skills along with a strong Jewish identity.',
-    link: '/programs/teen-camp/'
+    link: '/programs/bonim-travel-program/'
   },
   {
     name: 'SIT Program',
     age: '11th graders',
     icon: 'leader',
     description: 'Provides rising 11th graders the tools and experience they need to become future leaders, strong role models  Camp Laurelwood staff.',
-    link: '/programs/leader-in-training/'
+    link: '/programs/sit-program/'
   }
 ]
 

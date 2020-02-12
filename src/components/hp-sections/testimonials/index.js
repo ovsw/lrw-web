@@ -148,7 +148,7 @@ const TestimonialsSection = () => {
         position: 'relative',
         zIndex: '2'
       }}>
-      <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'accent'}}>What Campers Say</Styled.h1>
+      <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'accent'}}>What the Community Says</Styled.h1>
       <Container sx={{maxWidth: '6xl', px: ['2.8rem', 5, 0]}}>
         <Slider {...slickSettings}>
           {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
