@@ -4,6 +4,7 @@ import {Link} from 'gatsby'
 import isAbsoluteURL from 'is-absolute-url'
 import {jsx} from 'theme-ui'
 import Figure from './Figure'
+import AvatarImage from './AvatarImage'
 import File from './File'
 import getYouTubeId from 'get-youtube-id'
 import YouTube from 'react-youtube'
@@ -34,6 +35,7 @@ const serializers = {
   types: {
     authorReference: ({node}) => <span>{node.author.name}</span>,
     mainImage: Figure,
+    avatarImage: AvatarImage,
     localFile: File,
     youtube: ({node}) => {
       const {url} = node
