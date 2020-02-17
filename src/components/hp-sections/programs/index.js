@@ -56,7 +56,7 @@ const programs = [
     name: 'Overnight Camp',
     age: '2nd-9th graders',
     icon: 'moon',
-    description: 'We need a description here for the Overnight Camp for 2nd to 9th graders, couldn\'t find anything on the old website',
+    description: 'Campers entering second through seventh grades live in newly updated bunks with their friends and counselors, and enjoy all of the programs and activities camp has to offer!',
     link: '/programs/overnight-camp/'
   },
   {
