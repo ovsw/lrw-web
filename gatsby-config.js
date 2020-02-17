@@ -59,6 +59,11 @@ module.exports = {
                 slug: '/activities/',
                 children: [
                   {
+                    title: 'A Typical Day',
+                    slug: '/activities/a-typical-day/',
+                    children: []
+                  },
+                  {
                     title: 'Trips & Special Events',
                     slug: '/activities/trips-and-special-events',
                     children: []
@@ -69,10 +74,11 @@ module.exports = {
                     children: []
                   },
                   {
-                    title: 'A Typical Day',
-                    slug: '/activities/a-typical-day/',
+                    title: 'Activity Plans',
+                    slug: '/activities/activity-plans/',
                     children: []
                   }
+
                 ]
               }
             ]
@@ -103,6 +109,16 @@ module.exports = {
               {
                 title: 'Dates & Rates - Day Camp',
                 slug: '/dates-and-rates-day-camp/',
+                children: []
+              },
+              {
+                title: 'Dates & Rates - Bonim',
+                slug: '/dates-and-rates-bonim-travel-program/',
+                children: []
+              },
+              {
+                title: 'Dates & Rates - SIT',
+                slug: '/dates-and-rates-sit-program/',
                 children: []
               },
               {
@@ -142,8 +158,13 @@ module.exports = {
                 children: []
               },
               {
-                title: 'Meet our Staff',
-                slug: '/our-staff/',
+                title: 'Meet our Team',
+                slug: '/our-team/',
+                children: []
+              },
+              {
+                title: 'Work at Laurelwood',
+                slug: '/staff/',
                 children: []
               },
               {
@@ -185,12 +206,12 @@ module.exports = {
                 title: 'Alumni Events',
                 slug: '/alumni-events/',
                 children: []
-              },
-              {
-                title: 'Camp Newsletter',
-                slug: '/camp-newsletter/',
-                children: []
               }
+              // {
+              //   title: 'Camp Newsletter',
+              //   slug: '/camp-newsletter/',
+              //   children: []
+              // }
             ]
           }
         ]
@@ -214,7 +235,7 @@ module.exports = {
               },
               {
                 title: 'Donate',
-                slug: '/donate/',
+                slug: '/donate-now/',
                 children: []
               },
               {
@@ -335,8 +356,8 @@ module.exports = {
                 children: []
               },
               {
-                title: 'Apply',
-                slug: '/staff/staff-application/',
+                title: 'Apply Now',
+                slug: 'https://laurelwood.campintouch.com/ui/forms/application/staff/App#Positions',
                 children: []
               }
             ]
