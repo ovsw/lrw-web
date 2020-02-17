@@ -65,11 +65,11 @@ class Megamenu extends React.Component {
             boxShadow: '3px 3px 6px rgba(0,0,0,0.2)'
           }}
         >
-          <Flex className='MenuColumnsContainer' menuTitle={menuTitle}>
+          <Flex className='MenuColumnsContainer'>
             {menuColumns.map(column => (
-              <>
+              <React.Fragment key={column.title}>
                 {column.children.length !== 0 &&
-                <ul key={column.title} sx={{
+                <ul sx={{
                   variant: 'lists.reset',
                   py: 3,
                   px: '1.5rem',
@@ -101,7 +101,7 @@ class Megamenu extends React.Component {
                   ))}
                 </ul>
                 }
-              </>
+              </React.Fragment>
             ))}
           </Flex>
         </div>
