@@ -169,12 +169,12 @@ module.exports = {
               },
               {
                 title: 'Letter From the Director',
-                slug: 'welcome-letter-from-the-director',
+                slug: '/welcome-letter-from-the-director/',
                 children: []
               },
               {
                 title: 'Board of Directors',
-                slug: 'board-of-directors',
+                slug: '/board-of-directors/',
                 children: []
               },
               {
