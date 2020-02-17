@@ -31,12 +31,6 @@ const Sidebar = ({title, text}) => {
     <>
       <Styled.h2 sx={{mt: '0'}}>{title}</Styled.h2>
       {text && <PortableText blocks={text} />}
-      <div >
-        {/* <Link to='/programs/' sx={{variant: 'buttons.3DAccent', display: 'inline-block', mr: 3, mt: 4}}>More on CAPs </Link> */}
-        {/* <Link to='/dates-and-rates/' sx={{variant: 'buttons.3D', display: 'inline-block', mt: 4}}>Dates &amp; Rates </Link> */}
-      </div>
-
-      {/* <FaChevronRight sx={{position: 'relative', top: '3px'}} /> */}
     </>
   )
 }
@@ -46,13 +40,15 @@ const programs = [
     name: 'Donate Today',
     icon: 'donate',
     description: 'Donate to Camp Laurelwood Today',
-    link: '/donate-today/'
+    link: 'https://camplaurelwood.networkforgood.com/projects/65520-general-donation-page',
+    external: true
   },
   {
     name: 'Send a Kid to Laurelwood',
     icon: 'dayCamp',
     description: 'Sponsor a child by paying their camp fees.',
-    link: '/send-a-kid-to-laurelwood/'
+    link: '/send-a-kid-to-laurelwood/',
+    external: false
   },
   // {
   //   name: 'Amazon Wishlist',
@@ -64,13 +60,14 @@ const programs = [
     name: 'More ways to Support',
     icon: 'leader',
     description: 'Find out how else you can show your support for Laurelwood.',
-    link: '/more-ways-to-support-camp/'
+    link: '/more-ways-to-support-camp/',
+    external: false
   }
 ]
 
 const MainContent = () => {
   return (
-    <Flex sx={{pl: [0, 0, 4], flexWrap: 'wrap'}}>
+    <Flex sx={{pl: [0, 0, 4], flexWrap: 'wrap', justifyContent: 'center'}}>
       {programs.map(program => {
         const width = program.layout ? '100%' : '1/2'
         return (
