@@ -81,7 +81,7 @@ class MobileMenu extends React.Component {
             width: 'full'
           }}
         >
-          <div className='MenuColumnsContainer' menuTitle={menuTitle} sx={{
+          <div className='MenuColumnsContainer' sx={{
             display: ['block', 'flex']
           }}>
             {menuColumns.map(column => (
