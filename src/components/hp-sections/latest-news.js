@@ -21,7 +21,7 @@ const LatestNewsSection = ({posts}) => {
           flexDirection: ['column-reverse', 'column-reverse', 'column-reverse', 'row']
         }}>
           <LatestNewsContent post={post} />
-          <LatestNewsImage image={post.mainImage} />
+          <LatestNewsImage image={post.mainImage} link={`/news/${post.slug.current}`} />
         </Flex>
       </Container>
     </section>
@@ -43,17 +43,17 @@ const LatestNewsContent = ({post}) => {
           <PortableText blocks={post._rawExcerpt} sx={{fontFamily: 'body'}} />
         </div>
       )}
-      <Link to='/' sx={{variant: 'buttons.3D', display: 'inline-block', my: 3, mr: 3, position: 'relative'}}>
+      <Link to={`/news/${post.slug.current}`} sx={{variant: 'buttons.3D', display: 'inline-block', my: 3, mr: 3, position: 'relative'}}>
         Read More
       </Link>
     </div>
   )
 }
 
-const LatestNewsImage = ({image}) => {
+const LatestNewsImage = ({image, link}) => {
   // console.log(image)
   return (
-    <Link to='/' sx={{width: ['full', 'full', 'full', '50%']}}>
+    <Link to={link} sx={{width: ['full', 'full', 'full', '50%']}}>
       <Img fluid={image.asset.fluid} sx={{width: 'full', objectFit: 'cover', height: '100%'}} />
     </Link>
   )
