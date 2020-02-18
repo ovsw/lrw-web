@@ -82,6 +82,10 @@ export default {
       lineHeight: 'body',
       color: 'text'
     },
+    ul: {
+      lineHeight: 'body',
+      fonSize: 2
+    },
     'h1': {
       ...sharedHeadingStyles,
       'fontSize': [6, 6, 7, 8],
