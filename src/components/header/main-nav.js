@@ -93,7 +93,7 @@ const MainNav = ({navStructure, showNav, onHideNav}) => {
                       top: '-45px',
                       textAlign: 'center'
                     }}>
-                      <Img fixed={logoImage.childImageSharp.fixed} fadeIn={false} critical sx={{
+                      <Img fixed={logoImage.childImageSharp.fixed} fadeIn={false} loading='eager' sx={{
                         width: '120px', position: 'relative', top: '-12px'
                       }} alt='Camp Laurelwood Logo' />
                     </Link></li>
