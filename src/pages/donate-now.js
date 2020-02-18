@@ -17,22 +17,22 @@ import ProgramItem from '../components/hp-sections/programs/program'
 
 const DonateNowPage = ({data, errors}) => {
   return (
-    <>
+    <Layout>
       <PageHeaderImage headerImage={data.page.headerImage} />
       <section sx={{variant: 'sections.hpSectionLight'}}>
         <SectionWithSidebar sidebar={<Sidebar title={data.page.title} text={data.page._rawBody} />} mainContent={<MainContent />} />
       </section>
 
-    </>
+    </Layout>
   )
 }
 
 const Sidebar = ({title, text}) => {
   return (
-    <Layout>
+    <>
       <Styled.h2 sx={{mt: '0'}}>{title}</Styled.h2>
       {text && <PortableText blocks={text} />}
-    </Layout>
+    </>
   )
 }
 
