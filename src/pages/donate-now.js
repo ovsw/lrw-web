@@ -10,6 +10,7 @@ import PortableText from '../components/portableText'
 import PageHeaderImage from '../components/page-header-image'
 
 // containers
+import Layout from '../containers/layout'
 import SectionWithSidebar from '../containers/section-with-sidebar'
 // commponents
 import ProgramItem from '../components/hp-sections/programs/program'
@@ -28,10 +29,10 @@ const DonateNowPage = ({data, errors}) => {
 
 const Sidebar = ({title, text}) => {
   return (
-    <>
+    <Layout>
       <Styled.h2 sx={{mt: '0'}}>{title}</Styled.h2>
       {text && <PortableText blocks={text} />}
-    </>
+    </Layout>
   )
 }
 

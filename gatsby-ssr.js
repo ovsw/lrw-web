@@ -5,12 +5,3 @@
  */
 
 // You can delete this file if you're not using it
-
-import React from 'react'
-import Layout from './src/containers/layout'
-
-const wrapPageElement = ({element, props}) => {
-  return <Layout {...props}>{element}</Layout>
-}
-
-export {wrapPageElement}

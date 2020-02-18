@@ -2,6 +2,7 @@
 import React from 'react' // eslint-disable-line
 import {jsx, Styled, Container} from 'theme-ui'
 // import {Box, Flex} from '@theme-ui/components'
+import Layout from '../containers/layout'
 
 import {graphql} from 'gatsby'
 import {mapEdgesToNodes} from '../lib/helpers'
@@ -48,13 +49,13 @@ const ArchivePage = props => {
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
 
   return (
-    <>
+    <Layout>
       <SEO title='News' />
       <Container sx={{pt: ['10rem'], pb: 5}}>
         <Styled.h1 sx={{mb: 4}}>News</Styled.h1>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}
       </Container>
-    </>
+    </Layout>
   )
 }
 
