@@ -6,6 +6,6 @@
 
 // You can delete this file if you're not using it
 
-require('typeface-amatic-sc')
-require('typeface-open-sans')
-require('typeface-skranji')
+// require('typeface-amatic-sc')
+// require('typeface-open-sans')
+// require('typeface-skranji')
