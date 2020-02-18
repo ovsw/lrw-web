@@ -10,7 +10,7 @@ import {Box, Flex} from '@theme-ui/components'
 import SocialLinks from './socialLinks'
 
 const Footer = () => {
-  const {footerBgImage, acaLogoImage} = useStaticQuery(
+  const {footerBgImage, acaLogo, asocIndependentJewishCampLogo, jfgnhLogo} = useStaticQuery(
     graphql`
     query {
       footerBgImage: file(relativePath: { eq: "cl_summer_2016_web_files-73.jpg" }) {
@@ -20,9 +20,23 @@ const Footer = () => {
           }
         }
       }
-      acaLogoImage: file(relativePath: { eq: "aca-logo.png" }) {
+      acaLogo: file(relativePath: { eq: "aca-logo.png" }) {
         childImageSharp {
-          fixed(width: 192, quality: 90) {
+          fixed(height:100, quality: 90) {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+      }
+      asocIndependentJewishCampLogo: file(relativePath: { eq: "association-of-independent-jewish-camps.png" }) {
+        childImageSharp {
+          fixed(height:100, quality: 90) {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+      }
+      jfgnhLogo: file(relativePath: { eq: "jewish-federation-of-greater-new-haven-logo.png" }) {
+        childImageSharp {
+          fixed(height:100, quality: 90) {
             ...GatsbyImageSharpFixed_noBase64
           }
         }
@@ -39,8 +53,8 @@ const Footer = () => {
       backgroundColor: 'primaryDark',
       color: 'gray.4'}}>
       <Container>
-        <Flex sx={{flexWrap: 'wrap', pt: [4, 4, 5, 6], pb: [3, 3, 3, 5]}}>
-          <Box sx={{width: ['full', '1/2'], px: [0, 4], py: [4, 0], textAlign: ['center', 'right'], borderRight: ['none', '1px solid lightgray']}}>
+        <Flex sx={{flexWrap: 'wrap', pt: [4, 4, 5], pb: [3, 3, 3, 4]}}>
+          <Box sx={{width: ['full', 'full', '2/5'], px: [0, 4], py: [4, 0], textAlign: ['center', 'center', 'right'], borderRight: ['none', 'none', '1px solid lightgray']}}>
             <div className='vcard'>
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0, color: 'light'}}>Camp Laurelwood</Styled.h3></div>
               <div className='tel'>
@@ -57,16 +71,25 @@ const Footer = () => {
 
             </div>
           </Box>
-          <Box sx={{width: ['full', '1/2'], px: 4, textAlign: 'center'}}>
+          <Box sx={{width: ['full', 'full', '3/5'], px: 4, textAlign: 'center'}}>
             <SocialLinks />
-            <Img fixed={acaLogoImage.childImageSharp.fixed} sx={{maxWidth: 'full', width: '48'}} />
+            <Flex sx={{
+              justifyContent: ['space-around', 'space-around'],
+              a: {
+                px: 1
+              }
+            }}>
+              <a href='https://www.aijcamps.org/'><Img fixed={asocIndependentJewishCampLogo.childImageSharp.fixed} /></a>
+              <a href='https://www.jewishnewhaven.org/'><Img fixed={jfgnhLogo.childImageSharp.fixed} /></a>
+              <a href='https://www.acacamps.org/'><Img fixed={acaLogo.childImageSharp.fixed} /></a>
+            </Flex>
           </Box>
         </Flex>
         <p sx={{
           textAlign: 'center',
           color: 'gray.5',
           a: {
-            color: 'light'
+            color: 'gray.4'
           }
         }}>
           <Link to='/staff/'>Staff</Link> |{' '}

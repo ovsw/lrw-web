@@ -8,14 +8,16 @@ const SocialLinks = () => {
   return (
     <ul sx={{
       variant: 'lists.reset',
-      mb: 3,
+      textAlign: ['center', 'center'],
+      mt: [5, 5, 3],
+      mb: [5, 5, 4],
       li: {
         display: 'inline-block',
-        mr: 2
+        mr: 4
       },
       a: {
         display: 'inline-block',
-        fontSize: 5,
+        fontSize: 7,
         '& svg': {
           bg: 'white',
           borderRadius: '5px'
