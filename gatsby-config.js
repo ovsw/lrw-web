@@ -412,7 +412,7 @@ module.exports = {
       options: {
         headers: {
           '/*': [
-            'Access-Control-Allow-Origin: https://camplaurelwood.sanity.studio'
+            'Access-Control-Allow-Origin: *'
           ]
         }
       }
