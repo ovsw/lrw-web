@@ -407,15 +407,6 @@ module.exports = {
         display: 'block'
       }
     },
-    {
-      resolve: `gatsby-plugin-netlify-headers`,
-      options: {
-        headers: {
-          '/*': [
-            'Access-Control-Allow-Origin: *'
-          ]
-        }
-      }
-    }
+    `gatsby-plugin-netlify-headers`
   ]
 }
