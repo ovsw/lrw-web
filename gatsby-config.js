@@ -102,24 +102,30 @@ module.exports = {
                 children: []
               },
               {
-                title: 'Dates & Rates - Overnight',
-                slug: '/dates-and-rates-overnight-camp/',
-                children: []
-              },
-              {
-                title: 'Dates & Rates - Day Camp',
-                slug: '/dates-and-rates-day-camp/',
-                children: []
-              },
-              {
-                title: 'Dates & Rates - Bonim',
-                slug: '/dates-and-rates-bonim-travel-program/',
-                children: []
-              },
-              {
-                title: 'Dates & Rates - SIT',
-                slug: '/dates-and-rates-sit-program/',
-                children: []
+                title: 'Dates & Rates',
+                slug: '/dates-and-rates/',
+                children: [
+                  {
+                    title: 'Overnight',
+                    slug: '/dates-and-rates-overnight-camp/',
+                    children: []
+                  },
+                  {
+                    title: 'Day Camp',
+                    slug: '/dates-and-rates-day-camp/',
+                    children: []
+                  },
+                  {
+                    title: 'Bonim',
+                    slug: '/dates-and-rates-bonim-travel-program/',
+                    children: []
+                  },
+                  {
+                    title: 'SIT',
+                    slug: '/dates-and-rates-sit-program/',
+                    children: []
+                  }
+                ]
               },
               {
                 title: 'Tuition Assistance',
@@ -138,7 +144,7 @@ module.exports = {
               },
               {
                 title: 'Enroll Now',
-                slug: '/enroll-now/',
+                slug: 'https://laurelwood.campintouch.com/ui/forms/application/camper/App',
                 children: []
               }
             ]
@@ -206,6 +212,11 @@ module.exports = {
                 title: 'Alumni Events',
                 slug: '/alumni-events/',
                 children: []
+              },
+              {
+                title: 'Videos',
+                slug: '/videos/',
+                children: []
               }
               // {
               //   title: 'Camp Newsletter',
@@ -240,7 +251,7 @@ module.exports = {
               },
               {
                 title: 'Refer a Friend',
-                slug: '/refer-a-friend/',
+                slug: 'https://laurelwood.campintouch.com/ui/forms/client/referral/Form',
                 children: []
               },
               {
@@ -311,7 +322,7 @@ module.exports = {
             children: [
               {
                 title: 'Donate Today',
-                slug: '/donate-today/',
+                slug: 'https://camplaurelwood.networkforgood.com/projects/65520-general-donation-page',
                 children: []
               },
               {
@@ -324,11 +335,11 @@ module.exports = {
           {
             title: 'column 2',
             children: [
-              {
-                title: 'Amazon Wishlist',
-                slug: '/amazon-wishlist/',
-                children: []
-              },
+              // {
+              //   title: 'Amazon Wishlist',
+              //   slug: '/amazon-wishlist/',
+              //   children: []
+              // },
               {
                 title: 'More ways to support Camp',
                 slug: '/more-ways-to-support-camp/',
