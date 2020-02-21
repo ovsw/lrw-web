@@ -32,15 +32,11 @@ const Programs = () => {
 const Sidebar = () => {
   return (
     <>
-      <p>Camp Laurelwood is proud to offer a variety of session options to meet the needs of each Laurelwood family.</p>
-      <p><strong>What makes our Programs so special?</strong></p>
-      <p>At Laurelwood we believe that our <strong>program structure</strong> is as important as the relationships the campers make.</p>
-      <p>To ensure our campers are receiving high quality programming, we have developed <strong>Camp Activity Plans (CAPs)</strong>, which:</p>
-      <ul>
-        <li>Provide Age-appropriate activities</li>
-        <li>Provide campers the opportunity to learn or a grow a new skill</li>
-        <li>Ensure the activities are Fun</li>
-      </ul>
+      <p>Campers can begin their Laurelwood journey as they enter Kindergarten by trying out our amazing day camp. </p>
+      <p>From there, each summer they will grow, make new friends, and experience new adventures.</p>
+      <p>At Camp Laurelwood, our campers grow into Staff-in-Training, then eventually can apply to be on staff.</p>
+      <p>Growing up at camp can mean making camp your summer home for many years!</p>
+
       <div >
         <Link to='/programs/' sx={{variant: 'buttons.3DAccent', display: 'inline-block', mr: 3, mt: 4}}>More on CAPs </Link>
         <Link to='/dates-and-rates/' sx={{variant: 'buttons.3D', display: 'inline-block', mt: 4}}>Dates &amp; Rates </Link>
