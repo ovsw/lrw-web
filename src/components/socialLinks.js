@@ -24,10 +24,10 @@ const SocialLinks = () => {
         }
       }
     }}>
-      <li><a href='https://www.instagram.com/camplaurelwood/' sx={{color: '#8134AF'}} rel='noopener noreferrer'><FaInstagram /></a></li>
-      <li><a href='https://www.facebook.com/CampLaurelwood/' sx={{color: '#3b5998'}} rel='noopener noreferrer'><FaFacebookSquare /></a></li>
-      <li><a href='https://www.youtube.com/channel/UC_Kr62M5Wdnoe6U3YLXoFhg' sx={{color: '#ff0000'}} rel='noopener noreferrer'><FaYoutubeSquare /></a></li>
-      <li><a href='https://twitter.com/camp_laurelwood' sx={{color: '#00acee'}} rel='noopener noreferrer'><FaTwitterSquare /></a></li>
+      <li><a href='https://www.instagram.com/camplaurelwood/' sx={{color: '#8134AF'}} target='_blank' rel='noopener noreferrer'><FaInstagram /></a></li>
+      <li><a href='https://www.facebook.com/CampLaurelwood/' sx={{color: '#3b5998'}} target='_blank' rel='noopener noreferrer'><FaFacebookSquare /></a></li>
+      <li><a href='https://www.youtube.com/channel/UC_Kr62M5Wdnoe6U3YLXoFhg' target='_blank' sx={{color: '#ff0000'}} rel='noopener noreferrer'><FaYoutubeSquare /></a></li>
+      {/* <li><a href='https://twitter.com/camp_laurelwood' sx={{color: '#00acee'}} target='_blank' rel='noopener noreferrer'><FaTwitterSquare /></a></li> */}
     </ul>
   )
 }

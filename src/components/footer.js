@@ -79,9 +79,9 @@ const Footer = () => {
                 px: 1
               }
             }}>
-              <a href='https://www.aijcamps.org/'><Img fixed={asocIndependentJewishCampLogo.childImageSharp.fixed} /></a>
-              <a href='https://www.jewishnewhaven.org/'><Img fixed={jfgnhLogo.childImageSharp.fixed} /></a>
-              <a href='https://www.acacamps.org/'><Img fixed={acaLogo.childImageSharp.fixed} /></a>
+              <a href='https://www.aijcamps.org/' target='_blank' rel='noopener noreferrer'><Img fixed={asocIndependentJewishCampLogo.childImageSharp.fixed} /></a>
+              <a href='https://www.jewishnewhaven.org/' target='_blank' rel='noopener noreferrer'><Img fixed={jfgnhLogo.childImageSharp.fixed} /></a>
+              <a href='https://www.acacamps.org/' target='_blank' rel='noopener noreferrer'><Img fixed={acaLogo.childImageSharp.fixed} /></a>
             </Flex>
           </Box>
         </Flex>
