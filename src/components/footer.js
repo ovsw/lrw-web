@@ -64,7 +64,7 @@ const Footer = () => {
               <div className='adr' sx={{mt: 4, color: 'gray.4'}}>
                 <div className='street-address'>463 Summer Hill Rd.</div>
                 <span className='locality'>Madison</span>,{' '}
-                <span className='region'>CT</span>2{' '}
+                <span className='region'>CT</span>{' '}
                 <span className='postal-code'>06443</span>{' '}
                 <span className='country-name'>United States</span>
               </div>
