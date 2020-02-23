@@ -37,7 +37,7 @@ class Megamenu extends React.Component {
     const {menuTitle, mainLink, menuColumns} = this.props
     const {megaMenuVisible} = this.state
     return (
-      <li sx={{mx: 3}}>
+      <>
         <NavLink
           onTouchStart={this.toggleMegaMenu}
           onMouseEnter={this.showMenu}
@@ -45,9 +45,7 @@ class Megamenu extends React.Component {
           role='link'
           tabIndex='-1'
           to={mainLink}
-          sx={{
-            variant: 'links.navMain'
-          }}
+          sx={navMainItem}
         >
           <span>{menuTitle}</span>
         </NavLink>
@@ -105,9 +103,87 @@ class Megamenu extends React.Component {
             ))}
           </Flex>
         </div>
-      </li>
+      </>
     )
   }
 }
 
 export default Megamenu
+
+const navMainItem = {
+  color: 'secondary',
+  letterSpacing: '0.05rem',
+  mt: '7px',
+  pb: '5px',
+  position: 'relative',
+  overflow: 'hidden',
+  display: 'inline-block',
+  transition: '.3s ease-out .1s',
+  textTransform: 'uppercase',
+  textDecoration: 'none',
+  fontSize: [1, 1, '22px', 4],
+  fontFamily: 'heading',
+  fontWeight: 'bold',
+  '& span': {
+    // '&::before': {
+    //   width: '100%',
+    //   height: '2px',
+    //   background: '#8a4c2d',
+    //   content: '""',
+    //   position: 'absolute',
+    //   left: '0',
+    //   top: '0',
+    //   transition: '.3s',
+    //   transform: 'translateX(-100%)'
+    // },
+    '&::after': {
+      width: '30px',
+      height: '4px',
+      borderRadius: '999px',
+      background: '#8a4c2d',
+      content: '""',
+      position: 'absolute',
+      left: '50%',
+      bottom: '0',
+      transition: '.3s',
+      transform: 'translateX(-50%)'
+    }
+  },
+  // '&::before': {
+  //   width: '2px',
+  //   height: '100%',
+  //   background: '#8a4c2d',
+  //   content: '""',
+  //   position: 'absolute',
+  //   left: '0',
+  //   top: '0',
+  //   transition: '.3s',
+  //   transform: 'translateY(-100%)'
+  // },
+  // '&::after': {
+  //   width: '2px',
+  //   height: '100%',
+  //   background: '#8a4c2d',
+  //   content: '""',
+  //   position: 'absolute',
+  //   right: '0',
+  //   bottom: '0',
+  //   transition: '.3s',
+  //   transform: 'translateY(100%)'
+  // },
+  '&:hover': {
+    '&::before, &::after': {
+      transform: 'translateX(0)'
+    },
+    '& span': {
+      '&::before': {
+        transform: 'translateY(0)'
+      },
+      '&::after': {
+        transform: 'translateY(0)',
+        width: '100%',
+        left: '0'
+      }
+    }
+  }
+}

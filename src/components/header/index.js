@@ -17,16 +17,16 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   return (
     <ThemeHeader sx={{
       background: `url(${headerBgImage}) repeat bottom left`,
-      pb: 2,
       position: 'fixed',
       width: '100%',
       zIndex: 9999,
       boxShadow: '0 0 20px rgba(0,0,0,0.4)',
       borderTop: '4px solid',
       borderBottom: '2px solid',
-      borderColor: 'secondary'
+      borderColor: 'secondary',
+      height: [null, null, '107px', '117px']
     }}>
-      <Container className='HeaderContainer' sx={{pt: 2, pb: 0, maxWidth: '5xl'}}>
+      <Container className='HeaderContainer' sx={{py: 2, px: 0, maxWidth: '6xl'}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>
           <Box sx={{flex: 'flex: 1 1 0%', display: ['flex', 'flex', 'block'], alignItems: 'center'}}>

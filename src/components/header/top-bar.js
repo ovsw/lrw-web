@@ -8,13 +8,12 @@ import {Link} from 'gatsby'
 const TopBar = () => {
   return (
     <div>
-      <Flex sx={{display: ['none', 'none', 'flex'], pt: '7px'}}>
+      <Flex sx={{display: ['none', 'none', 'flex'], justifyContent: 'center'}}>
         <Box sx={{
-          width: '1/2',
           textAlign: 'right',
-          pr: 5,
+          pr: 1,
           '& a': {
-            mr: 2
+            mr: [1, 1, 1, 2]
           }
         }}>
           <Link to='/dates-and-rates/' sx={{variant: 'links.topBar'}}>Dates &amp; Rates</Link>
@@ -22,11 +21,10 @@ const TopBar = () => {
           <Link to='/interactive-map/' sx={{variant: 'links.topBar'}}>Interactive Map</Link>
           <Link to='/request-info/' sx={{variant: 'links.topBar'}} rel='noopener noreferrer' target='_blank'>Request Info</Link>
         </Box>
+        <Box sx={{flex: '0 1 120px'}} />
         <Box sx={{
-          width: '1/2',
-          pl: '90px',
           '& a': {
-            ml: 2
+            ml: [1, 1, 1, 2]
           }
         }}>
           <a href='https://laurelwood.campintouch.com/ui/forms/application/camper/App' rel='noopener noreferrer' sx={{variant: 'links.topBar'}}target='_blank'>Enroll Now</a>

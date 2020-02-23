@@ -14,7 +14,7 @@ const MainNav = ({navStructure, showNav, onHideNav}) => {
   query{
     logoImage: file(relativePath: { eq: "camp-laurelwood-logo.png" }) {
       childImageSharp {
-        fixed(width: 119) {
+        fixed(width: 114) {
           ...GatsbyImageSharpFixed_noBase64
         }
       }
@@ -56,23 +56,17 @@ const MainNav = ({navStructure, showNav, onHideNav}) => {
         }}
       >
         <Flex as='ul' sx={navUlDesk}>
+          <li sx={{...navUlDesk.navLiItem, order: '2', flex: '0 1 120px'}}>
+            <Link to='/' sx={logoLink}>
+              <Img sx={logoLink.Img} fixed={logoImage.childImageSharp.fixed} fadeIn={false} loading='eager' alt='Camp Laurelwood Logo' />
+            </Link></li>
           {navStructure.map((mainMenuItem, i) => {
             if (i > 3) { return } // only show the first 4 items in the desktop menu
-            if (i === 2) {
-              return (
-                <React.Fragment key={mainMenuItem.slug}>
-                  <li sx={navUlDesk.navLiItem}>
-                    <Link to='/' sx={logoLink}>
-                      <Img sx={logoLink.Img} fixed={logoImage.childImageSharp.fixed} fadeIn={false} loading='eager' alt='Camp Laurelwood Logo' />
-                    </Link></li>
-                  <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
-                </React.Fragment>
-              )
-            } else {
-              return (
+            return (
+              <li sx={{px: [0, 0, 2, 3], order: i}}>
                 <MegaMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} />
-              )
-            }
+              </li>
+            )
           })}
         </Flex>
 
@@ -96,11 +90,10 @@ const navMobileUl = {
 const navUlDesk = {
   variant: 'lists.reset',
   m: 0,
-  pt: [3, 3, 1],
-  pb: [4, 4, 1],
-  px: [0, 0, 0, 2, 3],
+  pt: [3, 3, 0],
+  pb: [4, 4, 0],
   display: ['block', 'block', 'flex'],
-  justifyContent: 'space-around',
+  justifyContent: 'center',
 
   'navLiItem': {
     flexGrow: '1',
@@ -108,18 +101,15 @@ const navUlDesk = {
     display: ['none', 'none', 'block']
   }
 }
+
 const logoLink = {
   display: 'block',
   position: 'absolute',
   width: '100%',
-  left: '100px',
-  marginLeft: '-100px',
-  top: '-45px',
+  top: [null, null, '-42px', '-47px'],
   textAlign: 'center',
   'Img': {
-    width: '120px',
-    position: 'relative',
-    top: '-12px'
+    position: 'relative'
   }
 }
 
