@@ -73,7 +73,7 @@ const PageSidebar = ({section}) => {
             borderBottom: '1px solid',
             borderBottomColor: 'gray.3'
           }}>
-            <Navlink to={menuItem.slug} activeClassName='active' sx={{variant: 'links.sidebarNav'}} partiallyActive>{menuItem.title}</Navlink>
+            <Navlink to={menuItem.slug} sx={{variant: 'links.sidebarNav'}} >{menuItem.title}</Navlink>
             { menuItem.children.length > 0 &&
             <ul sx={{pl: 4, listStyle: 'none'}}>
               {menuItem.children.map(childItem => (

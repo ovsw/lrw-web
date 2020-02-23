@@ -9,5 +9,5 @@ export default ({to, ...props}) => {
   if (isExternal) {
     return <a {...props} href={to} rel='noopener noreferrer' target='_blank' />
   }
-  return <Link {...props} to={to} activeClassName='active' />
+  return <Link {...props} to={to} activeClassName='active' partiallyActive />
 }
