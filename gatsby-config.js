@@ -395,8 +395,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-theme-ui',
     'gatsby-theme-style-guide',
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-sanity',

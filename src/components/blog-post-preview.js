@@ -7,15 +7,10 @@ import {buildImageObj, cn, getBlogUrl} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 
-import styles from './blog-post-preview.module.css'
-
 function BlogPostPreview (props) {
   return (
-    <Link
-      className={styles.inList}
-      to={`/news/${props.slug.current}/`}
-    >
-      <div className={styles.leadMediaThumb}>
+    <Link>
+      <div>
         {props.mainImage && props.mainImage.asset && (
           <img
             src={imageUrlFor(buildImageObj(props.mainImage))
@@ -35,14 +30,14 @@ function BlogPostPreview (props) {
           />
         )}
       </div>
-      <div className={styles.text}>
+      <div>
         <Styled.h3>{props.title}</Styled.h3>
         {props._rawExcerpt && (
-          <div className={styles.excerpt}>
+          <div>
             <PortableText blocks={props._rawExcerpt} sx={{fontFamily: 'body'}} />
           </div>
         )}
-        <div className={styles.date}>{format(props.publishedAt, 'MMMM Do, YYYY')}</div>
+        <div>{format(props.publishedAt, 'MMMM Do, YYYY')}</div>
       </div>
     </Link>
   )

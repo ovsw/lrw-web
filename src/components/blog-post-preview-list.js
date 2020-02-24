@@ -4,13 +4,11 @@ import {jsx, Styled} from 'theme-ui'
 import {Link} from 'gatsby'
 import BlogPostPreview from './blog-post-preview'
 
-import styles from './blog-post-preview-list.module.css'
-
 function BlogPostPreviewGrid (props) {
   return (
     <div>
       {props.title && <Styled.h1>{props.title}</Styled.h1>}
-      <ul className={styles.grid}>
+      <ul>
         {props.nodes &&
           props.nodes.map(node => (
             <li key={node.id}>
@@ -19,7 +17,7 @@ function BlogPostPreviewGrid (props) {
           ))}
       </ul>
       {props.browseMoreHref && (
-        <div className={styles.browseMoreNav}>
+        <div>
           <Link to={props.browseMoreHref}>Browse more</Link>
         </div>
       )}
