@@ -2,7 +2,7 @@ import React from 'react'
 import {Container} from 'theme-ui'
 import {graphql} from 'gatsby'
 import GraphQLErrorList from '../components/graphql-error-list'
-import BlogPost from '../components/blog-post'
+import BlogPost from '../components/blog/blog-post'
 import SEO from '../components/seo'
 import {toPlainText} from '../lib/helpers'
 import Layout from '../containers/layout'
@@ -13,7 +13,7 @@ export const query = graphql`
       id
       publishedAt
       mainImage {
-        ...SanityImage
+        ...SanityImageMeta
         alt
       }
       title

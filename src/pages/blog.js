@@ -6,7 +6,7 @@ import Layout from '../containers/layout'
 
 import {graphql} from 'gatsby'
 import {mapEdgesToNodes} from '../lib/helpers'
-import BlogPostPreviewList from '../components/blog-post-preview-list'
+import BlogPostPreviewList from '../components/blog/blog-post-preview-list'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 
@@ -51,10 +51,9 @@ const ArchivePage = props => {
   return (
     <Layout>
       <SEO title='News' />
-      <Container sx={{pt: ['10rem'], pb: 5}}>
-        <Styled.h1 sx={{mb: 4}}>News</Styled.h1>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}
-      </Container>
+      <>
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} title='Camp Blog' />}
+      </>
     </Layout>
   )
 }

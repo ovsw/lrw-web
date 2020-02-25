@@ -31,32 +31,6 @@ export default GenericPageTemplate
 
 export const query = graphql`
 
-  fragment SanityImageMeta on SanityMainImage {
-    crop {
-      _key
-      _type
-      top
-      bottom
-      left
-      right
-    }
-    hotspot {
-      _key
-      _type
-      x
-      y
-      height
-      width
-    }
-    asset {
-      _id
-      metadata {
-        lqip
-      }
-    }
-  }
-
-
   query GenericPageTemplateQuery($id: String!) {
     page: sanityPage(id: {eq: $id}) {
       id
