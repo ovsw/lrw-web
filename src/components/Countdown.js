@@ -3,6 +3,7 @@ import React from 'react' // eslint-disable-line
 import {jsx, Styled} from 'theme-ui'
 // import Moment from 'react-moment'
 import moment from 'moment'
+import {GiAlarmClock} from 'react-icons/gi'
 
 class Countdown extends React.Component {
   constructor (props) {
@@ -58,7 +59,7 @@ class Countdown extends React.Component {
 
     return (
       <div sx={{py: 4, borderRadius: '10px', margin: ['0 auto'], mb: 5, maxWidth: '3xl'}}>
-        <Styled.h3 as='p' sx={{textAlign: 'center', mt: 0, color: 'accent'}}>Countdown to Camp {new Date().getFullYear()}</Styled.h3>
+        <Styled.h3 as='p' sx={{textAlign: 'center', mt: 0, color: 'accent'}}><GiAlarmClock sx={{position: 'relative', top: '10px', fontSize: '4rem'}} /> Countdown to Camp {new Date().getFullYear()}</Styled.h3>
         <div sx={countDownWrapper}>
           {months && (
             <div className='countdown-item'>
