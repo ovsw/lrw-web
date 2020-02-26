@@ -24,7 +24,8 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       borderTop: '4px solid',
       borderBottom: '2px solid',
       borderColor: 'secondary',
-      height: [null, null, '107px', '117px']
+      height: [null, null, '107px', '117px'],
+      px: [2, null]
     }}>
       <Container className='HeaderContainer' sx={{py: 2, px: 0, maxWidth: '6xl'}}>
         <TopBar />
