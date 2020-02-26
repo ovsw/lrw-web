@@ -12,7 +12,7 @@ const SectionThreeColumns = () => {
     <section sx={{variant: 'sections.hpSectionLight'}}>
       <Container sx={{px: 0}}>
         <Countdown
-          timeTillDate='06 28 2020, 8:00 am'
+          timeTillDate='02 26 2020, 6:46 pm'
           timeFormat='MM DD YYYY, h:mm a'
         />
         <Styled.h1 as='h2' sx={{textAlign: 'center'}}>Connecticut's Premier Jewish Summer Camp</Styled.h1>

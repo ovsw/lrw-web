@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx} from 'theme-ui'
+import {jsx, Styled} from 'theme-ui'
 // import Moment from 'react-moment'
 import moment from 'moment'
 
@@ -8,25 +8,30 @@ class Countdown extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      months: undefined,
       days: undefined,
       hours: undefined,
       minutes: undefined,
-      seconds: undefined
+      seconds: undefined,
+      isBeforeCountdownDate: false
     }
   }
 
   componentDidMount () {
+    const {timeTillDate, timeFormat} = this.props
+    const then = moment(timeTillDate, timeFormat)
+
     this.interval = setInterval(() => {
-      const {timeTillDate, timeFormat} = this.props
-      const then = moment(timeTillDate, timeFormat)
       const now = moment()
       const countdown = moment(then - now)
+      const months = countdown.format('M')
       const days = countdown.format('D')
       const hours = countdown.format('HH')
       const minutes = countdown.format('mm')
       const seconds = countdown.format('ss')
+      const isBeforeCountdownDate = moment().isBefore(then)
 
-      this.setState({days, hours, minutes, seconds})
+      this.setState({months, days, hours, minutes, seconds, isBeforeCountdownDate})
     }, 1000)
   }
 
@@ -37,7 +42,8 @@ class Countdown extends React.Component {
   }
 
   render () {
-    const {days, hours, minutes, seconds} = this.state
+    const {months, days, hours, minutes, seconds, isBeforeCountdownDate} = this.state
+    const monthsRadius = mapNumber(months, 12, 0, 0, 360)
     const daysRadius = mapNumber(days, 30, 0, 0, 360)
     const hoursRadius = mapNumber(hours, 24, 0, 0, 360)
     const minutesRadius = mapNumber(minutes, 60, 0, 0, 360)
@@ -46,22 +52,32 @@ class Countdown extends React.Component {
     if (!seconds) {
       return null
     }
+    if (!isBeforeCountdownDate) {
+      return <Styled.h1 as='p' sx={{textAlign: 'center', color: 'accent'}}>{new Date().getFullYear()} Camp is in Session!!!</Styled.h1>
+    }
 
     return (
-      <div>
-        <h1>Countdown</h1>
+      <div sx={{py: 4, borderRadius: '10px', margin: ['0 auto'], mb: 5, maxWidth: '3xl'}}>
+        <Styled.h3 as='p' sx={{textAlign: 'center', mt: 0, color: 'accent'}}>Countdown to Camp {new Date().getFullYear()}</Styled.h3>
         <div sx={countDownWrapper}>
+          {months && (
+            <div className='countdown-item'>
+              <SVGCircle radius={monthsRadius} />
+              {months - 1}
+              <span>months</span>
+            </div>
+          )}
           {days && (
             <div className='countdown-item'>
               <SVGCircle radius={daysRadius} />
-              {days}
+              {days - 1 }
               <span>days</span>
             </div>
           )}
           {hours && (
             <div className='countdown-item'>
               <SVGCircle radius={hoursRadius} />
-              {hours}
+              {hours - 2}
               <span>hours</span>
             </div>
           )}
@@ -89,7 +105,7 @@ export default Countdown
 
 const SVGCircle = ({radius}) => (
   <svg sx={countDownSVG}>
-    <path fill='none' stroke='#333' strokeWidth='4' d={describeArc(50, 50, 48, 0, radius)} />
+    <path fill='none' strokeWidth='2' d={describeArc(50, 50, 48, 0, radius)} />
   </svg>
 )
 
@@ -128,7 +144,7 @@ const countDownWrapper = {
   justifyContent: 'center',
   flexWrap: 'wrap',
   '.countdown-item': {
-    color: '#111',
+    color: 'secondary',
     fontSize: '40px',
     display: 'flex',
     alignItems: 'center',
@@ -141,7 +157,7 @@ const countDownWrapper = {
     width: '100px',
     height: '100px',
     span: {
-      color: '#333',
+      color: 'accent',
       fontSize: '12px',
       fontWeight: '600',
       textTransform: 'uppercase'
@@ -153,5 +169,8 @@ const countDownSVG = {
   top: '0',
   left: '0',
   width: '100px',
-  height: '100px'
+  height: '100px',
+  stroke: 'primary'
 }
+
+const ContainerUnusedStyles = {py: 4, bg: 'background', border: '2px dashed', borderColor: 'primary', borderRadius: '10px', boxShadow: '0 0 6px 2px rgba(0,0,0,0.1)', margin: ['0 auto'], mb: 5, maxWidth: '3xl'}
