@@ -63,8 +63,8 @@ const MainNav = ({navStructure, showNav, onHideNav}) => {
           {navStructure.map((mainMenuItem, i) => {
             if (i > 3) { return } // only show the first 4 items in the desktop menu
             return (
-              <li sx={{px: [0, 0, 2, 3], order: i}}>
-                <MegaMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} />
+              <li key={mainMenuItem.slug} sx={{px: [0, 0, 2, 3], order: i}}>
+                <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} />
               </li>
             )
           })}
