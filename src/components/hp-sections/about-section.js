@@ -4,12 +4,17 @@ import {jsx, Container, Styled} from 'theme-ui'
 import {Link} from 'gatsby'
 import {Box, Flex} from '@theme-ui/components'
 
+import Countdown from '../Countdown'
 import Column from './about-section-column'
 
 const SectionThreeColumns = () => {
   return (
     <section sx={{variant: 'sections.hpSectionLight'}}>
       <Container sx={{px: 0}}>
+        <Countdown
+          timeTillDate='06 28 2020, 8:00 am'
+          timeFormat='MM DD YYYY, h:mm a'
+        />
         <Styled.h1 as='h2' sx={{textAlign: 'center'}}>Connecticut's Premier Jewish Summer Camp</Styled.h1>
         <div sx={{variant: 'styles', mt: 5, px: 2, textAlign: 'center', maxWidth: '3xl', mx: 'auto'}}>
           <p>We offer both Overnight and Day Camp <Link to='/programs/'>programs</Link>, lots of fun <Link to='/activities/'>activities</Link> and a warm welcoming community. </p>

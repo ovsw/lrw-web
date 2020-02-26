@@ -48,6 +48,7 @@
     "get-youtube-id": "^1.0.1",
     "is-absolute-url": "^3.0.3",
     "leaflet": "^1.6.0",
+    "moment": "^2.24.0",
     "react-icons": "^3.8.0",
     "react-leaflet": "^2.6.1",
     "react-modal-video": "^1.2.3",
