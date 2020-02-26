@@ -52,7 +52,7 @@ const Footer = () => {
       backgroundSize: 'cover',
       backgroundColor: 'primaryDark',
       color: 'gray.4'}}>
-      <Container>
+      <Container sx={{px: [1, null]}}>
         <Flex sx={{flexWrap: 'wrap', pt: [4, 4, 5], pb: [3, 3, 3, 4]}}>
           <Box sx={{width: ['full', 'full', '2/5'], px: [0, 4], py: [4, 0], textAlign: ['center', 'center', 'right'], borderRight: ['none', 'none', '1px solid lightgray']}}>
             <div className='vcard'>
@@ -71,18 +71,18 @@ const Footer = () => {
 
             </div>
           </Box>
-          <Box sx={{width: ['full', 'full', '3/5'], px: 4, textAlign: 'center'}}>
+          <Box sx={{width: ['full', 'full', '3/5'], px: [0, 1, 4], textAlign: 'center'}}>
             <SocialLinks />
-            <Flex sx={{
-              justifyContent: ['space-around', 'space-around'],
+            <div sx={{
               a: {
-                px: 1
+                px: 1,
+                display: 'inline-block'
               }
             }}>
               <a href='https://www.aijcamps.org/' target='_blank' rel='noopener noreferrer'><Img fixed={asocIndependentJewishCampLogo.childImageSharp.fixed} /></a>
               <a href='https://www.jewishnewhaven.org/' target='_blank' rel='noopener noreferrer'><Img fixed={jfgnhLogo.childImageSharp.fixed} /></a>
               <a href='https://www.acacamps.org/' target='_blank' rel='noopener noreferrer'><Img fixed={acaLogo.childImageSharp.fixed} /></a>
-            </Flex>
+            </div>
           </Box>
         </Flex>
         <p sx={{

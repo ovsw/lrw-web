@@ -8,7 +8,7 @@ const SocialLinks = () => {
   return (
     <ul sx={{
       variant: 'lists.reset',
-      textAlign: ['center', 'center'],
+      textAlign: ['right', 'center'],
       mt: [5, 5, 3],
       mb: [5, 5, 4],
       li: {
