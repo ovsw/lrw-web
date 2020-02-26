@@ -10,6 +10,7 @@ import getYouTubeId from 'get-youtube-id'
 import YouTube from 'react-youtube'
 import Table from './Table'
 import Embed from './Embed'
+import DatesRatesLinks from './DatesRatesLinks'
 
 import {GoLinkExternal} from 'react-icons/go'
 
@@ -43,7 +44,8 @@ const serializers = {
       return (<YouTube videoId={id} opts={YTopts} />)
     },
     mytable: Table,
-    iframeEmbed: Embed
+    iframeEmbed: Embed,
+    datesRatesLinks: DatesRatesLinks
   },
   marks: {
     button,

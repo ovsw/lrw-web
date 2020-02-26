@@ -37,9 +37,9 @@ const Sidebar = () => {
       <p>At Camp Laurelwood, our campers grow into Staff-in-Training, then eventually can apply to be on staff.</p>
       <p>Growing up at camp can mean making camp your summer home for many years!</p>
 
-      <div >
-        <Link to='/programs/' sx={{variant: 'buttons.3DAccent', display: 'inline-block', mr: 3, mt: 4}}>More on CAPs </Link>
-        <Link to='/dates-and-rates/' sx={{variant: 'buttons.3D', display: 'inline-block', mt: 4}}>Dates &amp; Rates </Link>
+      <div sx={{mt: 4}}>
+        <Link to='/dates-and-rates/' sx={{variant: 'buttons.3DAccent', display: 'inline-block', mr: 3}}>Dates &amp; Rates </Link>
+        <Link to='/programs/' sx={{variant: 'buttons.3D', display: 'inline-block'}}>More on Programs </Link>
       </div>
 
       {/* <FaChevronRight sx={{position: 'relative', top: '3px'}} /> */}
