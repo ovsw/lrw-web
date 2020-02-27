@@ -50,6 +50,10 @@ class Countdown extends React.Component {
     const minutesRadius = mapNumber(minutes, 60, 0, 0, 360)
     const secondsRadius = mapNumber(seconds, 60, 0, 0, 360)
 
+    const correctedMonths = months - 1
+    const correctedDays = days - 1
+    const correctedHours = hours - 1
+
     if (!seconds) {
       return null
     }
@@ -64,29 +68,29 @@ class Countdown extends React.Component {
           {months && (
             <div className='countdown-item'>
               <SVGCircle radius={monthsRadius} />
-              {months - 1}
-              <span>months</span>
+              {correctedMonths}
+              <span>{pluralizeUnits(correctedMonths, 'month')}</span>
             </div>
           )}
           {days && (
             <div className='countdown-item'>
               <SVGCircle radius={daysRadius} />
-              {days - 1 }
-              <span>days</span>
+              {correctedDays}
+              <span>{pluralizeUnits(correctedDays, 'day')}</span>
             </div>
           )}
           {hours && (
             <div className='countdown-item'>
               <SVGCircle radius={hoursRadius} />
-              {hours - 2}
-              <span>hours</span>
+              {correctedHours}
+              <span>{pluralizeUnits(correctedHours, 'hour')}</span>
             </div>
           )}
           {minutes && (
             <div className='countdown-item'>
               <SVGCircle radius={minutesRadius} />
               {minutes}
-              <span>minutes</span>
+              <span>{pluralizeUnits(minutes, 'minute')}</span>
             </div>
           )}
           {seconds && (
@@ -117,6 +121,14 @@ function polarToCartesian (centerX, centerY, radius, angleInDegrees) {
   return {
     x: centerX + (radius * Math.cos(angleInRadians)),
     y: centerY + (radius * Math.sin(angleInRadians))
+  }
+}
+
+function pluralizeUnits (number, measurementUnit) {
+  if (parseInt(number) === 1) {
+    return `${measurementUnit}`
+  } else {
+    return `${measurementUnit}s`
   }
 }
 
