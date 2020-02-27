@@ -7,6 +7,8 @@ import PortableText from '../portableText'
 import {format} from 'date-fns'
 import Img from 'gatsby-image'
 
+import {GiNewspaper} from 'react-icons/gi'
+
 // containers
 // import SectionWithSidebar from '../../containers/section-with-sidebar'
 // import Section2ColFull from '../../containers/section-2col-full'
@@ -15,15 +17,21 @@ const LatestNewsSection = ({posts}) => {
   const post = posts[0]
   return (
     <section sx={{variant: 'sections.hpSectionLight'}}>
-      <Container sx={{maxWidth: '7xl', py: 5}}>
+      <Container sx={{maxWidth: '7xl', pt: 0, pb: 5}}>
+        <Styled.h1 as='h2' sx={{textAlign: 'center', mb: 5}}> <Link to='/blog/' sx={{color: 'primary'}} ><GiNewspaper sx={{variant: 'links.icon'}} /> From Our Blog</Link></Styled.h1>
         <Flex sx={{
           flexWrap: 'wrap',
           flexDirection: ['column-reverse', 'column-reverse', 'column-reverse', 'row']
         }}>
+          <div sx={{width: ['full', 'full', 'full', '50%']}}>
+            <LatestNewsImage image={post.mainImage} link={`/news/${post.slug.current}`} />
+          </div>
           <LatestNewsContent post={post} />
-          <LatestNewsImage image={post.mainImage} link={`/news/${post.slug.current}`} />
         </Flex>
       </Container>
+      {/* <Container sx={{textAlign: 'center'}}>
+        <Link to='/blog/' sx={{variant: 'buttons.3D'}}>More from our Blog</Link>
+      </Container> */}
     </section>
   )
 }
@@ -32,18 +40,23 @@ const LatestNewsContent = ({post}) => {
   return (
     <div sx={{
       width: ['full', 'full', 'full', '50%'],
-      pr: [null, null, null, '2rem'],
-      pt: [ '1rem', '1rem', '1rem', 0 ],
-      p: {lineHeight: 'snug'}
+      px: '2rem',
+      'p': {lineHeight: 'snug'}
     }}>
-      <div sx={{color: 'gray.5', fontFamily: 'mono', fontSize: 1, borderTop: '1px solid', borderLeft: '1px solid', borderColor: 'gray.4', pl: 3, display: 'inline-block', pt: 3, mt: 2}}>{format(post.publishedAt, 'MMMM Do, YYYY')}</div>
-      <Styled.h2 as='h2'>{post.title}</Styled.h2>
+      <Styled.h3 sx={{
+        mt: [2, '0'],
+        borderBottom: '3px solid',
+        borderTop: '3px solid',
+        borderColor: 'primary',
+        py: 3
+      }}>{post.title}</Styled.h3>
+      <div sx={{color: 'muted', fontFamily: 'mono', fontSize: 1, display: 'inline-block', mt: 2}}>{format(post.publishedAt, 'MMMM Do, YYYY')}</div>
       {post._rawExcerpt && (
-        <div>
+        <div sx={{color: 'muted'}}>
           <PortableText blocks={post._rawExcerpt} sx={{fontFamily: 'body'}} />
         </div>
       )}
-      <Link to={`/news/${post.slug.current}`} sx={{variant: 'buttons.3D', display: 'inline-block', my: 3, mr: 3, position: 'relative'}}>
+      <Link to={`/news/${post.slug.current}`} sx={{variant: 'buttons.3DAccent', display: 'inline-block', my: 3, mr: 3, position: 'relative'}}>
         Read More
       </Link>
     </div>

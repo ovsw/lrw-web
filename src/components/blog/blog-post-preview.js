@@ -27,7 +27,7 @@ function BlogPostPreview ({title, publishedAt, mainImage, slug, _rawExcerpt}) {
         <Styled.h3 as='h2'>{title}</Styled.h3>
         <div className='date'>{format(publishedAt, 'MMMM Do, YYYY')}</div>
         {_rawExcerpt && (
-          <div>
+          <div sx={{color: 'muted'}}>
             <PortableText blocks={_rawExcerpt} sx={{fontFamily: 'body'}} />
           </div>
         )}
@@ -63,7 +63,7 @@ const textWrapper = {
   display: ['block', 'block', 'grid'],
   '.date': {
     fontSize: 1,
-    color: 'gray.5',
+    color: 'muted',
     my: 2,
     fontFamily: 'mono'
   }

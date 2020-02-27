@@ -98,6 +98,10 @@ const links = {
     },
     footerLinks: {
       color: 'accent'
+    },
+    icon: {
+      position: 'relative',
+      top: '0.2em'
     }
   }
 }
