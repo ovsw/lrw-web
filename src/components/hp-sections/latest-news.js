@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx, Container, Styled} from 'theme-ui'
-import {Link, useStaticQuery, graphql} from 'gatsby'
+import {Link} from 'gatsby'
 import {Flex} from '@theme-ui/components'
 import PortableText from '../portableText'
 import {format} from 'date-fns'
