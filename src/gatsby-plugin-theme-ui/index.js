@@ -97,7 +97,8 @@ export default {
       fontFamily: 'heading2',
       fontWeight: 'normal',
       'fontSize': 6,
-      'mt': 4,
+      'mt': 5,
+      mb: 4,
       'color': 'primary'
     },
     'h3': {

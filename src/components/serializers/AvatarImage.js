@@ -22,7 +22,8 @@ export default ({node}) => {
   return (
     <figure sx={{
       margin: '0',
-      float: 'left',
+      float: ['none', 'left'],
+      textAlign: 'center',
       borderRadius: '100%',
       shapeOutside: 'circle()',
       marginRight: '2rem',
