@@ -5,6 +5,8 @@ import {jsx} from 'theme-ui'
 import {buildImageObj} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 
+import ScrollDownIcon from '../elements/scroll-down-icon'
+
 function GenericPage ({_rawBody, title, section, headerImage = null}) {
   return (
     <>
@@ -59,6 +61,14 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
               }}
             />
           </picture>
+          <div sx={{
+            position: 'absolute',
+            bottom: '50px',
+            left: '50%',
+            marginLeft: '-1.5rem'
+          }}>
+            <ScrollDownIcon />
+          </div>
         </div>
       )}
 
