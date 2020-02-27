@@ -70,7 +70,7 @@ const programs = [
     link: '/programs/bonim-travel-program/'
   },
   {
-    name: 'SIT Program',
+    name: 'Staff-In-Training Program',
     age: '11th graders',
     icon: 'leader',
     description: 'Provides rising 11th graders the tools and experience they need to become future leaders, strong role models  Camp Laurelwood staff.',

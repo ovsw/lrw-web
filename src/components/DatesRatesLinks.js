@@ -25,7 +25,7 @@ const DatesRatesLinks = [
     link: '/dates-and-rates-bonim-travel-program/'
   },
   {
-    name: 'SIT Program',
+    name: 'Staff-in-Training Program',
     icon: 'leader',
     description: 'Dates & Rates',
     link: '/dates-and-rates-sit-program/'
