@@ -21,6 +21,16 @@ class Countdown extends React.Component {
   componentDidMount () {
     const {timeTillDate, timeFormat} = this.props
     const then = moment(timeTillDate, timeFormat)
+    const now = moment()
+    const countdown = moment(then - now)
+    const months = countdown.format('M')
+    const days = countdown.format('D')
+    const hours = countdown.format('HH')
+    const minutes = countdown.format('mm')
+    const seconds = countdown.format('ss')
+    const isBeforeCountdownDate = moment().isBefore(then)
+
+    this.setState({months, days, hours, minutes, seconds, isBeforeCountdownDate})
 
     this.interval = setInterval(() => {
       const now = moment()
