@@ -43,7 +43,7 @@ module.exports = {
                     children: []
                   },
                   {
-                    title: 'SIT Program',
+                    title: 'SIT Program (11th)',
                     slug: '/programs/sit-program/',
                     children: []
                   },
