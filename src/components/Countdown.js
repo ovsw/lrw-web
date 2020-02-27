@@ -20,27 +20,27 @@ class Countdown extends React.Component {
 
   componentDidMount () {
     const {timeTillDate, timeFormat} = this.props
-    const then = moment(timeTillDate, timeFormat)
-    const now = moment()
-    const countdown = moment(then - now)
-    const months = countdown.format('M')
-    const days = countdown.format('D')
-    const hours = countdown.format('HH')
-    const minutes = countdown.format('mm')
-    const seconds = countdown.format('ss')
-    const isBeforeCountdownDate = moment().isBefore(then)
+    const then = moment(timeTillDate, timeFormat).unix()
 
+    const now = moment().unix()
+    const diffTime = then - now
+    let isBeforeCountdownDate = diffTime > 0
+    let duration = moment.duration(diffTime * 1000, 'milliseconds')
+    let months = moment.duration(duration).months()
+    let days = moment.duration(duration).days()
+    let hours = moment.duration(duration).hours()
+    let minutes = moment.duration(duration).minutes()
+    let seconds = moment.duration(duration).seconds()
     this.setState({months, days, hours, minutes, seconds, isBeforeCountdownDate})
 
     this.interval = setInterval(() => {
-      const now = moment()
-      const countdown = moment(then - now)
-      const months = countdown.format('M')
-      const days = countdown.format('D')
-      const hours = countdown.format('HH')
-      const minutes = countdown.format('mm')
-      const seconds = countdown.format('ss')
-      const isBeforeCountdownDate = moment().isBefore(then)
+      duration = moment.duration(duration.asMilliseconds() - 1000, 'milliseconds')
+      months = moment.duration(duration).months()
+      days = moment.duration(duration).days()
+      hours = moment.duration(duration).hours()
+      minutes = moment.duration(duration).minutes()
+      seconds = moment.duration(duration).seconds()
+      isBeforeCountdownDate = diffTime > 0
 
       this.setState({months, days, hours, minutes, seconds, isBeforeCountdownDate})
     }, 1000)
@@ -54,56 +54,52 @@ class Countdown extends React.Component {
 
   render () {
     const {months, days, hours, minutes, seconds, isBeforeCountdownDate} = this.state
-    const monthsRadius = mapNumber(months, 12, 0, 0, 360)
+    const monthsRadius = mapNumber(months, 8, 0, 0, 360) // 8 months instead of 12 because that's the interval between camp seasons
     const daysRadius = mapNumber(days, 30, 0, 0, 360)
     const hoursRadius = mapNumber(hours, 24, 0, 0, 360)
     const minutesRadius = mapNumber(minutes, 60, 0, 0, 360)
     const secondsRadius = mapNumber(seconds, 60, 0, 0, 360)
 
-    const correctedMonths = months - 1
-    const correctedDays = days - 1
-    const correctedHours = hours - 1
-
-    if (!seconds) {
-      return null
-    }
+    // if (!seconds) {
+    //   return null
+    // }
     if (!isBeforeCountdownDate) {
       return <Styled.h1 as='p' sx={{textAlign: 'center', color: 'accent'}}>{new Date().getFullYear()} Camp is in Session!!!</Styled.h1>
     }
 
     return (
-      <div sx={{py: 4, borderRadius: '10px', margin: ['0 auto'], mb: 5, maxWidth: '3xl'}}>
+      <div sx={{pb: 3, borderRadius: '10px', margin: ['0 auto'], mb: 5, maxWidth: '3xl'}}>
         <Styled.h3 as='p' sx={{textAlign: 'center', mt: 0, color: 'accent'}}><GiAlarmClock sx={{position: 'relative', top: '10px', fontSize: '4rem'}} /> Countdown to Camp {new Date().getFullYear()}</Styled.h3>
         <div sx={countDownWrapper}>
-          {months && (
+          {(typeof (months) === 'number') && (
             <div className='countdown-item'>
               <SVGCircle radius={monthsRadius} />
-              {correctedMonths}
-              <span>{pluralizeUnits(correctedMonths, 'month')}</span>
+              {months}
+              <span>{pluralizeUnits(months, 'month')}</span>
             </div>
           )}
-          {days && (
+          {(typeof (days) === 'number') && (
             <div className='countdown-item'>
               <SVGCircle radius={daysRadius} />
-              {correctedDays}
-              <span>{pluralizeUnits(correctedDays, 'day')}</span>
+              {days}
+              <span>{pluralizeUnits(days, 'day')}</span>
             </div>
           )}
-          {hours && (
+          {(typeof (hours) === 'number') && (
             <div className='countdown-item'>
               <SVGCircle radius={hoursRadius} />
-              {correctedHours}
-              <span>{pluralizeUnits(correctedHours, 'hour')}</span>
+              {hours}
+              <span>{pluralizeUnits(hours, 'hour')}</span>
             </div>
           )}
-          {minutes && (
+          {(typeof (minutes) === 'number') && (
             <div className='countdown-item'>
               <SVGCircle radius={minutesRadius} />
               {minutes}
               <span>{pluralizeUnits(minutes, 'minute')}</span>
             </div>
           )}
-          {seconds && (
+          {(typeof (seconds) === 'number') && (
             <div className='countdown-item'>
               <SVGCircle radius={secondsRadius} />
               {seconds}
@@ -158,7 +154,11 @@ function describeArc (x, y, radius, startAngle, endAngle) {
 
 // Stackoverflow: https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
 function mapNumber (number, inMin, inMax, outMin, outMax) {
-  return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin
+  if (number == 0) {
+    return 359
+  } else {
+    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin
+  }
 }
 
 const countDownWrapper = {
