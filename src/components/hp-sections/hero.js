@@ -4,7 +4,7 @@ import {Container, jsx, Styled} from 'theme-ui'
 import {Box} from '@theme-ui/components'
 import HeroVideoBg from './hero-video-bg'
 import ModalVideo from 'react-modal-video'
-import ScrollDownIcon from '../../elements/scroll-down-icon'
+// import ScrollDownIcon from '../../elements/scroll-down-icon'
 
 import {FaPlay} from 'react-icons/fa'
 
@@ -85,14 +85,14 @@ const Hero = () => {
           <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Video
         </button>
         <ModalVideo channel='youtube' isOpen={playFullVideo} videoId='gcJfsUztrGE' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
-        <div sx={{
+        {/* <div sx={{
           position: 'absolute',
           bottom: '-140px',
           left: '50%',
           marginLeft: '-1.5rem'
         }}>
           <ScrollDownIcon />
-        </div>
+        </div> */}
       </Container>
     </Box>
   )

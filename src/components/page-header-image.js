@@ -61,14 +61,14 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
               }}
             />
           </picture>
-          <div sx={{
+          {/* <div sx={{
             position: 'absolute',
             bottom: '50px',
             left: '50%',
             marginLeft: '-1.5rem'
           }}>
             <ScrollDownIcon />
-          </div>
+          </div> */}
         </div>
       )}
 
