@@ -1,5 +1,6 @@
-// /** @jsx jsx */
+/** @jsx jsx */
 import React from 'react' // eslint-disable-line
+import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
 
@@ -21,7 +22,7 @@ const Nav = ({menuSections}) => {
       <MobileMenuToggle />
       {/* MAIN NAV WRAPPER: on mobile it's initially hidden. toggled by the hamburger menu (MobileMenuToggle). On desktop, always visible. */}
       <ul id='wpmega-menu-top' className='wpmm-mega-wrapper hide-menu' data-advanced-click='wpmm-click-submenu' data-trigger-effect='wpmm-onhover' sx={{
-        display: [showMobileMenu ? 'block' : 'hidden', null, 'block']
+        display: [showMobileMenu ? 'block' : 'none', null, 'block']
       }}>
         <MenuSection />
         <MenuSection />

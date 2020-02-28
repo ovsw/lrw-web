@@ -1,5 +1,6 @@
-// /** @jsx jsx */
+/** @jsx jsx */
 import React from 'react' // eslint-disable-line
+import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
 

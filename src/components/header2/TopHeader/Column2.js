@@ -1,5 +1,6 @@
-// /** @jsx jsx */
+/** @jsx jsx */
 import React from 'react' // eslint-disable-line
+import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
 
@@ -8,10 +9,10 @@ const Column2 = () => {
     <div className='top-right'>
       <ul>
         <li>
-          <a href='https://www.shibleydaycamp.com/blog' title='Blog'><span className='svg-ic'>blogi</span>Blog</a>
+          <a href='https://www.shibleydaycamp.com/blog' title='Blog'>Blog</a>
         </li>
         <li>
-          <a href='https://shibley.campintouch.com/v2/login.aspx' title='Login'><span className='svg-ic'>logini</span>Login</a>
+          <a href='https://shibley.campintouch.com/v2/login.aspx' title='Login'>Login</a>
         </li>
       </ul>
     </div>

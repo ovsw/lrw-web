@@ -1,9 +1,10 @@
-// /** @jsx jsx */
+/** @jsx jsx */
 import React from 'react' // eslint-disable-line
+import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
 
-import Nav from './Nav'
+import Nav from './Nav/'
 
 const BottomHeder = () => {
   return (
