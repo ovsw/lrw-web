@@ -4,9 +4,9 @@ import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
 
-const MobileQuickLinks = () => {
+const MobileQuickLinks = props => {
   return (
-    <div className='mobile-menu'>
+    <div className='mobile-menu' {...props}>
       <div className='mobile-nav'>
         <ul>
           <li><a href='https://www.shibleydaycamp.com/summer-camp/program/' title='Our Program'>Our Program</a></li>

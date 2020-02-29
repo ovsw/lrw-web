@@ -9,3 +9,6 @@
 // require('typeface-amatic-sc')
 // require('typeface-open-sans')
 // require('typeface-skranji')
+
+import AppContextProvider from './src/context'
+export const wrapRootElement = AppContextProvider

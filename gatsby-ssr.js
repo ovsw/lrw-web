@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+
+import AppContextProvider from './src/context'
+export const wrapRootElement = AppContextProvider

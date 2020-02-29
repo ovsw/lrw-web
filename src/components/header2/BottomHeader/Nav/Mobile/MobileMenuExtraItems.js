@@ -4,9 +4,9 @@ import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
 
-const MobileMenuExtraItems = () => {
+const MobileMenuExtraItems = props => {
   return (
-    <li className='mobile-li mobile-links'>
+    <li className='mobile-li mobile-links' {...props}>
       <div className='col-md-12 header-wrap'>
         <div className='top-col'>
           <div className='contact-col'>
