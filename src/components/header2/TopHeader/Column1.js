@@ -3,19 +3,22 @@ import React from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 import {Link} from 'gatsby'
+// import {useBreakpointIndex} from '@theme-ui/match-media'
 
 const Column1 = () => {
+  // const responsiveIndex = useBreakpointIndex()
+
   return (
     <div className='contact-col'>
 
       {/* MOBILE ONLY */}
-      <div className='mobile-menu' sx={{display: ['block', null, null, 'none'], a: {fontSize: 1}}}>
+      <div className='mobile-menu' sx={{display: ['block', null, null, 'none'], a: {fontSize: ['0.8rem', 1], lineHeight: 2}}}>
         <ul sx={{variant: 'lists.reset', display: 'flex', justifyContent: 'space-between', li: {display: 'inline-block'}}}>
           <li>
             <Link to='/dates-and-rates/' title='Dates &amp; Rates'><span>Dates &amp; Rates</span></Link>
           </li>
           <li>
-            <Link to='https://laurelwood.campintouch.com/ui/forms/application/camper/App' title='Enroll Now'><span>Enroll Now</span></Link>
+            <Link to='https://laurelwood.campintouch.com/ui/forms/application/camper/App' title='Enroll Now'><span> Enroll Now</span></Link>
           </li>
         </ul>
       </div>

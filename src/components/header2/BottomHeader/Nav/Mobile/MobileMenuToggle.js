@@ -28,13 +28,13 @@ const MobileMenuToggle = () => {
         circle: {
           strokeDashoffset: isMobileNavOpen ? '0' : `${circumference(circleRadius)}`
         },
-        '.bar:nth-child(1),.bar:nth-child(4)': {
+        '.bar:nth-of-type(1),.bar:nth-of-type(4)': {
           opacity: isMobileNavOpen ? '0' : '1'
         },
-        '.bar:nth-child(2)': {
+        '.bar:nth-of-type(2)': {
           transform: isMobileNavOpen ? 'rotate(45deg)' : 'rotate(0deg)'
         },
-        '.bar:nth-child(3)': {
+        '.bar:nth-of-type(3)': {
           transform: isMobileNavOpen ? 'rotate(-45deg)' : 'rotate(0deg)'
         }
 
@@ -45,7 +45,7 @@ const MobileMenuToggle = () => {
           <line className='bar' x1='13' y1='24.5' x2='37' y2='24.5' />
           <line className='bar' x1='13' y1='24.5' x2='37' y2='24.5' />
           <line className='bar' x1='13' y1='32.5' x2='37' y2='32.5' />
-          <circle className='circle' r='23' cx='25' cy='25' />
+          {/* <circle className='circle' r='23' cx='25' cy='25' /> */}
         </g>
       </svg>
     </a>
@@ -71,11 +71,11 @@ const toggleStyles = {
   background: 'transparent',
   outline: '0',
   cursor: 'pointer',
-  borderRadius: '50%',
+  // borderRadius: '50%',
   transition: 'background-color .15s linear',
 
   '&: hover, &:focus': {
-    backgroundColor: 'background'
+    // backgroundColor: 'background'
   }
 }
 

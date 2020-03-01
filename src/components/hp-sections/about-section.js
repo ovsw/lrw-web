@@ -10,12 +10,30 @@ import Column from './about-section-column'
 const SectionThreeColumns = () => {
   return (
     <section sx={{variant: 'sections.hpSectionLight'}}>
-      <Container sx={{px: 0}}>
+      <Container sx={{px: 0, position: 'relative', zIndex: 0}}>
         <Countdown
           timeTillDate='06 28 2020, 8:00 am'
           timeFormat='MM DD YYYY, h:mm a'
         />
-        <Styled.h1 as='h2' sx={{textAlign: 'center'}}>Connecticut's Premier Jewish Summer Camp</Styled.h1>
+      </Container>
+      <Styled.h1 as='h2' sx={{
+        textAlign: 'center',
+        position: 'relative',
+        '&::after': {
+          content: '"Who We Are"',
+          fontFamily: 'heading2',
+          fontSize: [1, 2, 3, '15vw', '15vw', '13vw'],
+          color: 'background',
+          position: 'absolute',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          top: '-0.35em',
+          zIndex: '-1',
+          textAlign: 'center',
+          width: 'full'
+        }
+      }}>Connecticut's Premier Jewish Summer Camp</Styled.h1>
+      <Container>
         <div sx={{variant: 'styles', mt: 5, px: 2, textAlign: 'center', maxWidth: '3xl', mx: 'auto'}}>
           <p>We offer both Overnight and Day Camp <Link to='/programs/'>programs</Link>, lots of fun <Link to='/activities/'>activities</Link> and a warm welcoming community. </p>
         </div>

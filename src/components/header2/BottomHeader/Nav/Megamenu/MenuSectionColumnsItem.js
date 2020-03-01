@@ -6,7 +6,7 @@ import {jsx} from 'theme-ui'
 
 const MenuSectionColumnsItem = () => {
   return (
-    <ul>
+    <ul sx={{variant: 'lists.reset'}}>
       {/* column nav item */}
       <li>
         <a href='https://www.shibleydaycamp.com/summer-camp/'><span>The Camper Experience</span></a>
@@ -14,7 +14,7 @@ const MenuSectionColumnsItem = () => {
       {/* column nav item with sub-items */}
       <li>
         <a href='https://www.shibleydaycamp.com/summer-camp/program/'><span>Our Program</span></a>
-        <ul className='wp-mega-sub-menu'>
+        <ul className='wp-mega-sub-menu' sx={{variant: 'lists.reset', pl: 3}}>
           <li><a href='https://www.shibleydaycamp.com/summer-camp/program/junior-camp/'><span>Junior Camp</span></a></li>
           <li><a href='https://www.shibleydaycamp.com/summer-camp/program/senior-camp/'><span>Senior Camp</span></a></li>
           <li><a href='https://www.shibleydaycamp.com/summer-camp/program/sleepaway-week/'><span>Sleepaway Week</span></a></li>
