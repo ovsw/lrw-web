@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useState} from 'react' // eslint-disable-line
+import React, {useState, useEffect} from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
@@ -11,21 +11,32 @@ import MenuSectionColumnsWrapper from './MenuSectionColumnsWrapper'
 const MenuSection = ({navData: {title = 'About Us', slug, children: subMenuColumns}}) => {
   // TODO: need state management here to keep track of the submenu's state (hidden initially, show on: click for mobile, hover on desktop)
   const [subNavIsVisible, setSubNavIsVisible] = useState(false)
-  const responsiveIndex = useBreakpointIndex()
+  // const responsiveIndex = useBreakpointIndex()
 
-  const toggleVisibilityMobile = () => {
+  let touchDevice = false
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      touchDevice = ('ontouchstart' in window)
+    }
+  })
+
+  const toggleVisibility = () => {
     setSubNavIsVisible(!subNavIsVisible)
   }
 
-  const toggleVisibilityDesktop = () => {
-    if (responsiveIndex > 3) setSubNavIsVisible(!subNavIsVisible)
+  const showNav = () => {
+    if (!touchDevice) setSubNavIsVisible(true)
+  }
+  const hideNav = () => {
+    setSubNavIsVisible(false)
   }
 
   return (
     <>
       {/* main menu item. on mobile it's very quiet, just another li. on desktop it needs to be spaced out correctly to fit logo. */}
       {/*  STATE/FUNCTION: it acts as the hover trigger for the sub-menu, on both mobile and desktop */}
-      <li onMouseEnter={toggleVisibilityDesktop} onMouseLeave={toggleVisibilityDesktop} onTouchEnd={toggleVisibilityMobile} className='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpmega-menu-megamenu wpmega-show-arrow wpmm-menu-align-left wpmega-hide-menu-icon wpmega-horizontal-full-width menu-item-8 menu-item-depth-0 no-dropdown' sx={{
+      <li onMouseEnter={showNav} onMouseLeave={hideNav} onTouchEnd={toggleVisibility} className='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpmega-menu-megamenu wpmega-show-arrow wpmm-menu-align-left wpmega-hide-menu-icon wpmega-horizontal-full-width menu-item-8 menu-item-depth-0 no-dropdown' sx={{
         px: [1, 2, null, 0],
         borderBottom: ['1px solid', null, null, 'none'],
         borderColor: 'gray.3'
