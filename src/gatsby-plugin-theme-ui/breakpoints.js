@@ -7,7 +7,7 @@ const breakpoints = {
   // ],
   'breakpoints': [
     '640px',
-    '769px',
+    '768px',
     '1024px',
     '1280px',
     '1440px'

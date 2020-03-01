@@ -15,7 +15,7 @@ import lists from './lists'
 import misc from './misc'
 
 const sharedHeadingStyles = {
-  'fontFamily': 'heading',
+  'fontFamily': 'heading2',
   'fontWeight': 'heading',
   'lineHeight': 'heading',
   'm': 0,
@@ -90,33 +90,29 @@ export default {
       ...sharedHeadingStyles,
       'fontSize': [6, 6, 7, 8],
       'mt': 2,
-      'color': 'primary'
+      'color': 'primaryDark'
     },
     'h2': {
       ...sharedHeadingStyles,
-      fontFamily: 'heading2',
-      fontWeight: 'normal',
-      'fontSize': 6,
-      'mt': 5,
-      mb: 4,
-      'color': 'primary'
+      'fontSize': [5, 6],
+      mt: 4,
+      mb: 3,
+      'color': 'primaryDark'
     },
     'h3': {
       ...sharedHeadingStyles,
-      'fontSize': [5, 5, 5, 6],
-      fontWeight: 'bold',
+      'fontSize': [3, null, 4],
       'mt': 4,
-      'color': 'primary'
+      'color': 'primaryDark'
     },
     'h4': {
       ...sharedHeadingStyles,
       'fontSize': 4,
-      'color': 'primary'
+      fontFamily: 'body'
     },
     'h5': {
       ...sharedHeadingStyles,
-      'fontSize': 2,
-      'color': 'primary'
+      'fontSize': 2
     },
     'h6': {
       ...sharedHeadingStyles,

@@ -22,7 +22,11 @@ const links = {
         bg: 'primary'
       }
     },
-
+    navTitle: {
+      fontFamily: 'heading',
+      fontSize: [4, 5],
+      textTransform: 'uppercase'
+    },
     'navSub': {
       color: ['light', 'light', 'primaryDarker'],
       display: 'block',
@@ -49,7 +53,7 @@ const links = {
       }
     },
     'sidebarNav': {
-      color: 'text',
+      color: '#5f5f5f',
       textDecoration: 'none',
       // textTransform: 'uppercase',
       fontSize: '1',
@@ -58,7 +62,7 @@ const links = {
       py: 2,
       px: 2,
       '&.active': {
-        color: 'primary',
+        color: 'primaryDark',
         fontWeight: 'extrabold'
       },
       '&:hover': {

@@ -3,7 +3,7 @@ const colors = {
     // layout
     'primary': '#6ebf34',
     'primaryLight': '#a1f266',
-    'primaryDark': '#398e00',
+    'primaryDark': '#378602',
     'primaryDarker': '#286500',
     'primaryHover': '#398e00',
     'secondary': '#592203',
@@ -16,9 +16,10 @@ const colors = {
     'dark': '#592203',
     'grayDark': '#2d3748',
     'black': '#282828',
+    'decoText': '#f9f8f6',
     // 'blue': '4E598C',
     // UI
-    'text': '#6c6b73',
+    'text': '#586255', // #374933
     'textMuted': '#9da2a0', // #8b8a90
     'white': '#fff',
     // 'success': '#9ae6b4', // green

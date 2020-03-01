@@ -44,7 +44,7 @@ const PageSidebar = ({section}) => {
         <h4 sx={{
           m: 0,
           py: 3,
-          color: ['white', 'white', 'primary']
+          color: ['white', 'white', 'primaryDark']
         }}>
           {currentSectionMenuStructure[0].title}
         </h4>
