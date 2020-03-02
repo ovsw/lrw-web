@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled, Container} from 'theme-ui'
+import {jsx, Container} from 'theme-ui'
 import {useStaticQuery, graphql} from 'gatsby'
 import Slider from 'react-slick'
 import BackgroundImage from 'gatsby-background-image'
 
 import TestimonialItem from './testimonial-item'
+
+import {AiOutlineWechat} from 'react-icons/ai'
 
 // styles
 import 'slick-carousel/slick/slick.css'
@@ -21,7 +23,7 @@ function NextArrow (props) {
       sx={{
         left: '-2rem',
         '&::before': {
-          color: 'primary',
+          color: 'light',
           fontSize: '2rem'
         }
       }}
@@ -39,7 +41,7 @@ function PrevArrow (props) {
         right: '-1rem',
         '&::before': {
           fontSize: '2rem',
-          color: 'primaryDark'
+          color: 'light'
         }
       }}
       onClick={onClick}
@@ -51,7 +53,7 @@ const TestimonialsSection = () => {
   const {testimonialsBgImage} = useStaticQuery(
     graphql`
     query {
-      testimonialsBgImage: file(relativePath: { eq: "img-bg-2.png" }) {
+      testimonialsBgImage: file(relativePath: { eq: "img-bg-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid_noBase64
@@ -109,8 +111,10 @@ const TestimonialsSection = () => {
     ],
     appendDots: dots => (
       <div>
-        <ul style={{
-          position: 'relative', top: '50px', padding: '0'
+        <ul sx={{
+          position: 'relative',
+          top: '50px',
+          padding: '0'
         }}> {dots} </ul>
       </div>
     ),
@@ -121,8 +125,8 @@ const TestimonialsSection = () => {
           height: '1.5rem',
           fontSize: '1rem',
           lineHeight: '1.5rem',
-          bg: 'primary',
-          color: 'light',
+          bg: 'light',
+          color: 'secondary',
           borderRadius: '100%',
           '.slick-active & ': {
             bg: 'accent',
@@ -135,33 +139,37 @@ const TestimonialsSection = () => {
       </div>
     )
   }
+  const backgroundFluidImageStack = [
+    testimonialsBgImage.childImageSharp.fluid,
+    `linear-gradient(rgba(62, 155, 0, 0.7), rgba(62, 155, 0, 0.83))`
+  ].reverse()
+
   return (
-    <BackgroundImage tag='section' quality='90' fluid={testimonialsBgImage.childImageSharp.fluid}
-      sx={{
-        variant: 'sections.hpSection',
-        py: [5, 5, 5, 6],
-        pb: [6, 5, 5, 6],
-        // background: `url(${SectionBg}) repeat-x bottom left`,
-        backgroundColor: 'transparent',
-        backgroundPosition: 'bottom center',
-        marginBottom: '-3rem',
-        position: 'relative',
-        zIndex: '2'
-      }}>
-      <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'accent'}}>What the Community Says</Styled.h1>
-      <Container sx={{maxWidth: '6xl', px: ['2.8rem', 5, 0]}}>
-        <Slider {...slickSettings}>
-          {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
-        </Slider>
-      </Container>
+
+    <BackgroundImage quality='40' fluid={backgroundFluidImageStack} backgroundColor={`red`} sx={{
+      // background: `url(${SectionBg}) repeat-x bottom left`,
+      backgroundColor: 'primary',
+      backgroundPosition: 'bottom center',
+      zIndex: '2'
+    }}>
+      <section sx={{variant: 'sections.hpSection', bg: 'transparent', pb: [6, 6, 6, 6, 6, 6]}}>
+        <h2 sx={{variant: 'headings.mainSectionHeading', color: 'light', mb: [3, null, null, null]}}><AiOutlineWechat sx={{position: 'relative', bottom: '0.6rem'}} /> What the Community Says</h2>
+
+        <Container sx={{maxWidth: '6xl', px: [0, 5, 0]}}>
+          <Slider {...slickSettings}>
+            {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
+          </Slider>
+        </Container>
+      </section>
     </BackgroundImage>
+
   )
 }
 
 const testimonialsContentTemp = [
   {
-    name: 'Emily Cooper',
-    text: 'Truly a magical place that fills me with more happiness than anywhere else in the world!'
+    name: 'Erin Bellucci',
+    text: 'When I’m at camp I’m so busy making friends, doing activities, singing on benches at shabbat, roasting marshmallows, and being a part of the countless other special things we do. When the 7 weeks are over and I have my first moment to reflect on the summer, I realize that all throughout each of those special days I was actually growing as a person and becoming a more genuine, thoughtful version of myself.'
   },
   {
     name: 'Henry Brown',
@@ -169,7 +177,8 @@ const testimonialsContentTemp = [
   },
   {
     name: 'Isabel Braverman',
-    text: 'Not a day goes by when I don’t think of camp; I am reminded of my home away from home when I hear “Unwritten” on the radio, whenever I wear a white blouse, and whenever I eat a blondie. It is the small traditions that make camp unique. Laurelwood has provided a safe haven for me to pursue my passions with the most supportive staff and campers, and I consider myself incredibly lucky to have not only a summer family, but a forever family, in the 06443.'
+    text: 'Not a day goes by when I don’t think of camp; I am reminded of my home away from home when I hear “Unwritten” on the radio, whenever I wear a white blouse, and whenever I eat a blondie. It is the small traditions that make camp unique. Laurelwood has provided a safe haven for me to pursue my passions with the most supportive staff and campers.'
+    // , and I consider myself incredibly lucky to have not only a summer family, but a forever family, in the 06443.
   },
   {
     name: 'Breezie Miller',
@@ -188,8 +197,8 @@ const testimonialsContentTemp = [
     text: 'Camp Laurelwood. A place where experiences become memories and friends become family. A place where bunks hold the most important secrets and matching bracelets mean everything. A place where you sing your heart out, where you dance like nobody is watching, where you share stories round campfires and laugh until you cry. Camp is a home away from home. Laurelwood is family.'
   },
   {
-    name: 'Erin Bellucci',
-    text: 'When I’m at camp I’m so busy making friends, doing activities, singing on benches at shabbat, roasting marshmallows, and being a part of the countless other special things we do. When the 7 weeks are over and I have my first moment to reflect on the summer, I realize that all throughout each of those special days I was actually growing as a person and becoming a more genuine, thoughtful version of myself.'
+    name: 'Emily Cooper',
+    text: 'Truly a magical place that fills me with more happiness than anywhere else in the world!'
   }
 ]
 

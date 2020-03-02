@@ -1,4 +1,4 @@
-import WhitePaper from '../images/white-paper-bg2.jpg'
+// import WhitePaper from '../images/white-paper-bg2.jpg'
 
 const links = {
   links: {
@@ -73,12 +73,9 @@ const links = {
       textDecoration: 'none',
       transition: 'transform 0.1s ease-out',
       boxShadow: '0 0 12px -2px rgba(0,0,0,0.1)',
-      background: `url(${WhitePaper})`,
-      borderRadius: '7px',
-      borderWidth: '1px',
-      borderColor: 'primary',
-      borderStyle: 'dashed',
-      bg: 'white',
+      // background: `url(${WhitePaper})`,
+
+      bg: 'light',
       p: 4,
       m: 3,
       color: 'primary',
@@ -97,7 +94,7 @@ const links = {
         }
       },
       '& p': {
-        color: 'text'
+        color: 'gray.6'
       }
     },
     footerLinks: {

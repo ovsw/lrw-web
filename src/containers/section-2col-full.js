@@ -15,7 +15,7 @@ const renderThemeString = (theme = 'light') => {
   }
 }
 
-const Section2ColFull = ({fluidBgImg, content = <p>no content</p>, theme = 'light', reverse = false}) => {
+const Section2ColFull = ({fluidBgImg, content = <p>no content</p>, theme = 'light', reverse = false, imageValign}) => {
   return (
     <section sx={{variant: renderThemeString(theme)}}>
       <Flex className='row' sx={{

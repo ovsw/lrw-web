@@ -14,6 +14,8 @@ import inputs from './inputs'
 import lists from './lists'
 import misc from './misc'
 
+import ImageBorder from '../images/deco/laurelwood-deco-frame-2.png'
+
 const sharedHeadingStyles = {
   'fontFamily': 'heading2',
   'fontWeight': 'heading',
@@ -35,6 +37,51 @@ export default {
   ...inputs,
   ...lists,
   ...misc, // borderWidths, radii, zindeces
+  'borders': {
+    drawn: {
+      borderImage: `url(${ImageBorder}) 6 round`,
+      borderImageSlice: '15',
+      borderWidth: '13px',
+      borderStyle: 'solid'
+    }
+  },
+  headings: {
+    mainSectionHeading: {
+      ...sharedHeadingStyles,
+      'fontSize': [6, 6, 7, 8],
+      'mt': 2,
+      textAlign: 'center',
+      position: 'relative',
+      fontFamily: 'heading',
+      fontWeight: 'bold',
+      mb: 5,
+      color: 'primaryDark'
+    // '&::after': {
+    //   content: '""',
+    //   width: '480px',
+    //   height: '19px',
+    //   background: `url(${DecoImg1}) no-repeat center center`,
+    //   position: 'absolute',
+    //   bottom: '-2rem',
+    //   left: '50%',
+    //   transform: 'translateX(-50%)'
+    //   // opacity: '0.5'
+    // }
+    }
+  },
+  svgDeco: {
+    topRightBig: {
+      position: 'absolute',
+      top: '-6rem',
+      right: '-6rem',
+      width: '25rem',
+      svg: {
+        fontSize: '25rem',
+        color: 'primaryDark',
+        opacity: '0.1'
+      }
+    }
+  },
   'styles': {
     'root': {
       margin: 0,
@@ -54,7 +101,7 @@ export default {
     },
     'a': {
       'color': 'accent',
-      'fontWeight': 'bold',
+      'fontWeight': 'normal',
       ':hover': {
         'textDecoration': 'underline',
         'color': 'primary'

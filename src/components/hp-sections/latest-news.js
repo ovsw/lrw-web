@@ -17,11 +17,14 @@ const LatestNewsSection = ({posts}) => {
   const post = posts[0]
   return (
     <section sx={{variant: 'sections.hpSectionLight'}}>
-      <Container sx={{maxWidth: '7xl', pt: 0, pb: 5}}>
-        <Styled.h1 as='h2' sx={{textAlign: 'center', mb: 5}}> <Link to='/blog/' sx={{color: 'primary'}} ><GiNewspaper sx={{variant: 'links.icon'}} /> From Our Blog</Link></Styled.h1>
+      <Container sx={{maxWidth: '7xl'}}>
+        <h2 sx={{variant: 'headings.mainSectionHeading'}}>
+          <Link to='/blog/' sx={{color: 'primaryDark', textDecoration: 'none'}} >
+            <GiNewspaper sx={{position: 'relative', bottom: '0.6rem'}} /> From Our Blog</Link>
+        </h2>
         <Flex sx={{
           flexWrap: 'wrap',
-          flexDirection: ['column-reverse', 'column-reverse', 'column-reverse', 'row']
+          flexDirection: ['column', 'column', 'column', 'row']
         }}>
           <div sx={{width: ['full', 'full', 'full', '50%']}}>
             <LatestNewsImage image={post.mainImage} link={`/news/${post.slug.current}`} />
@@ -40,11 +43,11 @@ const LatestNewsContent = ({post}) => {
   return (
     <div sx={{
       width: ['full', 'full', 'full', '50%'],
-      px: '2rem',
+      px: [0, null, '2rem'],
       'p': {lineHeight: 'snug'}
     }}>
       <Styled.h3 sx={{
-        mt: [2, '0'],
+        mt: 0,
         borderBottom: '3px solid',
         borderTop: '3px solid',
         borderColor: 'primary',

@@ -8,7 +8,7 @@ import Icon from '../../icon'
 const ProgramItem = ({name, icon = 'pineCone', iconSize = '4.7rem', description, link, layout = 'normal'}) => {
   return (
     <NavLink to={link} sx={{
-      variant: 'links.programListLink',
+      variant: ['links.programListLink', 'borders.drawn'],
       flexDirection: ['column', 'column', 'column'],
       alignItems: 'center'
     }}>
@@ -35,8 +35,17 @@ const ProgramItem = ({name, icon = 'pineCone', iconSize = '4.7rem', description,
         </div>
       </div>
 
-      <Styled.h3 sx={{mt: 2, mb: 1, color: 'accent', fontWeight: 'bold', lineHeight: 'none'}}>{name}</Styled.h3>
-      <p sx={{fontSize: 1, lineHeight: '1.5', mt: 2, mb: 1, ml: 0, textAlign: 'center'}}>{description}</p>
+      <Styled.h3 sx={{mt: 2, mb: 1, color: 'accent', lineHeight: 'none'}}>{name}</Styled.h3>
+      <p sx={{
+        // text
+        fontSize: 1,
+        lineHeight: '1.5',
+        fontWeight: 'normal',
+        textAlign: 'center',
+        // spacing
+        px: 2,
+        my: 2
+      }}>{description}</p>
     </NavLink>
   )
 }

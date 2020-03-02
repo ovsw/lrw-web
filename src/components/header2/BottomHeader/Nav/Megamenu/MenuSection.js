@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
-import {useBreakpointIndex} from '@theme-ui/match-media'
+// import {useBreakpointIndex} from '@theme-ui/match-media'
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
 
 import MenuSectionColumnsWrapper from './MenuSectionColumnsWrapper'

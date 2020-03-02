@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {Link} from 'gatsby'
-import {jsx, Container, Styled} from 'theme-ui'
+import {jsx, Container} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
 // import {FaChevronRight} from 'react-icons/fa'
@@ -19,8 +19,9 @@ const Programs = () => {
     <>
       <TrialSessions />
 
-      <section sx={{variant: 'sections.hpSectionLight'}}>
-        <Container sx={{maxWidth: '7xl'}}><Styled.h2 sx={{mt: '0'}}>Laurelwood Main Programs:</Styled.h2></Container>
+      <section sx={{variant: 'sections.hpSection'}}>
+        <Container sx={{maxWidth: '7xl'}}>
+          <h2 sx={{variant: 'headings.mainSectionHeading'}}>Laurelwood Main Programs:</h2></Container>
         <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} />
       </section>
 
@@ -37,9 +38,9 @@ const Sidebar = () => {
       <p>At Camp Laurelwood, our campers grow into Staff-in-Training, then eventually can apply to be on staff.</p>
       <p>Growing up at camp can mean making camp your summer home for many years!</p>
 
-      <div sx={{mt: 4}}>
+      <div sx={{mt: 5}}>
         <Link to='/dates-and-rates/' sx={{variant: 'buttons.3DAccent', display: 'inline-block', mr: 3}}>Dates &amp; Rates </Link>
-        <Link to='/programs/' sx={{variant: 'buttons.3D', display: 'inline-block'}}>More on Programs </Link>
+        <Link to='/programs/' sx={{variant: 'buttons.outline', display: 'inline-block'}}>More on Programs </Link>
       </div>
 
       {/* <FaChevronRight sx={{position: 'relative', top: '3px'}} /> */}

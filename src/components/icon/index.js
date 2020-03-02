@@ -22,7 +22,7 @@ function Icon (props) {
     case 'dayCamp':
       return <DayCamp />
     case 'teenagers':
-      return <Teenagers />
+      return <Teenagers {...props} />
     case 'leader':
       return <Leader />
     case 'sun':
@@ -30,7 +30,7 @@ function Icon (props) {
     case 'moon':
       return <Moon />
     case 'starOfDavid':
-      return <StarOfDavid />
+      return <StarOfDavid {...props} />
     case 'donate':
       return <Donate />
     case 'gift-list':

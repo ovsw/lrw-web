@@ -1,6 +1,7 @@
 import {graphql, StaticQuery} from 'gatsby'
 import React, {useState} from 'react'
 import Layout from '../components/layout'
+import {IconContext} from 'react-icons'
 
 const query = graphql`
   query SiteTitleQuery {
@@ -28,13 +29,15 @@ function LayoutContainer (props) {
           )
         }
         return (
-          <Layout
-            {...props}
-            showNav={showNav}
-            siteTitle={data.site.title}
-            onHideNav={handleHideNav}
-            onShowNav={handleShowNav}
-          />
+          <IconContext.Provider value={{style: {verticalAlign: 'middle'}}}>
+            <Layout
+              {...props}
+              showNav={showNav}
+              siteTitle={data.site.title}
+              onHideNav={handleHideNav}
+              onShowNav={handleShowNav}
+            />
+          </IconContext.Provider>
         )
       }}
     />

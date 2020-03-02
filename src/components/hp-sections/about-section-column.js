@@ -1,44 +1,62 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled, Flex} from 'theme-ui'
+import {jsx, Styled} from 'theme-ui'
 // import {Box, Flex} from '@theme-ui/components'
+import BackgroundImage from 'gatsby-background-image'
 import Icon from '../icon'
 
-const Column = ({title, text, icon}) => {
+import TestImage from '../../images/swim-lessons.jpg'
+
+const Column = ({title, text, icon, bgImage}) => {
+  const backgroundFluidImageStack = [
+    bgImage,
+    `linear-gradient(
+      rgba(62, 155, 0, 0.7) 0%, 
+      rgba(62, 155, 0, 0.86) 80%
+    )`
+  ].reverse()
   return (
-    <Flex sx={{
-      variant: 'links.programListLink',
-      flexDirection: 'column',
-      textAlign: 'center',
-      boxShadow: '0 0 6px 2px rgba(0,0,0,0.1)',
-      p: 3,
-      border: '1px dashed',
-      borderColor: 'primary',
-      borderRadius: 'lg'
+    <div sx={{
+      variant: 'borders.drawn',
+      p: 2,
+      position: 'relative',
+      // border: '1px dashed',
+      // borderColor: 'primary',
+      // borderRadius: 'lg',
+      display: 'flex',
+      textAlign: 'center'
+      // '&::after': {
+      //   content: '""',
+      //   width: '197px',
+      //   height: '197px',
+      //   position: 'absolute',
+      //   top: 0,
+      //   left: 0,
+      //   background: `url(${TopLeftLaurel}) no-repeat top right`,
+      //   zIndex: '-1'
+      // }
     }}>
-      <div sx={{
-        fontSize: 6,
-        color: 'primary',
-        borderRadius: '1000px'
+
+      <BackgroundImage fluid={backgroundFluidImageStack} sx={{background: `,url(${TestImage})`,
+        backgroundSize: 'cover',
+        p: 4
       }}>
-        <div className='iconBg' sx={{
-          borderRadius: '1000px',
-          width: '6rem',
-          height: '6rem',
-          bg: 'background',
-          border: '1px dashed red',
-          borderColor: 'white',
-          p: '1.5rem',
-          color: 'primaryDark',
-          mx: 'auto',
-          transition: 'all 0.1s ease-out'
-        }}>
-          <Icon symbol={icon} />
-        </div>
-      </div>
-      <Styled.h3 sx={{fontWeight: 'bold', my: 0, color: 'accent'}}>{title}</Styled.h3>
-      <Styled.p sx={{fontSize: '0.9rem', color: 'textMuted', mb: '0', lineHeight: '1.8', px: [0, 0, 0, 2], pb: 2}}>{text}</Styled.p>
-    </Flex >
+        <Styled.h3 sx={{my: 'auto', fontWeight: 'bold', color: 'white', lineHeight: 3, fontFamily: 'heading', fontSize: '3rem!important'}}>
+          <Icon symbol={icon} sx={{color: 'white', height: '2em', verticalAlign: 'middle', pr: 3}} /> {title}
+        </Styled.h3>
+        <Styled.p sx={{
+          gridColumnStart: '1',
+          gridColumnEnd: '3',
+          fontSize: 2,
+          mb: '0',
+          lineHeight: '1.8',
+          px: [0, 0, 0, 2],
+          pb: 2,
+          fontStyle: 'italic',
+          color: 'white'
+        }}>{text}</Styled.p>
+      </BackgroundImage>
+    </div >
   )
 }
 

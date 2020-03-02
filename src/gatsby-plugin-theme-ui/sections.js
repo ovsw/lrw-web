@@ -5,8 +5,7 @@ import YellowPaperBg from '../images/yellow-paper-bg.jpg'
 const sections = {
   sections: {
     hpSection: {
-      py: [3, 4, 5, 6],
-      bg: 'background'
+      py: [5, 5, 5, 6]
     },
     hpSectionPaper: {
       background: `url(${YellowPaperBg}) repeat center center`
@@ -15,7 +14,8 @@ const sections = {
       bg: 'white'
     },
     hpSectionLight: {
-      py: [3, 4, 4, 5],
+      pt: [3, 4, 4, 5],
+      pb: [3, 4, 5, 6],
       bg: 'white',
       position: 'relative',
       zIndex: '10',
@@ -48,6 +48,21 @@ const sections = {
         content: '""',
         position: 'absolute',
         top: '-40px',
+        left: 0,
+        right: 0,
+        height: '43px'
+      }
+    },
+    hpSectionLightNoTop: {
+      py: [3, 4, 4, 5],
+      bg: 'white',
+      position: 'relative',
+      zIndex: '10',
+      '&::after': {
+        background: `url(${SectionBorderBottom}) repeat-x bottom right`,
+        content: '""',
+        position: 'absolute',
+        bottom: '-40px',
         left: 0,
         right: 0,
         height: '43px'

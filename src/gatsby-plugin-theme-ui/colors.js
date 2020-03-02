@@ -1,8 +1,8 @@
 const colors = {
   'colors': {
     // layout
-    'primary': '#6ebf34',
-    'primaryLight': '#a1f266',
+    'primary': '#3e9b00', // #6ebf34
+    'primaryLight': '#6ebf34',
     'primaryDark': '#378602',
     'primaryDarker': '#286500',
     'primaryHover': '#398e00',
@@ -29,15 +29,24 @@ const colors = {
     'transparent': 'transparent',
     'gray': [
       null,
-      '#f7fafc',
-      '#edf2f7',
-      '#e2e8f0',
-      '#cbd5e0',
-      '#a0aec0',
-      '#718096',
-      '#4a5568',
-      '#2d3748',
-      '#1a202c'
+      // '#f7fafc',
+      // '#edf2f7',
+      // '#e2e8f0',
+      // '#cbd5e0',
+      // '#a0aec0',
+      // '#718096',
+      // '#4a5568',
+      // '#2d3748',
+      // '#1a202c'
+      '#fcfaf7',
+      '#f7f5ed',
+      '#f0ede2',
+      '#e0dacb',
+      '#c0b9a0',
+      '#968d71',
+      '#68604a',
+      '#48422d',
+      '#2c271a'
     ]
   }
 }
