@@ -17,7 +17,7 @@ const Hero = () => {
   const [playFullVideo, setPlayFullVideo] = useState(false)
 
   return (
-    <Box as='section' pt={[4, 4, 5, 5, 6]} pb={[2, 3, 4, 6]} mt={5} sx={{
+    <Box as='section' pt={[4, 4, 5, 5, 6]} pb={[2, 3, 4, 6]} sx={{
       textAlign: 'center',
       borderBottom: '1px solid lightgrey',
       position: 'relative',

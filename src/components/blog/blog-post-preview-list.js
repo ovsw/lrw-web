@@ -6,22 +6,24 @@ import BlogPostPreview from './blog-post-preview'
 
 function BlogPostPreviewGrid (props) {
   return (
-    <Container sx={{pt: ['10rem'], pb: 5}}>
-      {props.title && <Styled.h1 sx={{textAlign: 'center', mb: '5'}}>{props.title}</Styled.h1>}
-      <ul sx={postsList}>
-        {props.nodes &&
+    <section sx={{variant: 'sections.hpSectionLightNoTop'}}>
+      <Container sx={{pb: 5}}>
+        {props.title && <Styled.h1 sx={{textAlign: 'center', mb: '5'}}>{props.title}</Styled.h1>}
+        <ul sx={postsList}>
+          {props.nodes &&
           props.nodes.map(node => (
             <li key={node.id}>
               <BlogPostPreview {...node} isInList />
             </li>
           ))}
-      </ul>
-      {props.browseMoreHref && (
-        <div>
-          <Link to={props.browseMoreHref}>Browse more</Link>
-        </div>
-      )}
-    </Container>
+        </ul>
+        {props.browseMoreHref && (
+          <div>
+            <Link to={props.browseMoreHref}>Browse more</Link>
+          </div>
+        )}
+      </Container>
+    </section>
   )
 }
 

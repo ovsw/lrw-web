@@ -1,4 +1,6 @@
-import React, {useContext} from 'react'
+/** @jsx jsx */
+import React, {useContext} from 'react' // eslint-disable-line
+import {jsx} from 'theme-ui'
 
 import {Global} from '@emotion/core'
 import {Layout as ThemeLayout} from 'theme-ui'
@@ -47,7 +49,10 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => {
       })} />
       <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
 
-      <>{children}</>
+      {/* set the top margin to account for the fixed header */}
+      <div sx={{mt: ['5.5rem', null, null, '7.5rem']}}>
+        {children}
+      </div>
 
       <Footer />
     </ThemeLayout>

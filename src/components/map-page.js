@@ -98,7 +98,7 @@ const MapPage = ({locations}) => {
             maxZoom={0.5}
             zoomSnap={0.1}
             // center={[20, 960]}
-            style={{height: `${(height - 116).toString()}px`, marginTop: '116px'}}
+            style={{height: [`${(height - 55).toString()}px`, `${(height - 85).toString()}px`]}}
           >
             <ImageOverlay
               url={mapimage}

@@ -10,7 +10,7 @@ import PageHeaderImage from '../page-header-image'
 function BlogPost (props) {
   const {_rawBody, categories, title, mainImage, publishedAt} = props
   return (
-    <article sx={{pt: '7rem'}}>
+    <article>
       { mainImage && mainImage.asset && <PageHeaderImage headerImage={mainImage} />}
       <div sx={{variant: 'sections.hpSectionLight'}}>
         <Container sx={{maxWidth: '4xl', pt: 0}}>
