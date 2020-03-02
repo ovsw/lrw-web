@@ -100,10 +100,13 @@ export default {
       fontSize: '2'
     },
     'a': {
+      textDecoration: 'none',
+      px: 1,
+      borderBottom: '3px solid',
+      borderColor: 'accent',
       'color': 'accent',
       'fontWeight': 'normal',
       ':hover': {
-        'textDecoration': 'underline',
         'color': 'primary'
       },
       '&.contentButton': {

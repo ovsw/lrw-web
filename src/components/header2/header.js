@@ -10,7 +10,7 @@ import BottomHeader from './BottomHeader'
 
 const Header = () => {
   return (
-    <header className='site-header' role='banner'>
+    <header className='site-header' role='banner' sx={{position: 'fixed', zIndex: '1000', width: 'full', bg: 'white'}}>
       <TopHeader />
       <BottomHeader />
     </header>

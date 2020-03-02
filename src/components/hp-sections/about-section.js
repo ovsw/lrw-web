@@ -55,7 +55,7 @@ const SectionThreeColumns = () => {
           timeFormat='MM DD YYYY, h:mm a'
         />
         <h2 sx={{variant: 'headings.mainSectionHeading'}}>Connecticut's Premier Jewish Summer Camp</h2>
-        <div sx={{px: 2, textAlign: 'center', maxWidth: 'xl', mx: 'auto', a: {color: 'primaryDark', textDecoration: 'none', px: 1, borderBottom: '3px dotted', borderColor: 'accent'}}}>
+        <div sx={{px: 2, textAlign: 'center', maxWidth: 'xl', mx: 'auto', a: {color: 'primaryDark', textDecoration: 'none', px: 1, borderBottom: '3px solid', borderColor: 'accent'}}}>
           <p sx={{color: 'muted'}}>We offer both Overnight and Day Camp <Link to='/programs/'>programs</Link>, lots of fun <Link to='/activities/'>activities</Link> and a warm welcoming community. </p>
         </div>
         <Flex sx={{mt: 5, flexWrap: 'wrap'}}>

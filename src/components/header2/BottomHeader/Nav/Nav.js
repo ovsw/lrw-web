@@ -21,7 +21,7 @@ const Nav = ({menuSections}) => {
   const {isMobileNavOpen} = useContext(appContext)
   return (
     <nav sx={{
-      position: 'relative',
+      position: ['relative', null, null, 'static'],
       display: 'flex',
       justifyContent: 'space-between',
       px: [2, null, null, 0]
@@ -33,9 +33,9 @@ const Nav = ({menuSections}) => {
       <MobileMainLinks sx={{display: ['flex', null, null, 'none']}} />
 
       {/* MAIN NAV WRAPPER: on mobile it's initially hidden. toggled by the hamburger menu (MobileMenuToggle). On desktop, always visible. */}
-      <ul data-trigger-effect='wpmm-onhover' sx={{
+      <ul className='mainNavWrapper' sx={{
         variant: 'lists.reset',
-        display: [null, null, null, 'flex'],
+        // display: [null, null, null, 'flex'],
         visibility: [isMobileNavOpen ? 'visible' : 'hidden', null, null, 'visible'],
         // positioning
         position: ['absolute', null, null, 'static'],
@@ -46,18 +46,19 @@ const Nav = ({menuSections}) => {
         borderColor: 'accent',
         top: '50px',
         right: '0',
+        // sizing
         width: ['full', '324px', '424px', '100%!important'],
+        boxShadow: ['inset 0 19px 10px -20px rgba(0, 0, 0, 0.5)', 'inset 0 19px 10px -20px rgba(0, 0, 0, 0.5),0 3px 10px 0px rgba(0,0,0,0.1)', null, 'none!important'], // '0 12px 10px 0px rgba(0,0,0,0.2)'
         maxWidth: ['full', '324px', '424px', 'none!important'],
+        maxHeight: ['calc(100vh - 83px)', '80vh', 'none'],
         // animation
         height: [isMobileNavOpen ? '1000px' : '0px', isMobileNavOpen ? '500px' : '0px', isMobileNavOpen ? '700px' : '0px', 'auto!important'],
-        maxHeight: ['calc(100vh - 83px)', '80vh', 'none'],
-        overflowY: ['scroll', null, null, 'auto'],
         transition: 'all 300ms ease-out',
-        boxShadow: ['inset 0 19px 10px -20px rgba(0, 0, 0, 0.5)', 'inset 0 19px 10px -20px rgba(0, 0, 0, 0.5),0 3px 10px 0px rgba(0,0,0,0.1)', null, 'none'], // '0 12px 10px 0px rgba(0,0,0,0.2)'
+        overflowY: ['scroll', null, null, 'visible'],
         // spacing
-        px: [2, 4, null, 0],
-        py: [isMobileNavOpen ? 4 : 0, null, null, 0],
-        pt: 2,
+        px: [2, 4, 2],
+        py: [isMobileNavOpen ? 4 : 0, null, null, 2],
+        pt: [2, 2, 2, 0],
         // links
         li: {
           // bg: 'blue',
@@ -84,7 +85,7 @@ const Nav = ({menuSections}) => {
 
       }}>
         <MenuSection navData={siteNav[0]} />
-        <MenuSection navData={siteNav[1]} />
+        <MenuSection navData={siteNav[1]} logoSpace />
         <MenuSection navData={siteNav[2]} />
         <MenuSection navData={siteNav[3]} />
         <MobileMenuExtraItems sx={{display: ['block', null, null, 'none']}} />

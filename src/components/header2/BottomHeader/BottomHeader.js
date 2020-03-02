@@ -17,7 +17,7 @@ const BottomHeder = () => {
     }}>
       <div className='container-fluid'>
         {/* THIS CONTROLS THE MAX-WIDTH and CENTERING OF THE BOTTOMHEADER CONTENT. */}
-        <div className='col-md-12 header-wrap'>
+        <div className='col-md-12 header-wrap' sx={{maxWidth: '7xl', mx: 'auto'}}>
           {/* THIS CONTROLS THE PADDING OF THE BOTTOMHEADER CONTENT */}
           <div className='header-main'>
             <Nav />
