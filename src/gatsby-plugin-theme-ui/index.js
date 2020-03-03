@@ -104,7 +104,7 @@ export default {
     },
     'a': {
       textDecoration: 'none',
-      px: 1,
+      // px: 1,
       borderBottom: '3px solid',
       borderColor: 'accent',
       'color': 'accent',

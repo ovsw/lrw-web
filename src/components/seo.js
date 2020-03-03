@@ -5,14 +5,14 @@ import {StaticQuery, graphql} from 'gatsby'
 import {imageUrlFor} from '../lib/image-url'
 import {buildImageObj} from '../lib/helpers'
 
-function SEO ({description, lang, meta, keywords, title, image}) {
+function SEO ({title, description, lang, meta, image}) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription = description || (data.site && data.site.description) || ''
-        const siteTitle = (data.site && data.site.title) || ''
-        const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
+        const siteTitle = (data.site && data.site.title) || 'Camp Laurelwood - Connecticut\'s Premier Jewish Summer Camp'
+        const siteAuthor = (data.site && data.site.author && data.site.author.name) || 'Camp Laurelwood'
         const metaImage = (image && image.asset) ? imageUrlFor(buildImageObj(image)).width(1200).url() : ''
 
         return (

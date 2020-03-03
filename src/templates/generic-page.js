@@ -8,20 +8,21 @@ import Layout from '../containers/layout'
 // import {toPlainText} from '../lib/helpers'
 
 const GenericPageTemplate = props => {
-  const {data, errors, location} = props
+  const {data, errors} = props //  also location
   const page = data && data.page
   const section = data && (data.page.section || 'Future Families')
 
   return (
     <Layout>
       {errors && <SEO seoTitle='GraphQL Error' />}
-      {page && <SEO seoTitle={page.seoTitle || page.title || 'Untitled'} description={page.seoDescription || ''} />}
-
+      {page && <SEO title={page.seoTitle || page.title} description={page.seoDescription || ''} image={page.headerImage} />}
+      {console.log('seoTitle: ', page.seoTitle)}
       {errors && (
         <div>
           <GraphQLErrorList errors={errors} />
         </div>
       )}
+
       <GenericPage {...page} section={section} />
     </Layout>
   )
