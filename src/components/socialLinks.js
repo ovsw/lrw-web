@@ -2,7 +2,7 @@
 import React from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 
-import {FaFacebookSquare, FaYoutubeSquare, FaTwitterSquare, FaInstagram} from 'react-icons/fa'
+import {FaFacebookSquare, FaYoutubeSquare, FaInstagram} from 'react-icons/fa'
 
 const SocialLinks = () => {
   return (
