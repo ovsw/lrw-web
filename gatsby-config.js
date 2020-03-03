@@ -447,7 +447,7 @@ module.exports = {
           `Skranji`,
           `Open Sans:400,400i,700` // you can also specify font weights and styles
         ],
-        display: 'block'
+        display: 'swap'
       }
     },
     `gatsby-plugin-netlify-headers`
