@@ -55,13 +55,13 @@ const Footer = () => {
       <Container sx={{px: [1, null]}}>
         <Flex sx={{flexWrap: 'wrap', pt: [4, 4, 5], pb: [3, 3, 3, 4]}}>
           <Box sx={{width: ['full', 'full', '2/5'], px: [0, 4], py: [4, 0], textAlign: ['center', 'center', 'right'], borderRight: ['none', 'none', '1px solid lightgray']}}>
-            <div className='vcard'>
+            <div className='vcard' sx={{color: 'light', a: {color: 'light'}}}>
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0, color: 'light'}}>Camp Laurelwood</Styled.h3></div>
               <div className='tel'>
                 Call Now <a sx={{variant: 'links.footerLinks'}} href='tel:2034213736'>(203) 421-3736</a>
               </div>
               <a className='email' sx={{variant: 'links.footerLinks'}} href='mailto:info@camplaurelwood.org'>info@camplaurelwood.org</a>
-              <div className='adr' sx={{mt: 4, color: 'gray.4'}}>
+              <div className='adr' sx={{mt: 4}}>
                 <div className='street-address'>463 Summer Hill Rd.</div>
                 <span className='locality'>Madison</span>,{' '}
                 <span className='region'>CT</span>{' '}
@@ -79,9 +79,15 @@ const Footer = () => {
                 display: 'inline-block'
               }
             }}>
-              <a href='https://www.aijcamps.org/' target='_blank' rel='noopener noreferrer'><Img fixed={asocIndependentJewishCampLogo.childImageSharp.fixed} /></a>
-              <a href='https://www.jewishnewhaven.org/' target='_blank' rel='noopener noreferrer'><Img fixed={jfgnhLogo.childImageSharp.fixed} /></a>
-              <a href='https://www.acacamps.org/' target='_blank' rel='noopener noreferrer'><Img fixed={acaLogo.childImageSharp.fixed} /></a>
+              <a title='Association of Independent Jewish Camps' href='https://www.aijcamps.org/' target='_blank' rel='noopener noreferrer'>
+                <Img fixed={asocIndependentJewishCampLogo.childImageSharp.fixed} />
+              </a>
+              <a title='Jewish federation of Greater New Haven' href='https://www.jewishnewhaven.org/' target='_blank' rel='noopener noreferrer'>
+                <Img fixed={jfgnhLogo.childImageSharp.fixed} />
+              </a>
+              <a title='American Camp Association' href='https://www.acacamps.org/' target='_blank' rel='noopener noreferrer'>
+                <Img fixed={acaLogo.childImageSharp.fixed} />
+              </a>
             </div>
           </Box>
         </Flex>
