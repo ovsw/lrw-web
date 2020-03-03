@@ -63,7 +63,7 @@ class MenuSection extends React.Component {
         {/*  STATE/FUNCTION: it acts as the hover trigger for the sub-menu, on both mobile and desktop */}
         <li onMouseEnter={this.onHoverEnterMainItem} onMouseLeave={this.onHoverExitMainItem} className='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpmega-menu-megamenu wpmega-show-arrow wpmm-menu-align-left wpmega-hide-menu-icon wpmega-horizontal-full-width menu-item-8 menu-item-depth-0 no-dropdown' sx={{
 
-          mr: [null, null, null, logoSpace ? '200px' : '0'],
+          mr: [null, null, null, logoSpace ? '150px' : '0', logoSpace ? '200px' : '0'],
           borderBottom: ['1px solid', null, null, 'none'],
           borderColor: 'gray.3',
           display: ['block', null, null, 'inline-block']
@@ -71,7 +71,7 @@ class MenuSection extends React.Component {
           <Link to={slug} className='menuTitle'
             onTouchEnd={this.toggleMegaMenuOnTouch}
             sx={{
-              px: [1, 2, null, '2.5rem'],
+              px: [1, 2, null, '2rem', '2.5rem'],
               display: 'inline-block',
               fontFamily: 'heading',
               fontSize: [3, 4],
@@ -88,7 +88,7 @@ class MenuSection extends React.Component {
                 bg: 'accent',
                 height: '8px',
                 position: 'absolute',
-                bottom: '1px',
+                bottom: '0',
                 left: '50%',
                 transition: 'all 100ms ease',
                 opacity: megaMenuVisible ? '1' : '0',
