@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React, {useContext} from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
-// import {Link} from 'gatsby'
 
 // components
 import MenuSection from './Megamenu/MenuSection'
@@ -15,6 +14,8 @@ import MobileMenuExtraItems from './Mobile/MobileMenuExtraItems' // appear at th
 import MobileQuickLinks from './Mobile/MobileQuickLinks' // appear at the bottom of the expanded mobile menu as quick links
 
 import {appContext} from '../../../../context'
+
+import {useBreakpointIndex} from '@theme-ui/match-media'
 
 const Nav = ({menuSections}) => {
   const {siteNav} = useSiteMetadata()
@@ -50,44 +51,26 @@ const Nav = ({menuSections}) => {
         width: ['full', '324px', '424px', '100%!important'],
         boxShadow: ['inset 0 19px 10px -20px rgba(0, 0, 0, 0.5)', 'inset 0 19px 10px -20px rgba(0, 0, 0, 0.5),0 3px 10px 0px rgba(0,0,0,0.1)', null, 'none!important'], // '0 12px 10px 0px rgba(0,0,0,0.2)'
         maxWidth: ['full', '324px', '424px', 'none!important'],
-        maxHeight: ['calc(100vh - 83px)', '80vh', 'none'],
         // animation
         height: [isMobileNavOpen ? '1000px' : '0px', isMobileNavOpen ? '500px' : '0px', isMobileNavOpen ? '700px' : '0px', 'auto!important'],
         transition: 'all 300ms ease-out',
         overflowY: ['scroll', null, null, 'visible'],
+        maxHeight: ['calc(100vh - 83px)', '80vh', 'none'],
         // spacing
         px: [2, 4, 2],
-        py: [isMobileNavOpen ? 4 : 0, null, null, 2],
-        pt: [2, 2, 2, 0],
+        py: [isMobileNavOpen ? 4 : 0, null, null, 0],
+        pt: [2, 2, 2, '0!important'],
         // links
         li: {
           // bg: 'blue',
           fontSize: 2
-        },
-        // link styles
-        a: {
-          color: 'dark',
-          display: 'block',
-          fontSize: '15px',
-          fontWeight: 'bold',
-          textDecoration: 'none',
-          // bg: 'red',
-          pb: '12px',
-          '&.menuTitle': {
-            fontFamily: 'heading',
-            fontSize: [3, 4],
-            fontWeight: 'bold',
-            letterSpacing: ['0.012em', null, null, '0'],
-            py: 3
-          }
         }
-        // list styles
-
       }}>
-        <MenuSection navData={siteNav[0]} />
-        <MenuSection navData={siteNav[1]} logoSpace />
-        <MenuSection navData={siteNav[2]} />
-        <MenuSection navData={siteNav[3]} />
+        {console.log('bpindexup', useBreakpointIndex())}
+        <MenuSection navData={siteNav[0]} breakPointIndex={useBreakpointIndex()} />
+        <MenuSection navData={siteNav[1]} breakPointIndex={useBreakpointIndex()} logoSpace />
+        <MenuSection navData={siteNav[2]} breakPointIndex={useBreakpointIndex()} />
+        <MenuSection navData={siteNav[3]} breakPointIndex={useBreakpointIndex()} />
         <MobileMenuExtraItems sx={{display: ['block', null, null, 'none']}} />
         <MobileQuickLinks sx={{display: ['block', null, null, 'none']}} />
       </ul>

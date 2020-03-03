@@ -13,7 +13,7 @@ const SectionWithLeftSidebar = ({sidebar = <p>no sidebar</p>, mainContent = <p>n
         }}
       >
         <Box sx={{
-          width: ['full', 'full', '2/3'],
+          width: ['full', null, null, '2/3'],
           order: leftSidebar ? '1' : '2',
           mt: [4, 4, 0],
           px: 2
@@ -21,7 +21,7 @@ const SectionWithLeftSidebar = ({sidebar = <p>no sidebar</p>, mainContent = <p>n
           {mainContent}
         </Box>
         <Box sx={{
-          width: ['full', 'full', '1/3']
+          width: ['full', null, null, '1/3']
         }}>
           {sidebar}
         </Box>

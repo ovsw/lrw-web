@@ -20,7 +20,7 @@ const Programs = () => {
       <TrialSessions />
 
       <section sx={{variant: 'sections.hpSection'}}>
-        <Container sx={{maxWidth: '7xl'}}>
+        <Container sx={{maxWidth: '7xl', p: 0}}>
           <h2 sx={{variant: 'headings.mainSectionHeading'}}>Laurelwood Main Programs:</h2></Container>
         <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} />
       </section>
@@ -32,7 +32,7 @@ const Programs = () => {
 
 const Sidebar = () => {
   return (
-    <>
+    <div sx={{textAlign: [null, null, 'center', 'left'], maxWidth: [null, null, '2xl', 'none'], mx: [null, null, 'auto', 0]}}>
       <p>Campers can begin their Laurelwood journey as they enter Kindergarten by trying out our amazing day camp. </p>
       <p>From there, each summer they will grow, make new friends, and experience new adventures.</p>
       <p>At Camp Laurelwood, our campers grow into Staff-in-Training, then eventually can apply to be on staff.</p>
@@ -44,7 +44,7 @@ const Sidebar = () => {
       </div>
 
       {/* <FaChevronRight sx={{position: 'relative', top: '3px'}} /> */}
-    </>
+    </div>
   )
 }
 

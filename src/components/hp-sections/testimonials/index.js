@@ -94,8 +94,9 @@ const TestimonialsSection = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 640,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1
           // initialSlide: 2
@@ -104,6 +105,7 @@ const TestimonialsSection = () => {
       {
         breakpoint: 480,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1
         }
@@ -152,10 +154,10 @@ const TestimonialsSection = () => {
       backgroundPosition: 'bottom center',
       zIndex: '2'
     }}>
-      <section sx={{variant: 'sections.hpSection', bg: 'transparent', pb: [6, 6, 6, 6, 6, 6]}}>
+      <section sx={{variant: 'sections.hpSection', bg: 'transparent', pb: 6}}>
         <h2 sx={{variant: 'headings.mainSectionHeading', color: 'light', mb: [3, null, null, null]}}><AiOutlineWechat sx={{position: 'relative', bottom: '0.6rem'}} /> What the Community Says</h2>
 
-        <Container sx={{maxWidth: '6xl', px: [0, 5, 0]}}>
+        <Container sx={{maxWidth: '6xl', px: [0, 5, 4]}}>
           <Slider {...slickSettings}>
             {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
           </Slider>

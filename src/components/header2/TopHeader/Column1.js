@@ -18,7 +18,7 @@ const Column1 = () => {
             <Link to='/dates-and-rates/' title='Dates &amp; Rates'><span>Dates &amp; Rates</span></Link>
           </li>
           <li>
-            <Link to='https://laurelwood.campintouch.com/ui/forms/application/camper/App' title='Enroll Now'><span> Enroll Now</span></Link>
+            <a href='https://laurelwood.campintouch.com/ui/forms/application/camper/App' title='Enroll Now' rel='noopener noreferrer' target='_blank'><span> Enroll Now</span></a>
           </li>
         </ul>
       </div>

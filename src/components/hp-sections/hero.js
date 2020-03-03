@@ -82,7 +82,7 @@ const Hero = () => {
           py: 3,
           mt: 4
         }}>
-          <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Video
+          <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Full Video
         </button>
         <ModalVideo channel='youtube' isOpen={playFullVideo} videoId='gcJfsUztrGE' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
         {/* <div sx={{

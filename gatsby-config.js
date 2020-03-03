@@ -53,7 +53,12 @@ module.exports = {
                     children: []
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: [
               {
                 title: 'Activities',
                 slug: '/activities/',
@@ -84,23 +89,8 @@ module.exports = {
             ]
           },
           {
-            title: 'column 2',
+            title: 'column 3',
             children: [
-              {
-                title: 'Food, Health and Safety',
-                slug: '/food-health-and-safety/',
-                children: []
-              },
-              {
-                title: 'Tours & Events',
-                slug: '/prospective-families-tours-and-events/',
-                children: []
-              },
-              {
-                title: 'FAQs',
-                slug: '/faqs/',
-                children: []
-              },
               {
                 title: 'Dates & Rates',
                 slug: '/dates-and-rates/',
@@ -126,6 +116,26 @@ module.exports = {
                     children: []
                   }
                 ]
+              }
+            ]
+          },
+          {
+            title: 'column 4',
+            children: [
+              {
+                title: 'Food, Health and Safety',
+                slug: '/food-health-and-safety/',
+                children: []
+              },
+              {
+                title: 'Tours & Events',
+                slug: '/prospective-families-tours-and-events/',
+                children: []
+              },
+              {
+                title: 'FAQs',
+                slug: '/faqs/',
+                children: []
               },
               {
                 title: 'Tuition Assistance',
@@ -164,18 +174,13 @@ module.exports = {
                 children: []
               },
               {
-                title: 'Meet our Team',
-                slug: '/our-team/',
-                children: []
-              },
-              {
-                title: 'Work at Laurelwood',
-                slug: '/staff/',
-                children: []
-              },
-              {
                 title: 'Letter From the Director',
                 slug: '/welcome-letter-from-the-director/',
+                children: []
+              },
+              {
+                title: 'Meet our Team',
+                slug: '/our-team/',
                 children: []
               },
               {
@@ -203,16 +208,7 @@ module.exports = {
                 slug: '/location/',
                 children: []
               },
-              {
-                title: 'Alumni',
-                slug: '/alumni/',
-                children: []
-              },
-              {
-                title: 'Alumni Events',
-                slug: '/alumni-events/',
-                children: []
-              },
+
               {
                 title: 'Videos',
                 slug: '/videos/',
@@ -223,6 +219,31 @@ module.exports = {
               //   slug: '/camp-newsletter/',
               //   children: []
               // }
+            ]
+          },
+          {
+            title: 'Column 3',
+            children: [
+              {
+                title: 'Alumni',
+                slug: '/alumni/',
+                children: []
+              },
+              {
+                title: 'Alumni Events',
+                slug: '/alumni-events/',
+                children: []
+              }
+            ]
+          },
+          {
+            title: 'Column 4',
+            children: [
+              {
+                title: 'Work at Laurelwood',
+                slug: '/staff/',
+                children: []
+              }
             ]
           }
         ]
@@ -240,10 +261,15 @@ module.exports = {
                 children: []
               },
               {
-                title: 'Parent Log-in',
-                slug: '/parent-log-in/',
+                title: 'What\'s New',
+                slug: '/whats-new-on-campus/',
                 children: []
-              },
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: [
               {
                 title: 'Donate',
                 slug: '/donate-now/',
@@ -253,27 +279,33 @@ module.exports = {
                 title: 'Refer a Friend',
                 slug: 'https://laurelwood.campintouch.com/ui/forms/client/referral/Form',
                 children: []
-              },
+              }
+            ]
+          },
+          {
+            title: 'column 3',
+            children: [
               {
-                title: 'What\'s New',
-                slug: '/whats-new-on-campus/',
+                title: 'Parent Log-in',
+                slug: '/parent-log-in/',
                 children: []
               },
               {
                 title: 'Camp Store',
                 slug: '/camp-store/',
                 children: []
-              },
+              }
+            ]
+          },
+          {
+            title: 'column 3',
+            children: [
               {
                 title: 'Amazon Smile',
                 slug: '/amazon-smile/',
                 children: []
               }
             ]
-          },
-          {
-            title: 'column 2',
-            children: []
           }
         ]
       },
@@ -293,8 +325,12 @@ module.exports = {
                 title: 'Photos',
                 slug: '/private-events-and-retreats/photos/',
                 children: []
-              },
-
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: [
               {
                 title: 'Recommended Vendors',
                 slug: '/private-events-and-retreats/recommended-vendors/',
@@ -306,10 +342,6 @@ module.exports = {
                 children: []
               }
             ]
-          },
-          {
-            title: 'column 2',
-            children: []
           }
         ]
       },

@@ -50,7 +50,7 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => {
       <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
 
       {/* set the top margin to account for the fixed header */}
-      <div sx={{mt: ['5.5rem', null, null, '7.5rem']}}>
+      <div sx={{mt: ['5.5rem', null, null, '6.5rem']}}>
         {children}
       </div>
 

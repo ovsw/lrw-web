@@ -1,26 +1,34 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
+import React, {useContext} from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 // import {Link} from 'gatsby'
+import NavLink from '../../../../../elements/nav-link'
 
-const MenuSectionColumnsItem = () => {
+import {appContext} from '../../../../../context'
+
+const MenuSectionColumnsItem = ({items, onNavClick}) => {
+  const {closeMobileNav} = useContext(appContext)
   return (
-    <ul sx={{variant: 'lists.reset'}}>
-      {/* column nav item */}
-      <li>
-        <a href='https://www.shibleydaycamp.com/summer-camp/'><span>The Camper Experience</span></a>
-      </li>
-      {/* column nav item with sub-items */}
-      <li>
-        <a href='https://www.shibleydaycamp.com/summer-camp/program/'><span>Our Program</span></a>
-        <ul className='wp-mega-sub-menu' sx={{variant: 'lists.reset', pl: 3}}>
-          <li><a href='https://www.shibleydaycamp.com/summer-camp/program/junior-camp/'><span>Junior Camp</span></a></li>
-          <li><a href='https://www.shibleydaycamp.com/summer-camp/program/senior-camp/'><span>Senior Camp</span></a></li>
-          <li><a href='https://www.shibleydaycamp.com/summer-camp/program/sleepaway-week/'><span>Sleepaway Week</span></a></li>
-          <li><a href='https://www.shibleydaycamp.com/summer-camp/program/cit-program/'><span>CIT Program</span></a></li>
-        </ul>
-      </li>
+    <ul sx={{
+      variant: 'lists.reset',
+      mx: [null, null, null, 3]
+    }}>
+      {/* ^ keep quiet on mobile, on desktop we need space between the columns */}
+      {items.map(item => (
+        <li key={item.slug}>
+          <NavLink to={`${item.slug}`} onClick={closeMobileNav}><span>{item.title}</span></NavLink>
+          {(item.children !== []) && (
+            <ul className='wp-mega-sub-menu' sx={{variant: 'lists.reset', pl: 3, a: {fontWeight: 'normal!important'}}}>
+              {item.children.map(item => (
+                <li key={item.slug}>
+                  <NavLink to={`${item.slug}`} onClick={closeMobileNav}><span>{item.title}</span></NavLink>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
     </ul>
   )
 }
