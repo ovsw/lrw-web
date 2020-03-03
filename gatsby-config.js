@@ -177,7 +177,12 @@ module.exports = {
                 title: 'Letter From the Director',
                 slug: '/welcome-letter-from-the-director/',
                 children: []
-              },
+              }
+            ]
+          },
+          {
+            title: 'column 2',
+            children: [
               {
                 title: 'Meet our Team',
                 slug: '/our-team/',
@@ -193,10 +198,16 @@ module.exports = {
                 slug: '/aca-accreditation/',
                 children: []
               }
+
+              // {
+              //   title: 'Camp Newsletter',
+              //   slug: '/camp-newsletter/',
+              //   children: []
+              // }
             ]
           },
           {
-            title: 'column 2',
+            title: 'Column 3',
             children: [
               {
                 title: 'History',
@@ -214,15 +225,11 @@ module.exports = {
                 slug: '/videos/',
                 children: []
               }
-              // {
-              //   title: 'Camp Newsletter',
-              //   slug: '/camp-newsletter/',
-              //   children: []
-              // }
+
             ]
           },
           {
-            title: 'Column 3',
+            title: 'Column 4',
             children: [
               {
                 title: 'Alumni',
@@ -233,12 +240,7 @@ module.exports = {
                 title: 'Alumni Events',
                 slug: '/alumni-events/',
                 children: []
-              }
-            ]
-          },
-          {
-            title: 'Column 4',
-            children: [
+              },
               {
                 title: 'Work at Laurelwood',
                 slug: '/staff/',
@@ -298,7 +300,7 @@ module.exports = {
             ]
           },
           {
-            title: 'column 3',
+            title: 'column 4',
             children: [
               {
                 title: 'Amazon Smile',

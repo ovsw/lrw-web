@@ -6,7 +6,7 @@ import {jsx} from 'theme-ui'
 
 import MenuSectionColumnsItem from './MenuSectionColumnsItem'
 
-const MenuSectionColumnsWrapper = ({subMenuColumns, onNavClick}) => {
+const MenuSectionColumnsWrapper = ({subMenuColumns, onNavClick, justifyContent = 'space-around'}) => {
   return (
     <>
       {/* COLUMNS CONTAINER START */}
@@ -14,7 +14,7 @@ const MenuSectionColumnsWrapper = ({subMenuColumns, onNavClick}) => {
       <ul className='wp-mega-sub-menu' sx={{
         variant: 'lists.reset',
         display: [null, null, null, 'flex'],
-        justifyContent: [null, null, null, 'space-around'],
+        justifyContent: [null, null, null, justifyContent],
         maxWidth: [null, null, null, '4xl'],
         py: [null, null, null, 4],
         mx: 'auto'

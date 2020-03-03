@@ -12,7 +12,7 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
     <>
       {headerImage && (
         <div sx={{
-          paddingBottom: ['calc(12 / 16 * 100%)', 'calc(10 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)'],
+          paddingBottom: ['calc(12 / 16 * 100%)', 'calc(10 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(6 / 16 * 100%)', 'calc(5 / 16 * 100%)'],
           position: 'relative',
           backgroundImage: `url(${headerImage.asset.metadata.lqip})`,
           backgroundRepeat: 'no-repeat',
@@ -23,6 +23,7 @@ function GenericPage ({_rawBody, title, section, headerImage = null}) {
               width: '100%',
               height: '100%'
             }}>
+
             <source media='(min-width: 1600px)' srcSet={imageUrlFor(buildImageObj(headerImage))
               .width(1920)
               .height(Math.floor((5 / 16) * 1920))

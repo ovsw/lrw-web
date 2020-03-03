@@ -21,7 +21,10 @@ const sharedHeadingStyles = {
   'fontWeight': 'heading',
   'lineHeight': 'heading',
   'm': 0,
-  'mb': 3
+  'mb': 3,
+  strong: {
+    fontWeight: 'normal'
+  }
 }
 
 export default {

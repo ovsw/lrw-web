@@ -41,11 +41,11 @@ const Nav = ({menuSections}) => {
         // positioning
         position: ['absolute', null, null, 'static'],
         zIndex: 1000,
-        bg: 'white',
         borderTop: ['5px solid', null, null, 'none'],
         borderBottom: ['5px solid', null, null, 'none'],
         borderColor: 'accent',
         top: '50px',
+        bg: ['white', null, null, 'transparent'],
         right: '0',
         // sizing
         width: ['full', '324px', '424px', '100%!important'],
@@ -66,11 +66,10 @@ const Nav = ({menuSections}) => {
           fontSize: 2
         }
       }}>
-        {console.log('bpindexup', useBreakpointIndex())}
         <MenuSection navData={siteNav[0]} breakPointIndex={useBreakpointIndex()} />
         <MenuSection navData={siteNav[1]} breakPointIndex={useBreakpointIndex()} logoSpace />
         <MenuSection navData={siteNav[2]} breakPointIndex={useBreakpointIndex()} />
-        <MenuSection navData={siteNav[3]} breakPointIndex={useBreakpointIndex()} />
+        <MenuSection navData={siteNav[3]} breakPointIndex={useBreakpointIndex()} justifyContent='flex-end' />
         <MobileMenuExtraItems sx={{display: ['block', null, null, 'none']}} />
         <MobileQuickLinks sx={{display: ['block', null, null, 'none']}} />
       </ul>
