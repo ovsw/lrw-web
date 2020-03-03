@@ -70,8 +70,8 @@ const Nav = ({menuSections}) => {
         <MenuSection navData={siteNav[1]} breakPointIndex={useBreakpointIndex()} logoSpace />
         <MenuSection navData={siteNav[2]} breakPointIndex={useBreakpointIndex()} />
         <MenuSection navData={siteNav[3]} breakPointIndex={useBreakpointIndex()} justifyContent='flex-end' />
-        <MobileMenuExtraItems sx={{display: ['block', null, null, 'none']}} />
-        <MobileQuickLinks sx={{display: ['block', null, null, 'none']}} />
+        {/* <MobileMenuExtraItems sx={{display: ['block', null, null, 'none']}} /> */}
+        {/* <MobileQuickLinks sx={{display: ['block', null, null, 'none']}} /> */}
       </ul>
       {/* </div> */}
 
