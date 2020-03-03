@@ -83,6 +83,7 @@ class MenuSection extends React.Component {
               position: 'relative',
               '&::after': {
                 content: '""',
+                display: ['none', null, null, 'block'],
                 width: '80%',
                 bg: 'accent',
                 height: '8px',
