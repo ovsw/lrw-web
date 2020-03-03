@@ -5,7 +5,7 @@ import {jsx} from 'theme-ui'
 import {buildImageObj} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 
-import ScrollDownIcon from '../elements/scroll-down-icon'
+// import ScrollDownIcon from '../elements/scroll-down-icon'
 
 function GenericPage ({_rawBody, title, section, headerImage = null}) {
   return (
