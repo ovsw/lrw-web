@@ -24,7 +24,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
-    "gatsby": "2.17.17",
+    "gatsby": "^2.17.17",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-source-sanity": "^4.0.3",
     "prettier-eslint-cli": "^4.7.1",
