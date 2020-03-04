@@ -26,7 +26,7 @@ const button = props => {
   const url = props.mark.href
   const isExternal = isAbsoluteURL(url)
   if (isExternal) {
-    return <a href={url} rel='noopener noreferrer' target='_blank' className='contentButton'>{props.children}  <GoLinkExternal sx={{position: 'relative', top: '3px'}} /></a>
+    return <a href={url} rel='noopener noreferrer' target='_blank' className='contentButton'>{props.children}  <GoLinkExternal /></a>
   } else {
     return <Link to={url} activeClassName='active' className='contentButton'>{props.children}</Link>
   }
