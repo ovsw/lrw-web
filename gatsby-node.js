@@ -90,19 +90,3 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   await createGenericPages(graphql, actions, reporter)
   await createBlogPostPages(graphql, actions, reporter)
 }
-
-// for filtering out posts in the future in the /pages/index.js query
-// exports.createSchemaCustomization = ({actions, schema, getNode}) => {
-//   actions.createTypes([
-//     schema.buildObjectType({
-//       name: 'post',
-//       interfaces: ['Node'],
-//       fields: {
-//         isFuture: {
-//           type: 'Boolean!',
-//           resolve: (s) => new Date(s.publishedAt) > new Date()
-//         }
-//       }
-//     })
-//   ])
-// }

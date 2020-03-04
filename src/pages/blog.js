@@ -1,11 +1,14 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled, Container} from 'theme-ui'
+import {jsx} from 'theme-ui'
 // import {Box, Flex} from '@theme-ui/components'
 import Layout from '../containers/layout'
-
 import {graphql} from 'gatsby'
-import {mapEdgesToNodes} from '../lib/helpers'
+import {
+  mapEdgesToNodes,
+  filterOutDocsWithoutSlugs,
+  filterOutDocsPublishedInTheFuture
+} from '../lib/helpers'
 import BlogPostPreviewList from '../components/blog/blog-post-preview-list'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
@@ -46,13 +49,17 @@ const ArchivePage = props => {
     )
   }
 
-  const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
+  const postNodes = (data || {}).posts
+    ? mapEdgesToNodes(data.posts)
+      .filter(filterOutDocsWithoutSlugs)
+      .filter(filterOutDocsPublishedInTheFuture)
+    : []
 
   return (
     <Layout>
-      <SEO title='News' />
+      <SEO title='Blog' />
       <>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} title='Camp Blog' />}
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} title='Laurelwood Blog' />}
       </>
     </Layout>
   )
