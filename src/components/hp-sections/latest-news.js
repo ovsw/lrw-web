@@ -27,7 +27,7 @@ const LatestNewsSection = ({posts}) => {
           flexDirection: ['column', 'column', 'column', 'row']
         }}>
           <div sx={{width: ['full', 'full', 'full', '50%']}}>
-            <LatestNewsImage image={post.mainImage} link={`/news/${post.slug.current}`} />
+            <LatestNewsImage image={post.mainImage} link={`/blog/${post.slug.current}`} />
           </div>
           <LatestNewsContent post={post} />
         </Flex>
@@ -59,7 +59,7 @@ const LatestNewsContent = ({post}) => {
           <PortableText blocks={post._rawExcerpt} sx={{fontFamily: 'body'}} />
         </div>
       )}
-      <Link to={`/news/${post.slug.current}`} sx={{variant: 'buttons.3DAccent', display: 'inline-block', my: 3, mr: 3, position: 'relative'}}>
+      <Link to={`/blog/${post.slug.current}`} sx={{variant: 'buttons.3DAccent', display: 'inline-block', my: 3, mr: 3, position: 'relative'}}>
         Read More
       </Link>
     </div>
@@ -67,7 +67,6 @@ const LatestNewsContent = ({post}) => {
 }
 
 const LatestNewsImage = ({image, link}) => {
-  // console.log(image)
   return (
     <Link to={link} sx={{width: ['full', 'full', 'full', '50%']}}>
       <Img fluid={image.asset.fluid} sx={{width: 'full', objectFit: 'cover', height: '100%'}} />
