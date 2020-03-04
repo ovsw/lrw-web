@@ -118,7 +118,7 @@ const MapPage = ({locations}) => {
               // console.log(node.labelDirection)
 
               return (
-                <>
+                <React.Fragment key={node.title}>
                   {(latLong !== null) && (
                     <Marker
                       key={latLong}
@@ -130,7 +130,7 @@ const MapPage = ({locations}) => {
                       </Tooltip>
                     </Marker>
                   )}
-                </>
+                </React.Fragment>
               )
             })}
           </Map>
