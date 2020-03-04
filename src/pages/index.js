@@ -31,6 +31,7 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
+  const ogImage = (data || {}).ogImage
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)
       .filter(filterOutDocsWithoutSlugs)
@@ -42,12 +43,12 @@ const IndexPage = props => {
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
     )
   }
-
   return (
     <Layout>
       <SEO
         title={site.title}
         description={site.description}
+        image={ogImage.headerImage}
       />
       <Hero />
       <About />
@@ -76,6 +77,12 @@ export const query = graphql`
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
+    }
+    ogImage: sanityPage(_id: { regex: "/(drafts.|)letterFromTheDirector/" }) {
+      headerImage {
+        ...SanityImageMeta
+        alt
+      }
     }
     posts: allSanityPost(
       limit: 6
