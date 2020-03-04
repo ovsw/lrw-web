@@ -10,6 +10,7 @@ const clientConfig = require('./client-config')
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://www.camplaurelwood.org',
     siteNav: [
       {
         title: 'Prospective Families',
@@ -450,6 +451,76 @@ module.exports = {
         display: 'swap'
       }
     },
-    `gatsby-plugin-netlify-headers`
+    `gatsby-plugin-netlify-headers`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Camp Laurelwood - Connecticut's Premier Jewish Summer Camp`,
+        short_name: `Camp Laurelwood`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#3e9b00`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
+        // icons: [
+        //   {
+        //     src: '/favicons/android-chrome-192x192.png',
+        //     sizes: '192x192',
+        //     type: 'image/png'
+        //   },
+        //   {
+        //     src: '/favicons/android-chrome-512x512.png',
+        //     sizes: '512x512',
+        //     type: 'image/png'
+        //   }
+        // ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-tawk`,
+      options: {
+        tawkId: '5a9d5e5cd7591465c708437c'
+        // get this from the tawk script widget
+      }
+    },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.example.com',
+        sitemap: 'https://www.example.com/sitemap.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-5V584J8',
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: {platform: 'gatsby'}
+
+        // Specify optional GTM environment details.
+        // gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING',
+        // gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME',
+        // dataLayerName: 'YOUR_DATA_LAYER_NAME'
+      }
+    }
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: config.googleAnalyticsID,
+    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
+    //     head: true
+    //     // sampleRate: 5,
+    //     // siteSpeedSampleRate: 10
+    //   }
+    // }
   ]
 }
