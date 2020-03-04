@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import {jsx} from 'theme-ui'
 import React, { useRef, useEffect } from 'react' // eslint-disable-line
 import VideoCover from 'react-video-cover'
 
@@ -24,8 +26,19 @@ class HeroVideoBg extends React.Component {
     }
 
     return (
-
-      <VideoCover videoOptions={videoOptions} />
+      <div sx={{
+        '&::after': {
+          content: '""',
+          bg: 'rgba(0,0,0,0.3)',
+          position: 'absolute',
+          top: '0',
+          bottom: '0',
+          left: '0',
+          right: '0'
+        }
+      }}>
+        <VideoCover videoOptions={videoOptions} />
+      </div>
 
     )
   }

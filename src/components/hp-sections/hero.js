@@ -11,7 +11,7 @@ import {FaPlay} from 'react-icons/fa'
 import VideoPoster from '../../images/hero-video-bg.jpg'
 import BigLogo from '../../images/lrw-temp-simplified-logo-vector-bw.png'
 
-import '../../../node_modules/react-modal-video/css/modal-video.min.css'
+import '../react-modal-video.css'
 
 const Hero = () => {
   const [playFullVideo, setPlayFullVideo] = useState(false)
@@ -21,7 +21,7 @@ const Hero = () => {
       textAlign: 'center',
       borderBottom: '1px solid lightgrey',
       position: 'relative',
-      zIndex: '1',
+      // zIndex: '1',
       // bg: 'gray.2',
       backgroundImage: `url('${VideoPoster}')`,
       backgroundSize: 'cover',
@@ -34,9 +34,9 @@ const Hero = () => {
         position: 'absolute',
         top: 0,
         right: 0,
-        bottom: 0,
-        left: 0,
-        zIndex: 1
+        bottom: '100px',
+        left: 0
+        // zIndex: 1
       }} />
       <div sx={{
         display: ['none', 'none', 'block'],
@@ -44,15 +44,19 @@ const Hero = () => {
         top: 0,
         right: 0,
         bottom: 0,
-        left: 0,
-        zIndex: 0
+        left: 0
+        // zIndex: -1
       }}>
         <HeroVideoBg playFullVideo={playFullVideo} poster={VideoPoster} />
       </div>
+
+      {/* ////////////////////// */}
+
       <Container className='container' sx={{
         maxWidth: '5xl',
         position: 'relative',
-        zIndex: 10
+        py: 0
+        // zIndex: 10
         // my: [3, 4, 4, 3, 5]
         // bg: 'rgba(0,0,0,.32)'
       }}>
@@ -75,7 +79,7 @@ const Hero = () => {
           maxWidth: '2xl',
           mx: 'auto'
         }}>
-          Wonderful experiences await your child at Camp Laurelwood, Connecticut's Premier Jewish Co-ed Overnight Camp. </p>
+    Wonderful experiences await your child at Camp Laurelwood, Connecticut's Premier Jewish Co-ed Overnight Camp. </p>
         <button onClick={() => setPlayFullVideo(true)} sx={{
           variant: 'buttons.3DAccent',
           display: 'inline-block',
@@ -86,14 +90,17 @@ const Hero = () => {
         </button>
         <ModalVideo channel='youtube' isOpen={playFullVideo} videoId='gcJfsUztrGE' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
         {/* <div sx={{
-          position: 'absolute',
-          bottom: '-140px',
-          left: '50%',
-          marginLeft: '-1.5rem'
-        }}>
-          <ScrollDownIcon />
-        </div> */}
+    position: 'absolute',
+    bottom: '-140px',
+    left: '50%',
+    marginLeft: '-1.5rem'
+  }}>
+    <ScrollDownIcon />
+  </div> */}
+
+        {/* //////////////////////////// */}
       </Container>
+
     </Box>
   )
 }
