@@ -11,7 +11,7 @@ import {FaPlay} from 'react-icons/fa'
 import VideoPoster from '../../images/hero-video-bg.jpg'
 import BigLogo from '../../images/lrw-temp-simplified-logo-vector-bw.png'
 
-import '../react-modal-video.css'
+import '../../../node_modules/react-modal-video/css/modal-video.min.css'
 
 const Hero = () => {
   const [playFullVideo, setPlayFullVideo] = useState(false)
