@@ -88,7 +88,7 @@ const Hero = () => {
         }}>
           <FaPlay sx={{position: 'relative', top: '2px'}} /> &nbsp; Watch our Full Video
         </button>
-        <ModalVideo channel='youtube' isOpen={playFullVideo} videoId='8V1YjlxosGE' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
+        <ModalVideo channel='youtube' isOpen={playFullVideo} autoplay='1' videoId='8V1YjlxosGE' onClose={() => setPlayFullVideo(!setPlayFullVideo)} />
         {/* old video id: gcJfsUztrGE */}
         {/* <div sx={{
     position: 'absolute',
