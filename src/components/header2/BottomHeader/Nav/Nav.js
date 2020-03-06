@@ -15,7 +15,7 @@ import MobileQuickLinks from './Mobile/MobileQuickLinks' // appear at the bottom
 
 import {appContext} from '../../../../context'
 
-import {useBreakpointIndex} from '@theme-ui/match-media'
+// import {useBreakpointIndex} from '@theme-ui/match-media'
 
 const Nav = ({menuSections}) => {
   const {siteNav} = useSiteMetadata()
@@ -66,10 +66,10 @@ const Nav = ({menuSections}) => {
           fontSize: 2
         }
       }}>
-        <MenuSection navData={siteNav[0]} breakPointIndex={useBreakpointIndex()} />
-        <MenuSection navData={siteNav[1]} breakPointIndex={useBreakpointIndex()} logoSpace />
-        <MenuSection navData={siteNav[2]} breakPointIndex={useBreakpointIndex()} />
-        <MenuSection navData={siteNav[3]} breakPointIndex={useBreakpointIndex()} justifyContent='flex-end' />
+        <MenuSection navData={siteNav[0]} />
+        <MenuSection navData={siteNav[1]} logoSpace />
+        <MenuSection navData={siteNav[2]} />
+        <MenuSection navData={siteNav[3]} justifyContent='flex-end' />
         {/* <MobileMenuExtraItems sx={{display: ['block', null, null, 'none']}} /> */}
         {/* <MobileQuickLinks sx={{display: ['block', null, null, 'none']}} /> */}
       </ul>
