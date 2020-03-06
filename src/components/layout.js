@@ -1,17 +1,10 @@
 /** @jsx jsx */
 import React, {useContext} from 'react' // eslint-disable-line
-import {jsx} from 'theme-ui'
 
 import {Global} from '@emotion/core'
-import {Layout as ThemeLayout} from 'theme-ui'
+import {jsx, Layout as ThemeLayout} from 'theme-ui'
 import Header from './header2'
 import Footer from './footer'
-
-// import 'typeface-dosis'
-// import 'typeface-amatic-sc'
-// import 'typeface-skranji'
-// import 'typeface-open-sans'
-// import 'typeface-lato'
 
 // context
 import {appContext} from '../context'

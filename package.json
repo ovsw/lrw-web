@@ -63,11 +63,6 @@
     "react-video-cover": "^1.2.2",
     "react-youtube": "^7.9.0",
     "slick-carousel": "^1.8.1",
-    "theme-ui": "^0.2.49",
-    "typeface-amatic-sc": "0.0.72",
-    "typeface-dosis": "0.0.72",
-    "typeface-lato": "0.0.75",
-    "typeface-open-sans": "0.0.75",
-    "typeface-skranji": "0.0.72"
+    "theme-ui": "^0.2.49"
   }
 }
