@@ -33,7 +33,7 @@ const MobileMainReplacement = props => {
       }
     }}>
       <li sx={{borderRight: '1px solid', borderColor: 'muted'}}>
-        <a href='tel:203-421-3736' title='Call Us'>
+        <a href='tel:1-203-421-3736' title='Call Us'>
           <span><FiPhoneCall /> Call Us</span>
         </a>
       </li>

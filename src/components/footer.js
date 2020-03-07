@@ -58,7 +58,7 @@ const Footer = () => {
             <div className='vcard' sx={{color: 'light', a: {color: 'light'}}}>
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0, color: 'light'}}>Camp Laurelwood</Styled.h3></div>
               <div className='tel'>
-                Call Now <a sx={{variant: 'links.footerLinks'}} href='tel:2034213736'>(203) 421-3736</a>
+                Call Now <a sx={{variant: 'links.footerLinks'}} href='tel:12034213736'>(203) 421-3736</a>
               </div>
               <a className='email' sx={{variant: 'links.footerLinks'}} href='mailto:info@camplaurelwood.org'>info@camplaurelwood.org</a>
               <div className='adr' sx={{mt: 4}}>

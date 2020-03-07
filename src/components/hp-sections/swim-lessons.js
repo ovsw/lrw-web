@@ -39,7 +39,6 @@ const SwimSectionContent = () => {
       <Link to='/activities/' sx={{variant: 'buttons.3DAccent', display: 'inline-block', my: 3, mr: 3, position: 'relative'}}>
         Our Swimming Program
       </Link>
-      {/* <a href='tel:2034213736' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (203) 421-3736</a> */}
       <div sx={{variant: 'svgDeco.topRightBig'}}>
         <FaSwimmer />
       </div>
