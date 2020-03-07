@@ -25,8 +25,8 @@ const MainLogo = () => {
 `)
   return (
     <div sx={mainLogoStyles}>
-      <Link to='/' title='Camp Laurelwood'>
-        <img src={logoImage.childImageSharp.fixed.src} alt='Shibley Day Camp' />
+      <Link to='/' title='Camp Laurelwood home page'>
+        <img src={logoImage.childImageSharp.fixed.src} alt='Camp Laurelwood Logo' />
       </Link>
     </div>
   )
