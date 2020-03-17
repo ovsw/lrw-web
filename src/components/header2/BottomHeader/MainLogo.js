@@ -36,12 +36,11 @@ export default MainLogo
 
 const mainLogoStyles = {
   position: 'absolute',
-  top: ['0px', null, null, '0px'],
+  top: ['-32px', null, null, '-30px'],
   width: ['100px', null, null, '115px'],
   height: ['102px', null, null, '116px'],
   left: '0',
   right: '0',
-  bottom: '0',
   margin: '0 auto',
   padding: '3px',
   background: '#fff',

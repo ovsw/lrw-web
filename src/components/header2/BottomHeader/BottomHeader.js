@@ -13,7 +13,8 @@ const BottomHeder = () => {
     <div className='bottom-header' sx={{
       boxShadow: '0 3px 10px 0px rgba(0,0,0,0.2)',
       borderBottom: '5px solid',
-      borderColor: 'accent'
+      borderColor: 'accent',
+      position: 'relative'
     }}>
       <div className='container-fluid'>
         {/* THIS CONTROLS THE MAX-WIDTH and CENTERING OF THE BOTTOMHEADER CONTENT. */}

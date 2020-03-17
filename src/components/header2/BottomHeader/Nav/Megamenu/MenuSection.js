@@ -113,7 +113,7 @@ class MenuSection extends React.Component {
             background: [null, null, null, `#d2edf6 url(${MenuBGImage}) repeat-x center center`],
             // positioning
             position: [null, null, null, 'absolute'],
-            top: '6.5rem', //  FYI: 6.85 is the limit at which there's no space between this and the triggering parent
+            top: '4.65rem', //  FYI: 6.85 is the limit at which there's no space between this and the triggering parent
             right: '0',
             // sizing
             width: [null, null, null, '100%'],

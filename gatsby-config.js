@@ -259,10 +259,15 @@ module.exports = {
             title: 'column 1',
             children: [
               {
-                title: 'Upcoming Events',
-                slug: '/upcoming-events-current-families/',
+                title: 'Health and Safety Updates',
+                slug: '/health-and-safety-updates/',
                 children: []
               },
+              // {
+              //   title: 'Upcoming Events',
+              //   slug: '/upcoming-events-current-families/',
+              //   children: []
+              // },
               {
                 title: 'What\'s New',
                 slug: '/whats-new-on-campus/',

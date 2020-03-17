@@ -1,9 +1,12 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
+import React, {useContext} from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
-// import {Link} from 'gatsby'
+import {useStaticQuery, graphql} from 'gatsby'
 
+import {appContext} from '../../../context'
+
+import Announcement from '../announcement'
 import Column1 from './Column1'
 import Column2 from './Column2'
 
@@ -11,9 +14,20 @@ const TopHeader = () => {
   // STYLE CONFIG
   const logoSpace = '6rem'
   /// ////////////////////
+  const {alertSettings} = useStaticQuery(graphql`
+    query{
+      alertSettings: sanitySiteSettings(id: {eq: "0f217bb5-f7f6-5420-b7c6-58db2c12b8c7"}){
+        alertToggle
+        _rawAlertText
+      }
+    }
+  `)
+
+  const {isAlertShowing, hideAlert} = useContext(appContext)
 
   return (
     <div className='top-header' sx={{bg: 'primaryDark', a: {display: 'inline-block', color: 'white', textDecoration: 'none', textTransform: 'uppercase', px: 2, py: 1}}}>
+      {alertSettings.alertToggle && isAlertShowing && <Announcement closeAlert={hideAlert} alertText={alertSettings._rawAlertText} />}
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-12 header-wrap' sx={{display: 'flex'}}>
