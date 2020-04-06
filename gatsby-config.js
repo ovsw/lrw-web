@@ -176,7 +176,7 @@ module.exports = {
               },
               {
                 title: 'Letter From the Director',
-                slug: '/welcome-letter-from-the-director/',
+                slug: '/welcome-letter-from-the-executive-director/',
                 children: []
               }
             ]
