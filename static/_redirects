@@ -1,4 +1,5 @@
 https://lrw-app.netlify.com/* https://www.camplaurelwood.org/:splat 301!
+https://lrw-app.netlify.app/* https://www.camplaurelwood.org/:splat 301!
 
 /prospective-families/announcements/      /blog/
 /prospective-families/day-camp-entering-kindergarten-through-7th-grade/     /programs/day-camp/
