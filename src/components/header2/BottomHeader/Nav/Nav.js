@@ -10,8 +10,8 @@ import {useSiteMetadata} from '../../../../hooks/use-site-metadata'
 
 import MobileMainLinks from './Mobile/MobileMainLinks' // these are the items that appear in place of the main menu on mobile (usually contact link icons )
 import MobileMenuToggle from './Mobile/MobileMenuToggle'
-// import MobileMenuExtraItems from './Mobile/MobileMenuExtraItems' // appear at the bottom of the expanded mobile menu as quick links
-// import MobileQuickLinks from './Mobile/MobileQuickLinks' // appear at the bottom of the expanded mobile menu as quick links
+import MobileMenuExtraItems from './Mobile/MobileMenuExtraItems' // appear at the bottom of the expanded mobile menu as quick links
+import MobileQuickLinks from './Mobile/MobileQuickLinks' // appear at the bottom of the expanded mobile menu as quick links
 
 import {appContext} from '../../../../context'
 
@@ -71,7 +71,7 @@ const Nav = ({menuSections}) => {
         <MenuSection navData={siteNav[2]} />
         <MenuSection navData={siteNav[3]} justifyContent='flex-end' />
         {/* <MobileMenuExtraItems sx={{display: ['block', null, null, 'none']}} /> */}
-        {/* <MobileQuickLinks sx={{display: ['block', null, null, 'none']}} /> */}
+        <MobileQuickLinks sx={{display: ['block', null, null, 'none']}} />
       </ul>
       {/* </div> */}
 
