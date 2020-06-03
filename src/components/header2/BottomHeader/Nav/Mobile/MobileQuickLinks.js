@@ -4,7 +4,7 @@ import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 import {Link} from 'gatsby'
 
-const MobileQuickLinks = props => {
+const MobileQuickLinks = ({closeMobileNav}) => {
   return (
     <li>
       <div sx={{
@@ -12,7 +12,7 @@ const MobileQuickLinks = props => {
       }}>
         <Link to='/donate-now/' sx={{
           variant: 'buttons.simple'
-        }}>Donate Now</Link>
+        }} onClick={closeMobileNav}>Donate Now</Link>
       </div>
       {/* <div className='mobile-menu' {...props}>
         <div className='mobile-nav'>

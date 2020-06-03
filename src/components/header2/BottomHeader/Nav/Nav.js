@@ -19,7 +19,7 @@ import {appContext} from '../../../../context'
 
 const Nav = ({menuSections}) => {
   const {siteNav} = useSiteMetadata()
-  const {isMobileNavOpen} = useContext(appContext)
+  const {isMobileNavOpen, closeMobileNav} = useContext(appContext)
   return (
     <nav sx={{
       position: ['relative', null, null, 'static'],
@@ -71,7 +71,9 @@ const Nav = ({menuSections}) => {
         <MenuSection navData={siteNav[2]} />
         <MenuSection navData={siteNav[3]} justifyContent='flex-end' />
         {/* <MobileMenuExtraItems sx={{display: ['block', null, null, 'none']}} /> */}
-        <MobileQuickLinks sx={{display: ['block', null, null, 'none']}} />
+        <div sx={{display: ['block', null, 'none']}}>
+          <MobileQuickLinks closeMobileNav={closeMobileNav} />
+        </div>
       </ul>
       {/* </div> */}
 
