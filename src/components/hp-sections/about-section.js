@@ -4,7 +4,7 @@ import {jsx, Container} from 'theme-ui'
 import {Link, useStaticQuery, graphql} from 'gatsby'
 import {Box, Flex} from '@theme-ui/components'
 
-// import Countdown from '../Countdown'
+import Countdown from '../Countdown'
 import Column from './about-section-column'
 
 // import DecoImg1 from '../../images/deco/laurelwood-deco1-3.png'
@@ -50,10 +50,10 @@ const SectionThreeColumns = () => {
   return (
     <section sx={{variant: 'sections.hpSectionLight'}}>
       <Container sx={{px: 0, position: 'relative', zIndex: 0, maxWidth: '7xl'}}>
-        {/* <Countdown
-          timeTillDate='06 28 2020, 8:00 am'
+        <Countdown
+          timeTillDate='06 27 2021, 8:00 am'
           timeFormat='MM DD YYYY, h:mm a'
-        /> */}
+        />
         <h2 sx={{variant: 'headings.mainSectionHeading'}}>Connecticut's Premier Jewish Summer Camp</h2>
         <div sx={{px: 2, textAlign: 'center', maxWidth: 'xl', mx: 'auto', a: {color: 'primaryDark', textDecoration: 'none', px: 1, borderBottom: '3px solid', borderColor: 'accent'}}}>
           <p sx={{color: 'muted'}}>We offer both Overnight and Day Camp <Link to='/programs/'>programs</Link>, lots of fun <Link to='/activities/'>activities</Link> and a warm welcoming community. </p>

@@ -54,7 +54,7 @@ class Countdown extends React.Component {
 
   render () {
     const {months, days, hours, minutes, seconds, isBeforeCountdownDate} = this.state
-    const monthsRadius = mapNumber(months, 8, 0, 0, 360) // 8 months instead of 12 because that's the interval between camp seasons
+    const monthsRadius = mapNumber(months, 12, 0, 0, 360) // 8 months instead of 12 because that's the interval between camp seasons
     const daysRadius = mapNumber(days, 30, 0, 0, 360)
     const hoursRadius = mapNumber(hours, 24, 0, 0, 360)
     const minutesRadius = mapNumber(minutes, 60, 0, 0, 360)
