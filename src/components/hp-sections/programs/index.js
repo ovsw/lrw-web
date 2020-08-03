@@ -65,18 +65,18 @@ const programs = [
   },
   {
     name: 'Bonim Travel',
-    age: '10th graders',
-    icon: 'teenagers',
-    description: 'A recreational, educational and cultural experience for 10th graders, building character and social skills along with a strong Jewish identity.',
-    link: '/programs/bonim-travel-program/'
-  },
-  {
-    name: 'Staff-In-Training Program',
     age: '11th graders',
-    icon: 'leader',
-    description: 'Provides rising 11th graders the tools and experience they need to become future leaders, strong role models  Camp Laurelwood staff.',
-    link: '/programs/sit-program/'
+    icon: 'teenagers',
+    description: 'A recreational, educational and cultural experience for 11th graders, building character and social skills along with a strong Jewish identity.',
+    link: '/programs/bonim-travel-program/'
   }
+  // {
+  //   name: 'Staff-In-Training Program',
+  //   age: '11th graders',
+  //   icon: 'leader',
+  //   description: 'Provides rising 11th graders the tools and experience they need to become future leaders, strong role models  Camp Laurelwood staff.',
+  //   link: '/programs/sit-program/'
+  // }
 ]
 
 const MainContent = () => {

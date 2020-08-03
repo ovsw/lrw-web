@@ -29,7 +29,7 @@ module.exports = {
                     children: []
                   },
                   {
-                    title: 'Overnight Camp (2nd-9th)',
+                    title: 'Overnight Camp (2nd-10th)',
                     slug: '/programs/overnight-camp/',
                     children: []
                   },
@@ -39,15 +39,15 @@ module.exports = {
                     children: []
                   },
                   {
-                    title: 'Bonim Travel (10th)',
+                    title: 'Bonim Travel (11th)',
                     slug: '/programs/bonim-travel-program/',
                     children: []
                   },
-                  {
-                    title: 'SIT Program (11th)',
-                    slug: '/programs/sit-program/',
-                    children: []
-                  },
+                  // {
+                  //   title: 'SIT Program (11th)',
+                  //   slug: '/programs/sit-program/',
+                  //   children: []
+                  // },
                   {
                     title: 'Specialty Camps',
                     slug: '/programs/specialty-camps/',
@@ -110,12 +110,12 @@ module.exports = {
                     title: 'Bonim',
                     slug: '/dates-and-rates-bonim-travel-program/',
                     children: []
-                  },
-                  {
-                    title: 'SIT',
-                    slug: '/dates-and-rates-sit-program/',
-                    children: []
                   }
+                  // {
+                  //   title: 'SIT',
+                  //   slug: '/dates-and-rates-sit-program/',
+                  //   children: []
+                  // }
                 ]
               }
             ]
