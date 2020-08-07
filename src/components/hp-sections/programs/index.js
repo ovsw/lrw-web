@@ -63,20 +63,20 @@ const programs = [
     description: 'Laurelwood Day Camp is run by Camp Laurelwood and is a great way for campers (K to 7th grade) to start their camping experience.',
     link: '/programs/day-camp/'
   },
-  // {
-  //   name: 'Bonim Travel',
-  //   age: '11th graders',
-  //   icon: 'teenagers',
-  //   description: 'A recreational, educational and cultural experience for 11th graders, building character and social skills along with a strong Jewish identity.',
-  //   link: '/programs/bonim-travel-program/'
-  // },
   {
-    name: 'Staff-In-Training Program',
+    name: 'Bonim Travel',
     age: '11th graders',
-    icon: 'leader',
-    description: 'Provides rising 11th graders the tools and experience they need to become future leaders, strong role models  Camp Laurelwood staff.',
-    link: '/programs/sit-program/'
+    icon: 'teenagers',
+    description: 'A recreational, educational and cultural experience for 11th graders, building character and social skills along with a strong Jewish identity.',
+    link: '/programs/bonim-travel-program/'
   }
+  // {
+  //   name: 'Staff-In-Training Program',
+  //   age: '11th graders',
+  //   icon: 'leader',
+  //   description: 'Provides rising 11th graders the tools and experience they need to become future leaders, strong role models  Camp Laurelwood staff.',
+  //   link: '/programs/sit-program/'
+  // }
 ]
 
 const MainContent = () => {

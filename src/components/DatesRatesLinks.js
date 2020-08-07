@@ -18,18 +18,18 @@ const DatesRatesLinks = [
     description: 'Dates & Rates',
     link: '/dates-and-rates-day-camp/'
   },
-  // {
-  //   name: 'Bonim Travel',
-  //   icon: 'teenagers',
-  //   description: 'Dates & Rates',
-  //   link: '/dates-and-rates-bonim-travel-program/'
-  // },
   {
-    name: 'Staff-in-Training Program',
-    icon: 'leader',
+    name: 'Bonim Travel',
+    icon: 'teenagers',
     description: 'Dates & Rates',
-    link: '/dates-and-rates-sit-program/'
+    link: '/dates-and-rates-bonim-travel-program/'
   }
+  // {
+  //   name: 'Staff-in-Training Program',
+  //   icon: 'leader',
+  //   description: 'Dates & Rates',
+  //   link: '/dates-and-rates-sit-program/'
+  // }
 ]
 
 export default () => {
