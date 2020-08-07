@@ -53,7 +53,7 @@ const programs = [
     name: 'Overnight Camp',
     age: '2nd-9th graders',
     icon: 'moon',
-    description: 'Campers entering second through seventh grades live in newly updated bunks with their friends and counselors, and enjoy all of the programs and activities camp has to offer!',
+    description: 'Campers entering second through 10th grades live in newly updated bunks with their friends and counselors, and enjoy all of the programs and activities camp has to offer!',
     link: '/programs/overnight-camp/'
   },
   {
@@ -81,7 +81,7 @@ const programs = [
 
 const MainContent = () => {
   return (
-    <Flex sx={{pl: [0, 0, 4], flexWrap: 'wrap'}}>
+    <Flex sx={{pl: [0, 0, 4], flexWrap: 'wrap', justifyContent: 'center'}}>
       {programs.map(program => {
         const width = program.layout ? '100%' : '1/2'
         return (

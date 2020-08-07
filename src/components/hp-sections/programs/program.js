@@ -8,6 +8,7 @@ import Icon from '../../icon'
 const ProgramItem = ({name, icon = 'pineCone', iconSize = '4.7rem', description, link, layout = 'normal'}) => {
   return (
     <NavLink to={link} sx={{
+
       variant: ['links.programListLink', 'borders.drawn'],
       flexDirection: ['column', 'column', 'column'],
       alignItems: 'center'
