@@ -41,7 +41,7 @@ const programs = [
     name: 'Donate Today',
     icon: 'donate',
     description: 'Donate to Camp Laurelwood Today',
-    link: 'https://camplaurelwood.networkforgood.com/projects/101373-all-together-now-laurelwood',
+    link: 'https://camplaurelwood.networkforgood.com/projects/65520-general-donation-page',
     external: true
   },
   {

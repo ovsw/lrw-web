@@ -362,7 +362,7 @@ module.exports = {
             children: [
               {
                 title: 'Donate Today',
-                slug: 'https://camplaurelwood.networkforgood.com/projects/101373-all-together-now-laurelwood',
+                slug: 'https://camplaurelwood.networkforgood.com/projects/65520-general-donation-page',
                 children: []
               },
               {
