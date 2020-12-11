@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {Link} from 'gatsby'
+import styled from '@emotion/styled'
+
 import isAbsoluteURL from 'is-absolute-url'
 import {jsx} from 'theme-ui'
 import Figure from './Figure'
@@ -11,8 +13,26 @@ import YouTube from 'react-youtube'
 import Table from './Table'
 import Embed from './Embed'
 import DatesRatesLinks from './DatesRatesLinks'
+import getVideoId from 'get-video-id'
+import VimeoPlayer from '@u-wave/react-vimeo'
 
 import {GoLinkExternal} from 'react-icons/go'
+
+const Vimeo = styled(VimeoPlayer)`
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`
 
 const YTopts = {
   width: '100%',
@@ -38,10 +58,19 @@ const serializers = {
     mainImage: Figure,
     avatarImage: AvatarImage,
     localFile: File,
+
     youtube: ({node}) => {
       const {url} = node
       const id = getYouTubeId(url)
       return (<YouTube videoId={id} opts={YTopts} />)
+    },
+    vimeo: ({node}) => {
+      const {url} = node
+      if (url) {
+        const {id} = getVideoId(url)
+        return (<Vimeo video={id} className='fuuuuu' style={{textAlign: 'center', width: '100%'}} />)
+      }
+      return <p>problem</p>
     },
     mytable: Table,
     iframeEmbed: Embed,
