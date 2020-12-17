@@ -426,6 +426,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '441537890196363'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {
         linkStyles: false // (default: true) Enable/disable loading stylesheets via CDN
