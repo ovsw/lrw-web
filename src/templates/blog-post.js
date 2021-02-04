@@ -27,6 +27,7 @@ export const query = graphql`
 `
 
 const BlogPostTemplate = props => {
+  console.log('sprops', props.pageContext)
   const {data, errors} = props
   const post = data && data.post
   return (
@@ -40,7 +41,7 @@ const BlogPostTemplate = props => {
         </Container>
       )}
 
-      {post && <BlogPost {...post} />}
+      {post && <BlogPost {...post} prevSlug={props.pageContext.prevSlug} nextSlug={props.pageContext.nextSlug} />}
     </Layout>
   )
 }

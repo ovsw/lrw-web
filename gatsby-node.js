@@ -50,12 +50,23 @@ async function createBlogPostPages (graphql, actions, reporter) {
   const result = await graphql(`
     {
       allSanityPost(
+        sort: { fields: [publishedAt], order: DESC }
         filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
       ) {
         edges {
           node {
             id
             publishedAt
+            slug {
+              current
+            }
+          }
+          next {
+            slug {
+              current
+            }
+          }
+          previous {
             slug {
               current
             }
@@ -75,13 +86,19 @@ async function createBlogPostPages (graphql, actions, reporter) {
       const {id, slug = {}} = edge.node // publishedAt
       // const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/blog/${slug.current}/`
+      const nextSlug = edge.next ? edge.next.slug.current : ''
+      const prevSlug = edge.previous ? edge.previous.slug.current : ''
 
       reporter.info(`Creating blog post page: ${path}`)
 
       createPage({
         path,
         component: require.resolve('./src/templates/blog-post.js'),
-        context: {id}
+        context: {
+          id,
+          nextSlug: nextSlug,
+          prevSlug: prevSlug
+        }
       })
     })
 }

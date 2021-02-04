@@ -4,11 +4,15 @@ import React from 'react' // eslint-disable-line
 import {jsx, Container} from 'theme-ui'
 // import {buildImageObj} from '../../lib/helpers'
 // import {imageUrlFor} from '../../lib/image-url'
+import {Link} from 'gatsby'
 import PortableText from '../portableText'
 import PageHeaderImage from '../page-header-image'
 
+import {FaChevronRight, FaChevronLeft} from 'react-icons/fa'
+
 function BlogPost (props) {
-  const {_rawBody, categories, title, mainImage, publishedAt} = props
+  const {_rawBody, categories, title, mainImage, publishedAt, prevSlug, nextSlug} = props
+
   return (
     <article>
       { mainImage && mainImage.asset && <PageHeaderImage headerImage={mainImage} />}
@@ -51,6 +55,10 @@ function BlogPost (props) {
               </div>
             )}
           </aside>
+          <p>
+            { prevSlug !== '' ? <Link sx={{variant: 'buttons.3DAccent', display: 'inline-block', my: 3, mr: 3, position: 'relative'}} to={'/blog/' + prevSlug}><FaChevronLeft /> previous post</Link> : ''}
+            { nextSlug !== '' ? <Link sx={{variant: 'buttons.3DAccent', display: 'inline-block', my: 3, mr: 3, position: 'relative'}} to={'/blog/' + nextSlug}>next post <FaChevronRight /></Link> : ''}
+          </p>
         </Container>
       </div>
     </article>
