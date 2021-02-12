@@ -33,26 +33,26 @@ module.exports = {
                     slug: '/programs/overnight-camp/',
                     children: []
                   },
-                  {
-                    title: 'Day Camp (K-7th)',
-                    slug: '/programs/day-camp/',
-                    children: []
-                  },
+                  // {
+                  //   title: 'Day Camp (K-7th)',
+                  //   slug: '/programs/day-camp/',
+                  //   children: []
+                  // },
                   {
                     title: 'Bonim Travel (11th)',
                     slug: '/programs/bonim-travel-program/',
                     children: []
-                  },
+                  }
                   // {
                   //   title: 'SIT Program (11th)',
                   //   slug: '/programs/sit-program/',
                   //   children: []
                   // },
-                  {
-                    title: 'Specialty Camps',
-                    slug: '/programs/specialty-camps/',
-                    children: []
-                  }
+                  // {
+                  //   title: 'Specialty Camps',
+                  //   slug: '/programs/specialty-camps/',
+                  //   children: []
+                  // }
                 ]
               }
             ]
