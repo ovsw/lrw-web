@@ -33,11 +33,11 @@ module.exports = {
                     slug: '/programs/overnight-camp/',
                     children: []
                   },
-                  // {
-                  //   title: 'Day Camp (K-7th)',
-                  //   slug: '/programs/day-camp/',
-                  //   children: []
-                  // },
+                  {
+                    title: 'Day Camp (K-7th)',
+                    slug: '/programs/day-camp/',
+                    children: []
+                  },
                   {
                     title: 'Bonim Travel (11th)',
                     slug: '/programs/bonim-travel-program/',
