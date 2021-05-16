@@ -38,7 +38,7 @@ const MobileMainReplacement = props => {
         </a>
       </li>
       <li>
-        <a href='mailto:info@camplaurelwood.com' title='Email Us'>
+        <a href='mailto:info@camplaurelwood.org' title='Email Us'>
 
           <span> <FiMail /> Email Us</span>
         </a>
