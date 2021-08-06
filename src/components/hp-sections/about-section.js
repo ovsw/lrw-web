@@ -35,14 +35,14 @@ const SectionThreeColumns = () => {
     {
       title: 'Our Mission',
       icon: 'teenagers',
-      text: 'To provide a fun, safe and inclusive environment that builds self-esteem and encourages personal growth for children ages 5-15: Jewish identity and values, healthy lifestyle choices, and the foundation for lifelong friendships.',
+      text: 'Camp Laurelwood is an evolving Jewish community where we build the world we aspire to live in by creating opportunities for people to connect, explore, and inspire.',
       // was : To provide a fun, safe and inclusive environment that builds self-esteem and encourages personal growth for children ages 5-15: explore and enhance Jewish identity and values, encourage healthy lifestyle choices, and lay the foundation for positive, lifelong friendships.
       bgImage: bgImageMission.childImageSharp.fluid
     },
     {
       title: 'Our Vision',
       icon: 'starOfDavid',
-      text: 'A vibrant, nurturing community rooted in Jewish values and traditions that inspire campers and staff to learn, grow and explore, creating lasting memories that strengthen the community.',
+      text: 'We envision a kinder world supported by generations of goodness and a vibrant Jewish community.',
       bgImage: bgImageVision.childImageSharp.fluid
     }
   ]
