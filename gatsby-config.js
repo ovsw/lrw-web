@@ -29,7 +29,7 @@ module.exports = {
                     children: []
                   },
                   {
-                    title: 'Overnight Camp (2nd-10th)',
+                    title: 'Overnight Camp (2nd-9th)',
                     slug: '/programs/overnight-camp/',
                     children: []
                   },
@@ -39,7 +39,7 @@ module.exports = {
                     children: []
                   },
                   {
-                    title: 'Bonim Travel (11th)',
+                    title: 'Bonim Travel (10th-11th)',
                     slug: '/programs/bonim-travel-program/',
                     children: []
                   }
