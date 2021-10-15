@@ -101,11 +101,11 @@ module.exports = {
                     slug: '/dates-and-rates-overnight-camp/',
                     children: []
                   },
-                  // {
-                  //   title: 'Day Camp',
-                  //   slug: '/dates-and-rates-day-camp/',
-                  //   children: []
-                  // },
+                  {
+                    title: 'Day Camp',
+                    slug: '/dates-and-rates-day-camp/',
+                    children: []
+                  },
                   {
                     title: 'Bonim',
                     slug: '/dates-and-rates-bonim-travel-program/',
