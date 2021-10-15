@@ -12,12 +12,12 @@ const DatesRatesLinks = [
     description: 'Dates & Rates',
     link: '/dates-and-rates-overnight-camp/'
   },
-  // {
-  //   name: 'Day Camp',
-  //   icon: 'dayCamp',
-  //   description: 'Dates & Rates',
-  //   link: '/dates-and-rates-day-camp/'
-  // },
+  {
+    name: 'Day Camp',
+    icon: 'dayCamp',
+    description: 'Dates & Rates',
+    link: '/dates-and-rates-day-camp/'
+  },
   {
     name: 'Bonim Travel',
     icon: 'teenagers',
