@@ -345,6 +345,11 @@ module.exports = {
                 children: []
               },
               {
+                title: 'Alumni Events',
+                slug: '/alumni-events/',
+                children: []
+              },
+              {
                 title: 'Contact us',
                 slug: '/private-events-and-retreats/contact-us/',
                 children: []
