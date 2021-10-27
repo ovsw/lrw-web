@@ -3,6 +3,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`
 })
 
+console.log("XXXXXXXXXXXXXXXXXXXXXXXX", process.env.SANITY_READ_TOKEN);
+
 const path = require(`path`)
 const clientConfig = require('./client-config')
 
@@ -258,11 +260,11 @@ module.exports = {
           {
             title: 'column 1',
             children: [
-              {
-                title: 'Health and Safety Updates',
-                slug: '/health-and-safety-updates/',
-                children: []
-              },
+              // {
+              //   title: 'Health and Safety Updates',
+              //   slug: '/health-and-safety-updates/',
+              //   children: []
+              // },
               // {
               //   title: 'Upcoming Events',
               //   slug: '/upcoming-events-current-families/',
