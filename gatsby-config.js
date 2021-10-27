@@ -3,7 +3,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`
 })
 
-console.log("XXXXXXXXXXXXXXXXXXXXXXXX", process.env.SANITY_READ_TOKEN);
+// console.log("XXXXXXXXXXXXXXXXXXXXXXXX", process.env.SANITY_READ_TOKEN);
 
 const path = require(`path`)
 const clientConfig = require('./client-config')
@@ -335,6 +335,11 @@ module.exports = {
                 title: 'Photos',
                 slug: '/private-events-and-retreats/photos/',
                 children: []
+              },
+              {
+                title: 'Alumni Events',
+                slug: '/alumni-events/',
+                children: []
               }
             ]
           },
@@ -347,8 +352,8 @@ module.exports = {
                 children: []
               },
               {
-                title: 'Alumni Events',
-                slug: '/alumni-events/',
+                title: 'Neighborhood Connections',
+                slug: 'https://docs.google.com/forms/d/e/1FAIpQLScg-U7ga_40dNpIUe83keRFLEoQCixGtU1g_7JY7AVvGxAlyg/viewform?usp=sf_link',
                 children: []
               },
               {
