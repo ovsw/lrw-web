@@ -67,6 +67,11 @@ module.exports = {
                 slug: '/activities/',
                 children: [
                   {
+                    title: 'Activity Areas',
+                    slug: '/activities/',
+                    children: []
+                  },
+                  {
                     title: 'A Typical Day',
                     slug: '/activities/a-typical-day/',
                     children: []
