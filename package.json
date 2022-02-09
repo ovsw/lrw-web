@@ -33,6 +33,8 @@
     "react-helmet": "^5.2.1"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.3",
+    "@heroicons/react": "^1.0.5",
     "@mdx-js/react": "^1.5.7",
     "@theme-ui/components": "^0.2.50",
     "@theme-ui/match-media": "^0.3.1",

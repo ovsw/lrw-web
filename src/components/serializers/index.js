@@ -15,6 +15,7 @@ import Embed from './Embed'
 import DatesRatesLinks from './DatesRatesLinks'
 import getVideoId from 'get-video-id'
 import VimeoPlayer from '@u-wave/react-vimeo'
+import FaqBlock from './FaqBlock'
 
 import {GoLinkExternal} from 'react-icons/go'
 
@@ -74,7 +75,8 @@ const serializers = {
     },
     mytable: Table,
     iframeEmbed: Embed,
-    datesRatesLinks: DatesRatesLinks
+    datesRatesLinks: DatesRatesLinks,
+    faqBlock: FaqBlock
   },
   marks: {
     button,

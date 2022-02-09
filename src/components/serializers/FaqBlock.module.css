@@ -1,0 +1,45 @@
+.dlWrapper  {
+ 
+}
+.dlWrapper > div {
+  border-bottom: 1px solid #ddd;
+}
+
+.dtItem button{
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #fff;
+  border: none;
+  padding: 1.1rem;
+  font-size: 1em;
+  text-align: left;
+}
+.questionText{
+  padding-right: 2em;
+}
+
+.iconOpen {
+  width: 25px;
+  height: 25px;
+  display: block;
+  transform: rotate(-180deg);
+  color: #ddd
+}
+.iconClosed {
+  width: 25px;
+  height: 25px;
+  display: block;
+  color: #ddd
+
+}
+
+.answerDd p {
+  padding: 0.5em;
+  font-size: 18px!important;
+  color: #666!important;
+  margin-top: 0;
+  padding-top: 0;
+  padding-right:60px;
+}
