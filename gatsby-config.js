@@ -44,6 +44,11 @@ module.exports = {
                     title: 'Bonim Travel (10th-11th)',
                     slug: '/programs/bonim-travel-program/',
                     children: []
+                  },
+                  {
+                    title: 'Jewish Family Camp Weekends',
+                    slug: '/jewish-family-camp/',
+                    children: []
                   }
                   // {
                   //   title: 'SIT Program (11th)',
