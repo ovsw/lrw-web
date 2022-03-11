@@ -4,6 +4,7 @@ import { Container, jsx, Styled } from "theme-ui";
 import { Box } from "@theme-ui/components";
 import HeroVideoBg from "./hero-video-bg";
 import ModalVideo from "react-modal-video";
+import { Link } from "gatsby";
 // import ScrollDownIcon from '../../elements/scroll-down-icon'
 
 import { FaPlay } from "react-icons/fa";
@@ -73,25 +74,46 @@ const Hero = () => {
           // bg: 'rgba(0,0,0,.32)'
         }}
       >
-        <img
+        {/* <img
           src={BigLogo}
           alt="Camp Laurelwood Big Logo"
           sx={{ maxWidth: ["10rem", null, "15rem", null, "20rem"] }}
-        />
+        /> */}
+
         <Styled.h1
           sx={{
-            textTransform: "lowercase",
             color: "white",
             fontWeight: "normal",
             textShadow: "2px 2px 2px rgba(0,0,0,.5)",
-            fontSize: [3, 4],
+            fontSize: [6, 7],
             fontFamily: "heading2",
             mb: 0
           }}
           onClick={() => console.log("click")}
         >
-          Fun. Friends. Forever.
+          <span sx={{ display: "block", fontFamily: "body", fontSize: [3, 4], mb: 3 }}>
+            Camp Laurelwood's
+          </span>
+          85th Year Celebration
+          {/* Fun. Friends. Forever. */}
         </Styled.h1>
+
+        <p
+          sx={{
+            textShadow: "1px 1px 2px rgba(0,0,0,.5)",
+            fontSize: [1, 2],
+            color: "light",
+            fontWeight: "light",
+            mt: 2,
+            mb: 5,
+            maxWidth: "2xl",
+            mx: "auto"
+          }}
+        >
+          <Link to="/alumni-events/" sx={{ color: "white", fontSize: [2, 3] }}>
+            Learn More
+          </Link>
+        </p>
         <p
           sx={{
             textShadow: "1px 1px 2px rgba(0,0,0,.5)",
