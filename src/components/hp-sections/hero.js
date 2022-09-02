@@ -92,13 +92,13 @@ const Hero = () => {
           onClick={() => console.log("click")}
         >
           <span sx={{ display: "block", fontFamily: "body", fontSize: [3, 4], mb: 3 }}>
-            Camp Laurelwood's
+            Camp Laurelwood
           </span>
-          85th Year Celebration
-          {/* Fun. Friends. Forever. */}
+          {/* 85th Year Celebration */}
+          Fun. Friends. Forever.
         </Styled.h1>
 
-        <p
+        {/* <p
           sx={{
             textShadow: "1px 1px 2px rgba(0,0,0,.5)",
             fontSize: [1, 2],
@@ -113,7 +113,7 @@ const Hero = () => {
           <Link to="/alumni-events/" sx={{ color: "white", fontSize: [2, 3] }}>
             Learn More
           </Link>
-        </p>
+        </p> */}
         <p
           sx={{
             textShadow: "1px 1px 2px rgba(0,0,0,.5)",
