@@ -69,7 +69,7 @@ class Countdown extends React.Component {
 
     return (
       <div sx={{pb: 3, borderRadius: '10px', margin: ['0 auto'], mb: 5, maxWidth: '3xl'}}>
-        <Styled.h3 as='p' sx={{textAlign: 'center', mt: 0, color: 'accent'}}><GiAlarmClock sx={{variant: 'links.icon', fontSize: '4rem'}} /> Countdown to Camp 2022</Styled.h3>
+        <Styled.h3 as='p' sx={{textAlign: 'center', mt: 0, color: 'accent'}}><GiAlarmClock sx={{variant: 'links.icon', fontSize: '4rem'}} /> Countdown to Camp 2023</Styled.h3>
         <div sx={countDownWrapper}>
           {(typeof (months) === 'number') && (
             <div className='countdown-item'>
