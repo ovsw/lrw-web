@@ -14,7 +14,7 @@ class HeroVideoBg extends React.Component {
 
   render() {
     const videoOptions = {
-      src: "https://www.camplaurelwood.org/Laurelwood-Hero-Graded-low-small-1_.mp4",
+      src: "https://www.camplaurelwood.org/video/Laurelwood-Hero-Graded-low-small-1_.mp4",
       autoPlay: true,
       loop: true,
       muted: true,
