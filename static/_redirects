@@ -44,3 +44,5 @@ https://lrw-app.netlify.app/* https://www.camplaurelwood.org/:splat 301!
 /day-camp/the-laurelwood-experience/      /the-laurelwood-experience/
 
 /schedule-summer-tour/      /schedule-a-tour/
+
+/welcome-letter-from-the-executive-director/      /welcome-letter-from-the-camp-director/

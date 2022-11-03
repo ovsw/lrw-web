@@ -188,7 +188,7 @@ module.exports = {
               },
               {
                 title: 'Letter From the Director',
-                slug: '/welcome-letter-from-the-executive-director/',
+                slug: '/welcome-letter-from-the-camp-director/',
                 children: []
               }
             ]
