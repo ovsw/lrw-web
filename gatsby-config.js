@@ -49,12 +49,12 @@ module.exports = {
                     title: 'Jewish Family Camp Weekends',
                     slug: '/jewish-family-camp/',
                     children: []
-                  }
-                  // {
-                  //   title: 'SIT Program (11th)',
-                  //   slug: '/programs/sit-program/',
-                  //   children: []
-                  // },
+                  },
+                  {
+                    title: 'SIT Program (11th)',
+                    slug: '/programs/sit-program/',
+                    children: []
+                  },
                   // {
                   //   title: 'Specialty Camps',
                   //   slug: '/programs/specialty-camps/',
@@ -122,12 +122,12 @@ module.exports = {
                     title: 'Bonim',
                     slug: '/dates-and-rates-bonim-travel-program/',
                     children: []
+                  },
+                  {
+                    title: 'SIT',
+                    slug: '/dates-and-rates-sit-program/',
+                    children: []
                   }
-                  // {
-                  //   title: 'SIT',
-                  //   slug: '/dates-and-rates-sit-program/',
-                  //   children: []
-                  // }
                 ]
               }
             ]
