@@ -118,6 +118,7 @@ export default {
         'backgroundColor': 'accent',
         'border': 'none',
         mb: 3,
+        mr: 2,
         'borderBottomWidth': '4px',
         'borderBottomStyle': 'solid',
         'borderBottomColor': 'accentDark',
