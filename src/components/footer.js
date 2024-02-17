@@ -78,9 +78,11 @@ const Footer = () => {
               <SocialLinks />
             </div>
           </Box>
-          <Box sx={{width: ['full', 'full', '3/5'], px: [0, 1, 4], textAlign: 'center', display: "grid", "grid-template-columns": "1fr 1fr"}}>
+          <Box sx={{width: ['full', 'full', '3/5'], px: [0, 1, 4], textAlign: 'center'}}>
             
             <div sx={{
+              display: "grid",
+              "grid-template-columns": "1fr 1fr",
               a: {
                 px: 1,
                 display: 'inline-block'
