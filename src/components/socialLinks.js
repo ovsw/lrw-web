@@ -19,7 +19,7 @@ const SocialLinks = () => {
         display: 'inline-block',
         fontSize: 7,
         '& svg': {
-          bg: 'white',
+          bg: 'transparent',
           borderRadius: '5px'
         }
       }
