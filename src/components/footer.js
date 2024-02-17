@@ -10,7 +10,7 @@ import {Box, Flex} from '@theme-ui/components'
 import SocialLinks from './socialLinks'
 
 const Footer = () => {
-  const {footerBgImage, acaLogo, asocIndependentJewishCampLogo, jfgnhLogo} = useStaticQuery(
+  const {footerBgImage, acaLogo, asocIndependentJewishCampLogo, jfgnhLogo, jfghLogo} = useStaticQuery(
     graphql`
     query {
       footerBgImage: file(relativePath: { eq: "cl_summer_2016_web_files-73.jpg" }) {
