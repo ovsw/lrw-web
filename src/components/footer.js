@@ -90,7 +90,7 @@ const Footer = () => {
                 <Img fixed={asocIndependentJewishCampLogo.childImageSharp.fixed} />
               </a>
               <a title='Jewish federation of Greater New Haven' href='https://www.jewishnewhaven.org/' target='_blank' rel='noopener noreferrer'>
-                <Img fixed={jfgnhLogo.childImageSharp.fixed} />
+                <Img fixed={jfgnhLogo.childImageSharp.fixed} /> 
               </a>
               <a title='Jewish federation of Greater Hartford' href='https://www.jewishhartford.org/' target='_blank' rel='noopener noreferrer'>
                 <Img fixed={jfghLogo.childImageSharp.fixed} />
