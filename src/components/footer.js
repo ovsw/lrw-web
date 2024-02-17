@@ -82,7 +82,9 @@ const Footer = () => {
             
             <div sx={{
               display: "grid",
+              "align-items": "center",
               "grid-template-columns": "1fr 1fr",
+              width: ['full'],
               a: {
                 px: 1,
                 display: 'inline-block'
