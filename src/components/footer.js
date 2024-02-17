@@ -41,6 +41,13 @@ const Footer = () => {
           }
         }
       }
+      jfghLogo: file(relativePath: { eq: "jfgh-logo-color-stacked.png" }) {
+        childImageSharp {
+          fixed(height:100, quality: 90) {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+      }
     }
     `
   )
@@ -68,11 +75,11 @@ const Footer = () => {
                 <span className='postal-code'>06443</span>{' '}
                 <span className='country-name'>United States</span>
               </div>
-
+              <SocialLinks />
             </div>
           </Box>
-          <Box sx={{width: ['full', 'full', '3/5'], px: [0, 1, 4], textAlign: 'center'}}>
-            <SocialLinks />
+          <Box sx={{width: ['full', 'full', '3/5'], px: [0, 1, 4], textAlign: 'center', display: "grid", "grid-template-columns": "1fr 1fr"}}>
+            
             <div sx={{
               a: {
                 px: 1,
@@ -85,9 +92,13 @@ const Footer = () => {
               <a title='Jewish federation of Greater New Haven' href='https://www.jewishnewhaven.org/' target='_blank' rel='noopener noreferrer'>
                 <Img fixed={jfgnhLogo.childImageSharp.fixed} />
               </a>
+              <a title='Jewish federation of Greater Hartford' href='https://www.jewishhartford.org/' target='_blank' rel='noopener noreferrer'>
+                <Img fixed={jfghLogo.childImageSharp.fixed} />
+              </a>
               <a title='American Camp Association' href='https://www.acacamps.org/' target='_blank' rel='noopener noreferrer'>
                 <Img fixed={acaLogo.childImageSharp.fixed} />
               </a>
+              
             </div>
           </Box>
         </Flex>
