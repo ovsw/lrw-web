@@ -78,12 +78,13 @@ const Footer = () => {
               <SocialLinks />
             </div>
           </Box>
-          <Box sx={{width: ['full', 'full', '3/5'], px: [0, 1, 4], textAlign: 'center'}}>
+          <Box sx={{width: ['full', 'full', '3/5'], px: [0, 1, 4], textAlign: 'center', display: "flex"}}>
             
             <div sx={{
               display: "grid",
               "align-items": "center",
-              "grid-template-columns": "1fr 1fr",
+              "grid-template-columns": ["1fr", "1fr 1fr"],
+              "gap": ["1rem", "0rem"],
               width: ['full'],
               a: {
                 px: 1,
