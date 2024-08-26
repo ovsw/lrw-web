@@ -25,11 +25,11 @@ module.exports = {
                 title: 'Programs',
                 slug: '/programs/',
                 children: [
-                  {
-                    title: 'Trial Sessions',
-                    slug: '/programs/trial-sessions/',
-                    children: []
-                  },
+                  // {
+                  //   title: 'Trial Sessions',
+                  //   slug: '/programs/trial-sessions/',
+                  //   children: []
+                  // },
                   {
                     title: 'Overnight Camp (2nd-9th)',
                     slug: '/programs/overnight-camp/',
