@@ -17,7 +17,7 @@ import ProgramItem from './program'
 const Programs = () => {
   return (
     <>
-      <TrialSessions />
+      {/* <TrialSessions /> */}
 
       <section sx={{variant: 'sections.hpSection'}}>
         <Container sx={{maxWidth: '7xl', p: 0}}>
