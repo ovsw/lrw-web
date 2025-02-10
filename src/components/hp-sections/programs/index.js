@@ -25,7 +25,7 @@ const Programs = () => {
         <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} />
       </section>
 
-      <SpecialtyCamps />
+      {/* <SpecialtyCamps /> */}
     </>
   )
 }
