@@ -280,11 +280,11 @@ module.exports = {
               //   slug: '/upcoming-events-current-families/',
               //   children: []
               // },
-              {
-                title: 'What\'s New',
-                slug: '/whats-new-on-campus/',
-                children: []
-              }
+              // {
+              //   title: 'What\'s New',
+              //   slug: '/whats-new-on-campus/',
+              //   children: []
+              // }
             ]
           },
           {
