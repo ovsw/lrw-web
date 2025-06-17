@@ -17,12 +17,12 @@ const Column2 = () => {
           display: 'inline-flex',
           alignItems: 'center',
           gap: '6px',
-          backgroundColor: 'rgba(255, 0, 0, 0.1)',
           borderRadius: '4px',
           '&:hover': {
             color: 'white',
             backgroundColor: '#e74c3c',
             '& svg': {
+              color: 'white',
               animation: 'heartbeat 1s ease-in-out infinite'
             }
           },
@@ -41,7 +41,7 @@ const Column2 = () => {
         rel='noopener noreferrer' 
         target='_blank'
       >
-        <FaHeart sx={{fontSize: '0.9em', color: '#e74c3c'}} />
+        <FaHeart sx={{fontSize: '0.9em', color: '#ff0000'}} />
         Donate Now
       </Link>
 

@@ -20,7 +20,7 @@ const MobileQuickLinks = ({closeMobileNav}) => {
             fontSize: '1.1em'
           }
         }} onClick={closeMobileNav}>
-          <FaHeart sx={{color: '#e74c3c'}} />
+          <FaHeart sx={{color: '#ff0000'}} />
           Donate Now
         </Link>
       </div>
