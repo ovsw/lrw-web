@@ -3,6 +3,7 @@ import React from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
 // import {jsx, Container, Styled} from 'theme-ui'
 import {Link} from 'gatsby'
+import {FaHeart} from 'react-icons/fa'
 
 const MobileQuickLinks = ({closeMobileNav}) => {
   return (
@@ -11,8 +12,17 @@ const MobileQuickLinks = ({closeMobileNav}) => {
         py: 4
       }}>
         <Link to='/donate-now/' sx={{
-          variant: 'buttons.simple'
-        }} onClick={closeMobileNav}>Donate Now</Link>
+          variant: 'buttons.simple',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          '& svg': {
+            fontSize: '1.1em'
+          }
+        }} onClick={closeMobileNav}>
+          <FaHeart sx={{color: '#e74c3c'}} />
+          Donate Now
+        </Link>
       </div>
       {/* <div className='mobile-menu' {...props}>
         <div className='mobile-nav'>
