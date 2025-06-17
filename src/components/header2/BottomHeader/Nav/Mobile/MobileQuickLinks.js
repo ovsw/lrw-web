@@ -21,7 +21,7 @@ const MobileQuickLinks = ({closeMobileNav}) => {
           }
         }} onClick={closeMobileNav}>
           <FaHeart sx={{color: '#ff0000'}} />
-          Donate Now
+          {' '}Donate Now
         </Link>
       </div>
       {/* <div className='mobile-menu' {...props}>

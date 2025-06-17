@@ -42,7 +42,7 @@ const Column2 = () => {
         target='_blank'
       >
         <FaHeart sx={{fontSize: '0.9em', color: '#ff0000'}} />
-        Donate Now
+        {' '}Donate Now
       </Link>
 
     </div>
