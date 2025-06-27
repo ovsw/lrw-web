@@ -65,7 +65,7 @@ const programs = [
   },
   {
     name: 'Bonim Travel',
-    age: '11th graders',
+    age: '10th graders',
     icon: 'teenagers',
     description: 'A recreational, educational and cultural experience for 11th graders, building character and social skills along with a strong Jewish identity.',
     link: '/programs/bonim-travel-program/'
