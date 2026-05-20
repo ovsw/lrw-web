@@ -69,5 +69,11 @@
     "react-youtube": "^7.9.0",
     "slick-carousel": "^1.8.1",
     "theme-ui": "^0.2.49"
+  },
+  "overrides": {
+    "axios": "0.31.1"
+  },
+  "resolutions": {
+    "axios": "0.31.1"
   }
 }
