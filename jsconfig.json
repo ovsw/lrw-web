@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "checkJs": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noEmit": true
+  },
+  "include": [
+    "gatsby-browser.js",
+    "gatsby-config.js",
+    "gatsby-node.js",
+    "gatsby-ssr.js",
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ],
+  "exclude": [".cache", "node_modules", "public"]
+}
