@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "typescript-language-server": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "fileTypes": [".js", ".jsx", ".ts", ".tsx", ".mjs", ".cjs"],
+      "rootMarkers": ["package.json", "jsconfig.json", "tsconfig.json"]
+    }
+  }
+}
